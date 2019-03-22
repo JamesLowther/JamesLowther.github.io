@@ -1,19 +1,22 @@
 +++
 title = "About"
-date = "2014-04-09"
-aliases = ["about-us","about-hugo","contact"]
-[ author ]
-  name = "Hugo Authors"
+date = "2019-01-25"
+author = "Radek"
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+# Hi there
 
-It makes use of a variety of open source projects including:
+My name is Radek and I'm the author of this theme. I made it to help you present your ideas easier.
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+This theme is pretty basic and covers all of the essentials. All you have to do is start typing!
+
+The theme includes:
+
+- **5 duotone themes**, depending on your preferences (orange, red, blue, green, pink)
+- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
+- **realy nice, custom duotone** syntax highlighting based on [**PrismJS**](https://prismjs.com)
+- mobile friendly layout
+
+So, there you have it... enjoy!

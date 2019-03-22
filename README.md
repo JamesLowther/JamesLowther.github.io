@@ -1,22 +1,29 @@
-# Hello Friend NG
+# Terminal
 
-![Hello Friend NG](https://dsh.re/d27822)
+![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
 
+### DEMO - https://hugo-terminal.now.sh/
 
+---
 
-## General informations
-
-This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit).
-
+- [Features](#features)
+- [Built-in shortcodes](#built-in-shortcodes)
+- [Code highlighting](#code-highlighting)
+- [How to start](#how-to-start)
+- [How to configure](#how-to-configure)
+- [Add-ons](#add-ons)
+- [How to run your site](#how-to-run-your-site)
+- [How to edit the theme](#how-to-edit-the-theme)
+- [How to contribute](#how-to-contribute)
+- [Terminal theme user?](#terminal-theme-user)
+- [Licence](#licence)
 
 ## Features
 
-- Theming: **dark/light mode**, depending on your preferences (dark is default, but you can change it)
-- Great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
-- Nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
-- An easy way to modify the theme with Hugo tooling
-- Fully responsive
-- Support for social
+- **5 duetone themes**, depending on your preferences (orange is default, red, blue, green, pink)
+- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
+- **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
+- fully responsive
 
 #### Built-in shortcodes
 
@@ -27,7 +34,7 @@ This theme was highly inspired by the [hello-friend](https://github.com/panr/hug
 
 #### Code highlighting
 
-By default the theme is using PrismJS to color your code syntax. All you need to do is to wrap you code like this:
+A custom syntax highlighting based on PrismJS. All you need to do is to wrap you code like this:
 
 <pre>
 ```html
@@ -35,36 +42,23 @@ By default the theme is using PrismJS to color your code syntax. All you need to
 ```
 </pre>
 
-**Supported languages**: https://prismjs.com/#languages-list
+**Supported languages**: bash/shell, css, clike, javascript, apacheconf, actionscript, applescript, c, csharp, cpp, coffeescript, ruby, csp, css-extras, diff, django, docker, elixir, elm, markup-templating, erlang, fsharp, flow, git, go, graphql, less, handlebars, haskell, http, java, json, kotlin, latex, markdown, makefile, objectivec, ocaml, perl, php, php-extras, r, sql, processing, scss, python, jsx, typescript, toml, reason, textile, rust, sass, stylus, scheme, pug, swift, yaml, haml, twig, tsx, vim, visual-basic, wasm.
 
 ## How to start
 
-You can download the theme manually by going to [https://github.com/rhazdon/hugo-theme-hello-friend-ng.git](https://github.com/rhazdon/hugo-theme-hello-friend-ng.git) and pasting it to `themes/hello-friend-ng` in your root directory.
+You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
 
 You can also clone it directly to your Hugo folder:
 
 ```
-$ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+$ git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
-If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. To do so, include it as a git submodule:
+If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
 
 ```
-$ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+$ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
-### Favicon
-
-Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these files, put them into your site's static folder:
-
-- android-chrome-192x192.png
-- android-chrome-512x512.png
-- apple-touch-icon.png
-- favicon-16x16.png
-- favicon-32x32.png
-- favicon.ico
-- mstile-150x150.png
-- safari-pinned-tab.svg
-- site.webmanifest
 
 ## How to configure
 
@@ -73,41 +67,37 @@ The theme doesn't require any advanced configuration. Just copy:
 ```
 baseurl = "/"
 languageCode = "en-us"
-theme = "hello-friend-ng"
+theme = "terminal"
+paginate = 5
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-
-  # Metadata mostly used in document's head
-  description = "Homepage and blog by Djordje Atlialp"
-  keywords = "homepage, blog, science, informatics, development, programming"
-  images = [""]
-
-  # Directory name of your blog content (default is `content/posts`)
+  # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
-  # Default theme "light" or "dark"
-  defaultTheme = "dark"
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "orange"
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
+  # set theme to full screen width
+  fullWidthTheme = false
+  # center theme with default width
+  centerTheme = false
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
 
 [languages]
   [languages.en]
-    title = "Hello Friend NG"
-    subtitle = "A simple theme for Hugo"
+    title = "Terminal"
+    subtitle = "A simple, retro theme for Hugo"
     keywords = ""
     copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "hello friend ng"
+      logoText = "Terminal"
       logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
 
-	# You can create a language based menu
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "about"
@@ -117,60 +107,56 @@ theme = "hello-friend-ng"
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
-
-# And you can even create generic menu
-[menu]
-  [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "/about"
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
 ```
 
+to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/9eeea6f595c257febdadc11763e3a6d1).
+
+**NOTE:** Please keep in mind that currently `main menu` doesn't support nesting.
+
+## Add-ons
+
+- **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.  
+- **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html  
+- **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
 
 ## How to run your site
 
 From your Hugo root directory run:
 
 ```
-$ hugo server -t hello-friend-ng
+$ hugo server -t terminal
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
 
-
 ## How to edit the theme
 
-If you really want to edit the theme, you need to install Node dependencies. To do this, go to the theme directory (from your Hugo root directory):
+If you have to override some of the styles, **you can do this easily** by adding `static/style.css` in your root directory and point things you want to change.
+
+Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
 
 ```
-$ cd themes/hello-friend-ng
+$ cd themes/terminal
 ```
 
 and then run:
 
 ```
 $ npm install
+$ npm i yarn
+$ yarn
 ```
-
 
 ## How to contribute
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/rhazdon/hugo-theme-hello-friend-ng/pulls).
+If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls).
 
+## Terminal theme user?
 
-## Third Party
-
-  - [normalize.css](https://github.com/necolas/normalize.css)
-  - [Feather Open Source Icons](https://github.com/feathericons/feather)
-  - [Flag Icon](https://github.com/lipis/flag-icon-css)
-
+I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-terminal/blob/master/USERS.md)! 🤗
 
 ## Licence
 
-Copyright © 2019 Djordje Atlialp
+Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
-The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
+The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
