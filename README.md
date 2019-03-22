@@ -1,162 +1,116 @@
-# Terminal
+# Victor Hugo
 
-![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
+**A Hugo boilerplate for creating truly epic websites**
 
-### DEMO - https://hugo-terminal.now.sh/
+This is a boilerplate for using [Hugo](https://gohugo.io/) as a static site generator and [Webpack](https://webpack.js.org/) as your asset pipeline.
 
----
+Victor Hugo setup to use [PostCSS](http://postcss.org/) and [Babel](https://babeljs.io/) for CSS and JavaScript compiling/transpiling.
 
-- [Features](#features)
-- [Built-in shortcodes](#built-in-shortcodes)
-- [Code highlighting](#code-highlighting)
-- [How to start](#how-to-start)
-- [How to configure](#how-to-configure)
-- [Add-ons](#add-ons)
-- [How to run your site](#how-to-run-your-site)
-- [How to edit the theme](#how-to-edit-the-theme)
-- [How to contribute](#how-to-contribute)
-- [Terminal theme user?](#terminal-theme-user)
-- [Licence](#licence)
+This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
 
-## Features
+## Usage
 
-- **5 duetone themes**, depending on your preferences (orange is default, red, blue, green, pink)
-- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
-- **really nice duotone**, custom syntax highlighting based on [**PrismJS**](https://prismjs.com)
-- fully responsive
+### :exclamation: Prerequisites
 
-#### Built-in shortcodes
+You need to have the latest/LTS [node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm) versions installed in order to use Victor Hugo.
 
-- **`image`** (prop required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
-  - eg: `{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}`
-- **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**
-  - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
+Next step, clone this repository and run:
 
-#### Code highlighting
-
-A custom syntax highlighting based on PrismJS. All you need to do is to wrap you code like this:
-
-<pre>
-```html
-  // your code here
-```
-</pre>
-
-**Supported languages**: bash/shell, css, clike, javascript, apacheconf, actionscript, applescript, c, csharp, cpp, coffeescript, ruby, csp, css-extras, diff, django, docker, elixir, elm, markup-templating, erlang, fsharp, flow, git, go, graphql, less, handlebars, haskell, http, java, json, kotlin, latex, markdown, makefile, objectivec, ocaml, perl, php, php-extras, r, sql, processing, scss, python, jsx, typescript, toml, reason, textile, rust, sass, stylus, scheme, pug, swift, yaml, haml, twig, tsx, vim, visual-basic, wasm.
-
-## How to start
-
-You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
-
-You can also clone it directly to your Hugo folder:
-
-```
-$ git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+```bash
+npm install
 ```
 
-If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
+This will take some time and will install all packages necessary to run Victor Hugo and its tasks.
 
-```
-$ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
-```
+### :construction_worker: Development
 
-## How to configure
+While developing your website, use:
 
-The theme doesn't require any advanced configuration. Just copy:
-
-```
-baseurl = "/"
-languageCode = "en-us"
-theme = "terminal"
-paginate = 5
-
-[params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
-  # set theme to full screen width
-  fullWidthTheme = false
-  # center theme with default width
-  centerTheme = false
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
-
-[languages]
-  [languages.en]
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-
-    [languages.en.params.logo]
-      logoText = "Terminal"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+```bash
+npm start
 ```
 
-to `config.toml` file in your Hugo root directory and change params fields. In case you need, here's [a YAML version](https://gist.github.com/panr/9eeea6f595c257febdadc11763e3a6d1).
+or for developing your website with `hugo server --buildDrafts --buildFuture`, use:
 
-**NOTE:** Please keep in mind that currently `main menu` doesn't support nesting.
-
-## Add-ons
-
-- **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.  
-- **Extended Head** — please take a look at `layouts/partials/extended_head.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_head.html  
-- **Extended Footer** — please take a look at `layouts/partials/extended_footer.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/extended_footer.html
-
-## How to run your site
-
-From your Hugo root directory run:
-
-```
-$ hugo server -t terminal
+```bash
+npm run preview
 ```
 
-and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
+Then visit http://localhost:3000/ _- or a new browser windows popped-up already -_ to preview your new website. Webpack Dev Server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
 
-## How to edit the theme
+### :package: Static build
 
-If you have to override some of the styles, **you can do this easily** by adding `static/style.css` in your root directory and point things you want to change.
+To build a static version of the website inside the `/dist` folder, run:
 
-Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
-
-```
-$ cd themes/terminal
+```bash
+npm run build
 ```
 
-and then run:
+To get a preview of posts or articles not yet published, run:
 
-```
-$ npm install
-$ npm i yarn
-$ yarn
+```bash
+npm run build:preview
 ```
 
-## How to contribute
+See [package.json](package.json#L8) for all tasks.
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls).
+## Structure
 
-## Terminal theme user?
+```
+|--site                // Everything in here will be built with hugo
+|  |--content          // Pages and collections - ask if you need extra pages
+|  |--data             // YAML data files with any data for use in examples
+|  |--layouts          // This is where all templates go
+|  |  |--partials      // This is where includes live
+|  |  |--index.html    // The index page
+|  |--static           // Files in here ends up in the public folder
+|--src                 // Files that will pass through the asset pipeline
+|  |--css              // Webpack will bundle imported css seperately
+|  |--index.js         // index.js is the webpack entry for your css & js assets
+```
 
-I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-terminal/blob/master/USERS.md)! 🤗
+## Basic Concepts
 
-## Licence
+You can read more about Hugo's template language in their documentation here:
 
-Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
+https://gohugo.io/templates/overview/
 
-The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
+The most useful page there is the one about the available functions:
+
+https://gohugo.io/templates/functions/
+
+For assets that are completely static and don't need to go through the asset pipeline,
+use the `site/static` folder. Images, font-files, etc, all go there.
+
+Files in the static folder end up in the web root. So a file called `site/static/favicon.ico`
+will end up being available as `/favicon.ico` and so on...
+
+The `src/index.js` file is the entrypoint for webpack and will be built to `/dist/main.js`
+
+You can use **ES6** and use both relative imports or import libraries from npm.
+
+Any CSS file imported into the `index.js` will be run through Webpack, compiled with [PostCSS Next](http://cssnext.io/), and
+minified to `/dist/[name].[hash:5].css`. Import statements will be resolved as part of the build.
+
+## Environment variables
+
+To separate the development and production _- aka build -_ stages, all gulp tasks run with a node environment variable named either `development` or `production`.
+
+You can access the environment variable inside the theme files with `getenv "NODE_ENV"`. See the following example for a conditional statement:
+
+    {{ if eq (getenv "NODE_ENV") "development" }}You're in development!{{ end }}
+
+All tasks starting with _build_ set the environment variable to `production` - the other will set it to `development`.
+
+## Deploying to Netlify
+
+- Push your clone to your own GitHub repository.
+- [Create a new site on Netlify](https://app.netlify.com/start) and link the repository.
+
+Now Netlify will build and deploy your site whenever you push to git.
+
+You can also click this button:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/victor-hugo)
+
+## Enjoy!! 😸

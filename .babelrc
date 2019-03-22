@@ -1,7 +1,9 @@
 {
   "presets": [
-    ["@babel/preset-env", {
-      "targets": "last 2 versions, >1%, not dead"
-    }],
+    "@babel/preset-env"
   ],
+  "plugins": [
+    "@babel/plugin-syntax-object-rest-spread",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
 }
