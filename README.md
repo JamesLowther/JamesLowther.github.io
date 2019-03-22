@@ -1,120 +1,176 @@
-# Victor Hugo CMS Template
-<!-- Markdown snippet -->
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/bdougie/strata-cms-template)
+# Hello Friend NG
 
-![mrtable image](https://s3-us-west-1.amazonaws.com/publis-brian-images/mrtable.png)
+![Hello Friend NG](https://dsh.re/d27822)
 
-**A [Hugo](http://gohugo.io/) boilerplate for creating truly epic websites**
 
-This is a boilerplate for using Hugo as a static site generator and Gulp + Weback as your
-asset pipeline.
 
-It's setup to use post-css and babel for CSS and JavaScript.
+## General informations
 
-## Usage
-Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/overview/installing/) installed. If you need to install hugo, run:
+This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit).
 
-Clone this repository and run:
 
-```bash
-npm install
-npm start
+## Features
+
+- Theming: **dark/light mode**, depending on your preferences (dark is default, but you can change it)
+- Great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
+- Nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
+- An easy way to modify the theme with Hugo tooling
+- Fully responsive
+- Support for social
+
+#### Built-in shortcodes
+
+- **`image`** (prop required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
+  - eg: `{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}`
+- **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**
+  - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
+
+#### Code highlighting
+
+By default the theme is using PrismJS to color your code syntax. All you need to do is to wrap you code like this:
+
+<pre>
+```html
+  // your code here
+```
+</pre>
+
+**Supported languages**: https://prismjs.com/#languages-list
+
+## How to start
+
+You can download the theme manually by going to [https://github.com/rhazdon/hugo-theme-hello-friend-ng.git](https://github.com/rhazdon/hugo-theme-hello-friend-ng.git) and pasting it to `themes/hello-friend-ng` in your root directory.
+
+You can also clone it directly to your Hugo folder:
+
+```
+$ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
 ```
 
-Then visit http://localhost:3000/ - BrowserSync will automatically reload CSS or
-refresh the page when stylesheets or content changes.
-
-To build your static output to the `/dist` folder, use:
-
-```bash
-npm run build
-```
-
-## Structure
+If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. To do so, include it as a git submodule:
 
 ```
-|--site                // Everything in here will be built with hugo
-|  |--content          // Pages and collections - ask if you need extra pages
-|  |--data             // YAML data files with any data for use in examples
-|  |--layouts          // This is where all templates go
-|  |  |--partials      // This is where includes live
-|  |  |--index.html    // The index page
-|  |--static           // Files in here ends up in the public folder
-|--src                 // Files that will pass through the asset pipeline
-|  |--css              // CSS files in the root of this folder will end up in /css/...
-|  |--js               // app.js will be compiled to /js/app.js with babel
+$ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
 ```
-## CMS
+### Favicon
 
-### How it works
+Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these files, put them into your site's static folder:
 
-Netlify CMS is a single-page app that you pull into the `/admin` part of your site.
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- favicon-16x16.png
+- favicon-32x32.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+- site.webmanifest
 
-It presents a clean UI for editing content stored in a Git repository.
+## How to configure
 
-You setup a YAML config to describe the content model of your site, and typically
-tweak the main layout of the CMS a bit to fit your own site.
+The theme doesn't require any advanced configuration. Just copy:
 
-### Setup GitHub as a Backend
-
-In the `config.yml` file [change the GitHub owner and repo](https://github.com/bdougie/strata-cms-template/blob/master/site/static/admin/config.yml#L3) to reflect your repo:
-
-```yaml
-backend:
-  name: github
-  repo: owner/repo # Path to your Github repository
-  branch: master # Branch to update (master by default)
-  
-  ...
 ```
-When a user navigates to `/admin` she'll be prompted to login, and once authenticated
-she'll be able to create new content or edit existing content.
-The default Github-based authenticator integrates with Netlify's [Authentication Provider feature](https://www.netlify.com/docs/authentication-providers) and the repository
-backend integrates directly with Github's API.
+baseurl = "/"
+languageCode = "en-us"
+theme = "hello-friend-ng"
 
-To get everything hooked up, setup continuous deployment from Github to Netlify
-and then follow [the documentation](https://www.netlify.com/docs/authentication-providers)
-to setup Github as an authentication provider.
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
 
-That's it, now you should be able to go to the `/admin` section of your site and
-log in.
+  # Metadata mostly used in document's head
+  description = "Homepage and blog by Djordje Atlialp"
+  keywords = "homepage, blog, science, informatics, development, programming"
+  images = [""]
 
-### Find out more and contribute
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
 
-Visit the [Netlify CMS](https://github.com/netlify/netlify-cms/) to find out more and contribute. 
+[languages]
+  [languages.en]
+    title = "Hello Friend NG"
+    subtitle = "A simple theme for Hugo"
+    keywords = ""
+    copyright = ""
+    readOtherPosts = "Read other posts"
 
-## Basic Concepts
+    [languages.en.params.logo]
+      logoText = "hello friend ng"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
-You can read more about Hugo's template language in their documentation here:
+	# You can create a language based menu
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "showcase"
+        name = "Showcase"
+        url = "/showcase"
 
-https://gohugo.io/templates/overview/
+# And you can even create generic menu
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+```
 
-The most useful page there is the one about the available functions:
 
-https://gohugo.io/templates/functions/
+## How to run your site
 
-For assets that are completely static and don't need to go through the asset pipeline,
-use the `site/static` folder. Images, font-files, etc, all go there.
+From your Hugo root directory run:
 
-Files in the static folder ends up in the web root. So a file called `site/static/favicon.ico`
-will end up being available as `/favicon.ico` and so on...
+```
+$ hugo server -t hello-friend-ng
+```
 
-The `src/js/app.js` file is the entrypoint for webpack and will be built to `/dist/app.js`.
+and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
 
-You can use ES6 and use both relative imports or import libraries from npm.
 
-Any CSS file directly under the `src/css/` folder will get compiled with [PostCSS Next](http://cssnext.io/)
-to `/dist/css/{filename}.css`. Import statements will be resolved as part of the build
+## How to edit the theme
 
-## Deploying to netlify
+If you really want to edit the theme, you need to install Node dependencies. To do this, go to the theme directory (from your Hugo root directory):
 
-- Push your clone to your own GitHub repository.
-- [Create a new site on Netlify](https://app.netlify.com/start) and link the repository.
+```
+$ cd themes/hello-friend-ng
+```
 
-Now netlify will build and deploy your site whenever you push to git.
+and then run:
 
-##  Enjoy!!
+```
+$ npm install
+```
 
-#### License
 
-[MIT](LICENSE)
+## How to contribute
+
+If you spot any bugs, please use [Issue Tracker](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/rhazdon/hugo-theme-hello-friend-ng/pulls).
+
+
+## Third Party
+
+  - [normalize.css](https://github.com/necolas/normalize.css)
+  - [Feather Open Source Icons](https://github.com/feathericons/feather)
+  - [Flag Icon](https://github.com/lipis/flag-icon-css)
+
+
+## Licence
+
+Copyright © 2019 Djordje Atlialp
+
+The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
