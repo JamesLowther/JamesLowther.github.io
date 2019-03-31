@@ -92,29 +92,29 @@ class IndexPage extends React.Component {
   render() {
     return (
       <div>
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
         </form>
 
-      <Layout location={this.props.location}>
-        <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
-          <div id="wrapper">
-            <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
-            <Main
-              isArticleVisible={this.state.isArticleVisible}
-              timeout={this.state.timeout}
-              articleTimeout={this.state.articleTimeout}
-              article={this.state.article}
-              onCloseArticle={this.handleCloseArticle}
-              setWrapperRef={this.setWrapperRef}
-            />
-            <Footer timeout={this.state.timeout} />
+        <Layout location={this.props.location}>
+          <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
+            <div id="wrapper">
+              <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+              <Main
+                isArticleVisible={this.state.isArticleVisible}
+                timeout={this.state.timeout}
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+                setWrapperRef={this.setWrapperRef}
+              />
+              <Footer timeout={this.state.timeout} />
+            </div>
+            <div id="bg"></div>
           </div>
-          <div id="bg"></div>
-        </div>
-      </Layout>
+        </Layout>
       </div>
     )
   }
