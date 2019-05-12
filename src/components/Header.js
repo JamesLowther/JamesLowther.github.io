@@ -9,14 +9,14 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>James Lowther</h1>
-                <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-                for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+                <p>Currently attending my third year of schooling at the Univerity of Calgary pursuing a degree in computing science.</p>
+                <p>Interested in all things computing and its application in the modern world.</p>
             </div>
         </div>
         <nav>
             <ul>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
-                <li><a href="https://github.com/JamesLowther/" target="_blank">Projects</a></li>
+                <li><a href="https://github.com/JamesLowther/" target="_blank" rel="noopener noreferrer">Projects</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
         </nav>
