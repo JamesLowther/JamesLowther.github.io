@@ -92,7 +92,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <div>
-        <form name="contact" data-netlify-recaptcha="true" data-netlify="true" netlify-honeypot="bot-field" action="/">
+        <form name="contact" data-netlify-recaptcha="true" data-netlify="true" action="/">
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
