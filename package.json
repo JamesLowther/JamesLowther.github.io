@@ -4,15 +4,15 @@
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
-    "gatsby": "^2.2.9",
-    "gatsby-plugin-manifest": "^2.0.24",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.10",
-    "gatsby-plugin-sass": "^2.0.11",
-    "node-sass": "^4.11.0",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-helmet": "^5.2.0"
+    "gatsby": "^2.23.3",
+    "gatsby-plugin-manifest": "^2.4.11",
+    "gatsby-plugin-offline": "^3.2.9",
+    "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-sass": "^2.3.4",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
   },
   "keywords": [
     "gatsby"
