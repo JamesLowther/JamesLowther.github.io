@@ -23,7 +23,7 @@ class Main extends React.Component {
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">About</h2>
           <span className="image main"><img src={codeimage} alt="" /></span>
-          <p>I am a third-year student at the University of Calgary currently pursuing a Bachelor of Science in Computer Science. My interests include software development, information security, and the Linux/GNU operating system. I enjoy participating in capture-the-flag (CTF) information security competitions to practice solving programming-based problems and to learn to avoid writing vulnerabilities into my own code. I look forward to furthering my knowledge in computer systems improving my programming skills.</p>
+          <p>I am a fourth-year student at the University of Calgary currently pursuing a Bachelor of Science in Computer Science. My interests include software development, information security, and the Linux/GNU operating system. I enjoy participating in capture-the-flag (CTF) information security competitions to practice solving programming-based problems and to learn to avoid writing vulnerabilities into my own code. I look forward to furthering my knowledge in computer systems improving my programming skills.</p>
           {close}
         </article>
 
