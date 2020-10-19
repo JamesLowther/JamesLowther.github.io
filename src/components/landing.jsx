@@ -50,7 +50,7 @@ const Landing = () => {
             <p class="text-xl font-display mt-4">Located in Calgary, Alberta</p>
 
           </div>
-          <div class="py-20 transform hover:translate-y-1 overflow-hidden">
+          <div class="my-20 transform hover:translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" width="60">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
             </svg>
