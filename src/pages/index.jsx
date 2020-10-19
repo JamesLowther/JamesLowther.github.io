@@ -15,7 +15,7 @@ const Home = () => {
   
   return (
     <Layout>
-      <SiteMetadata title="James Lowther" />
+      <SiteMetadata title="James Lowther - Home" />
       <Navbar />
       <Landing />
       <About />
