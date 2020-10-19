@@ -6,7 +6,7 @@ export default class Terminal extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      typing: !window.lowWidth
+      typing: false
     }
   }
 

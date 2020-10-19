@@ -26,7 +26,7 @@ const BackgroundSection= ({ className, children }) => {
       className={className}
       backgroundColor={`#040e18`}
     >
-      <StarfieldAnimation 
+      {/* <StarfieldAnimation 
         numParticles="400"
         lineWidth="1.0"
         alphaFactor="0.8"
@@ -35,7 +35,7 @@ const BackgroundSection= ({ className, children }) => {
           width: '100%',
           height: '100%',
         }}
-      />
+      /> */}
       {children}
     </BackgroundImage>
   )
