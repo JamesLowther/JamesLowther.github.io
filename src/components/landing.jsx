@@ -30,7 +30,7 @@ const Landing = () => {
     <StyledBackgroundSection>
       <section id="landing" class="w-full h-screen">
         <div class="flex flex-col justify-center items-center h-full overflow-auto">
-          <div class="flex flex-row mt-6">
+          <div class="flex flex-row mt-6 mb-6">
             <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103">
               <Img
                 fluid={data.github.childImageSharp.fluid} 
@@ -45,10 +45,12 @@ const Landing = () => {
             </a>
           </div>
           <div class="my-auto w-3/4 md:w-1/2 p-10 rounded-lg bg-white bg-opacity-65">
-            <p class="text-5xl">JAMES LOWTHER</p>
-            <p class="text-xl">Currently attending my fourth year of schooling at the Univerity of Calgary pursuing a degree in computing science. Interested in all things computing and its application in the modern world.</p>
+            <p class="text-5xl tracking-widest font-header">JAMES LOWTHER</p>
+            <p class="text-xl font-display mt-2">Currently attending my fourth year of schooling at the Univerity of Calgary pursuing a degree in computing science. Interested in cybersecurity and both front-end and back-end development.</p>
+            <p class="text-xl font-display mt-4">Located in Calgary, Alberta</p>
+
           </div>
-          <div class="mb-20 transform hover:translate-y-1">
+          <div class="py-20 transform hover:translate-y-1 overflow-hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" width="60">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
             </svg>

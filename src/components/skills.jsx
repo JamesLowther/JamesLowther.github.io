@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import TechCard from "./techcard"
 
@@ -147,7 +146,7 @@ const Skills = () => {
   return (
     <section id="skills" class="w-full bg-gray-900 pb-20">
     <div class="pt-8 w-2/3 mx-auto text-white">
-      <p class="text-center text-6xl mb-8">Skills</p>
+      <p class="text-center text-6xl mb-8 font-header">Skills</p>
       <p class="text-5xl mb-2">Languages / Frameworks</p>
       <div class="flex flex-wrap">
         <TechCard

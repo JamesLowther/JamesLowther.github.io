@@ -22,8 +22,8 @@ export default class Terminal extends React.Component {
 
     const texts = [
       "Student",
-      "Tech Enthusiast",
-      "Hacker",
+      "Security Enthusiast",
+      "Developer",
       "Driven Learner"
     ]
 

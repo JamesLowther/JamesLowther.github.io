@@ -12,5 +12,8 @@
     scale: {
       '103': '1.03',
     },
+  },
+  purge: {
+    enabled: false,
   }
 }

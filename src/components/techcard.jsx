@@ -26,6 +26,7 @@ class TechCard extends React.Component {
         class="h-24 w-24 mb-8"
         onMouseEnter={this.handleMouseHover} 
         onMouseLeave={this.handleMouseHover}
+        role="none"
       >
         <Img
           fluid={this.props.fluid} 

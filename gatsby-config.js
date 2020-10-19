@@ -7,6 +7,18 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            subsets: [`latin`],
+            variants: [`400`, `500`]
+          },
+        ],
+      },
+    },
     `gatsby-plugin-postcss`,
     { 
       resolve: `gatsby-plugin-purgecss`,
