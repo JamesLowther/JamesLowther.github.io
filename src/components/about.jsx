@@ -29,7 +29,7 @@ const About = () => {
         </div>
         <div>
           <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">Hello!</p>
-          <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">My name is James Lowther and I'm a fourth-year computer science student at the University of Calgary. Some of my interests include participating in CTF (Capture-the-flag) hacking competitions and creating educational material related to information security. I have a passion for cybersecurity and enjoy learning about proper methods for deployment of server infrastructure.</p>
+          <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">My name is James Lowther and I'm a fourth-year computer science student at the University of Calgary. Some of my interests include participating in CTF (Capture-the-Flag) hacking competitions and creating educational material related to information security. I have a passion for cybersecurity and enjoy learning about proper methods for deployment of server infrastructure.</p>
           <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">Take a look below at some of the projects I've been working on or check out my <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="underline text-purple-400">GitHub</a>!</p>
         </div>
       </div>
