@@ -8,14 +8,10 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Raleway`,
-            subsets: [`latin`],
-            variants: [`400`, `500`]
-          },
+            `Raleway`,
         ],
       },
     },
