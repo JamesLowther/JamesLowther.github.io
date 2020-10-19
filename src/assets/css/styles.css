@@ -4,6 +4,6 @@
 
 .subtitle-typing:before {
   content: "root@james:~$ ";
-  color: #051047;
+  color: #2f224d;
   font-weight: bold;
 }

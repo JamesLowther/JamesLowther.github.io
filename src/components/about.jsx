@@ -27,9 +27,13 @@ const About = () => {
             className="rounded-full"
           />
         </div>
-          <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum, lacus at pulvinar venenatis, ipsum diam egestas enim, nec iaculis nibh orci eu lectus. Mauris sodales tristique lacus, a pharetra quam aliquam ut. Integer rutrum massa nec nisi fringilla venenatis. Ut ac maximus lectus, id elementum nibh. Sed a condimentum purus. Nam sed odio ac ligula dictum vestibulum non non nunc. Vivamus eleifend, magna eu dictum consequat, ligula nunc congue felis, nec vulputate ipsum nisi in risus. Sed suscipit lacus quis eleifend imperdiet. Fusce semper lacus id ipsum tincidunt, sed facilisis sapien finibus. Duis lorem elit, laoreet pulvinar commodo quis, lacinia nec justo. Etiam ultrices suscipit enim, eget tincidunt ante tincidunt et. Integer non lorem varius, euismod ex a, bibendum nunc.</p>
+        <div>
+          <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">Hello!</p>
+          <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">My name is James Lowther and I'm a fourth-year computer science student at the University of Calgary. Some of my interests include participating in CTF (Capture-the-flag) hacking competitions and creating educational material related to information security. I have a passion for infosec and also enjoy learning about proper methods for deployment of server infrastructure.</p>
+          <p class="text-white text-2xl mt-6 md:ml-16 md:mr-16">Take a look below at some of the projects I've been working on!</p>
+        </div>
       </div>
-      <div class="border bg-blue-700 rounded-full py-2 px-3 m-8 w-6/7 lg:w-1/2 mx-auto text-white text-2xl">
+      <div class="border-2 bg-blue-700 rounded-lg py-2 px-3 m-8 w-6/7 lg:w-1/2 mx-auto text-white text-2xl">
         <Terminal/>
       </div>
     </div>

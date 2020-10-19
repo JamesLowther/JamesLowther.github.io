@@ -34,7 +34,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.29.0",
-    "react-starfield-animation": "^1.0.1",
+    "react-sizeme": "^2.6.12",
     "react-typist-repacked": "^1.0.0",
     "styled-components": "^5.2.0",
     "tailwind": "^4.0.0"
