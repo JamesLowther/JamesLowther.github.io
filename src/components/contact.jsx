@@ -45,7 +45,7 @@ const Contact = () => {
               <p class="text-white text-4xl">Send me an email at:</p>
               <p class="text-gray-900 text-3xl">jamesevlowther@gmail.com</p>
             </div>
-            <a href="/static/james-lowther-resume.pdf">
+            <a href="/static/james-lowther-resume.pdf" target="_blank">
               <div class="rounded-lg bg-gray-600 hover:bg-gray-700 mx-6 p-3 mt-6">
                 <p class="text-white text-3xl">Download Resume</p>
               </div>
@@ -53,13 +53,13 @@ const Contact = () => {
           </div>
         </div>
         <div class="mt-12">
-          <a href="https://github.com/JamesLowther/" class="mx-6 transform hover:scale-103">
+          <a href="https://github.com/JamesLowther/" target="_blank" class="mx-6 transform hover:scale-103">
             <Img
               fluid={data.github.childImageSharp.fluid} 
               className="w-16 inline-block"
             />
           </a>
-          <a href="https://www.linkedin.com/in/jameselowther/" class="mx-6 transform hover:scale-103">
+          <a href="https://www.linkedin.com/in/jameselowther/" target="_blank" class="mx-6 transform hover:scale-103">
             <Img
               fluid={data.linkedin.childImageSharp.fluid} 
               className="w-16 inline-block"
