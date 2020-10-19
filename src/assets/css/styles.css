@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.subtitle-typing:before {
+  content: "root@james:~$ ";
+  color: #051047;
+  font-weight: bold;
+}
