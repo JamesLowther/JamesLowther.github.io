@@ -6,7 +6,7 @@ import Terminal from "../components/terminal";
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: {eq: "head-2.jpg"}) {
+      file(relativePath: {eq: "head.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid_withWebp
