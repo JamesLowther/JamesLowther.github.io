@@ -9,7 +9,7 @@ const InfosecProject = () => {
       <InfosecIcon className="w-4/5 md:w-1/3 h-auto" />
       <div class="w-full md:w-2/3">
         <p class="text-white text-4xl mb-8 font-header">InfoSec Club UCalgary</p>
-        <p class="text-white text-2xl mb-8">Technical director for the Information Security Club at the University of Calgary. Prepared and taught beginner and advanced workshops at weekly club meetings. Administrated server infrastructure and managed front-end development the for club website.</p>
+        <p class="text-white text-2xl mb-8">Technical Director for the Information Security Club at the University of Calgary. Prepared and taught beginner and advanced workshops at weekly club meetings. Administrated server infrastructure and managed front-end development the for club website.</p>
         <div class="text-center md:text-left">
           <a class="text-2xl text-white underline" href="https://infosecucalgary.ca/" target="_blank" rel="noreferrer">https://infosecucalgary.ca/</a>
         </div>
