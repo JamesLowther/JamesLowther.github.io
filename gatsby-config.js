@@ -6,6 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `James Lowther`,
+    description: `Personal website for James Lowther`,
+    siteUrl: `https://www.jameslowther.com`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,
