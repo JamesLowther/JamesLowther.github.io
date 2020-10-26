@@ -22,8 +22,6 @@ export default class Lightbox extends React.Component {
       array.push(<NonStretchedImage fluid={image.node.childImageSharp.fluid} />)
     )
 
-    console.log(array);
-
     return (
       <div>
         <button type="button" onClick={() => this.setState({ isOpen: true })}>
