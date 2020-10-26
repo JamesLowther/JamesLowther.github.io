@@ -30,7 +30,8 @@ module.exports = {
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
-        whitelistPatterns: [/ril__/],
+        //whitelistPatterns: [/ril__/],
+        ignore: ['lightbox-react/'],
       }
     },
     {
