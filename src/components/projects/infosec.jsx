@@ -63,11 +63,13 @@ const InfosecProject = () => {
           />
         </div>
         <div class="text-center md:text-left mt-10">
-          <Lightbox 
-            text="View Gallery"
-            textClass="px-6 py-2 text-white text-xl bg-blue-500 hover:bg-blue-700 rounded-md mb-6"
-            images={data.gallery.edges}
-          />
+          <div class="mb-6">
+            <Lightbox 
+              text="View Gallery"
+              textClass="px-6 py-2 text-white text-xl bg-blue-500 hover:bg-blue-700 rounded-md"
+              images={data.gallery.edges}
+            />
+          </div>
           <a class="text-2xl text-white underline" href="https://infosecucalgary.ca/" target="_blank" rel="noreferrer">https://infosecucalgary.ca/</a>
         </div>
       </div>

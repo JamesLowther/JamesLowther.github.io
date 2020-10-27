@@ -39,11 +39,13 @@ const MagpieCTFProject = () => {
         <span class="text-pink-400"> Docker</span>, <span class="text-pink-400">Watchtower</span>, <span class="text-pink-400">Terraform</span>, <span class="text-pink-400">DigitalOcean</span>, <span class="text-pink-400">Cloudflare</span>, and <span class="text-pink-400">Google Cloud</span>. 
         Created challenges with pre-defined vulnerabilities for the categories of web exploitation, forensics, and networks. Created art and assets to help market the event.</p>
         <div class="text-center md:text-left">
-          <Lightbox 
-            text="View Gallery"
-            textClass="px-6 py-2 text-white text-xl bg-purple-600 hover:bg-purple-700 rounded-md mb-6"
-            images={data.gallery.edges}
-          />
+          <div class="mb-6">
+            <Lightbox 
+              text="View Gallery"
+              textClass="px-6 py-2 text-white text-xl bg-purple-600 hover:bg-purple-700 rounded-md"
+              images={data.gallery.edges}
+            />
+          </div>
           <a class="text-2xl text-white underline" href="https://magpiectf.ca/" target="_blank" rel="noreferrer">https://magpiectf.ca/</a>
         </div>
       </div>
