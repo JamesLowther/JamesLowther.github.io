@@ -36,7 +36,7 @@ const InfosecProject = () => {
             class="mx-auto p-2"
             width="300" 
             height="200" 
-            src="https://www.youtube.com/embed/KQSlSHGt9g8" f
+            src="https://www.youtube.com/embed/KQSlSHGt9g8"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
@@ -46,7 +46,7 @@ const InfosecProject = () => {
             class="mx-auto p-2"
             width="300" 
             height="200" 
-            src="https://www.youtube.com/embed/UtWZ0dNIslE" f
+            src="https://www.youtube.com/embed/UtWZ0dNIslE"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
@@ -56,7 +56,7 @@ const InfosecProject = () => {
             class="mx-auto p-2"
             width="300" 
             height="200" 
-            src="https://www.youtube.com/embed/yqSC6unNcus" f
+            src="https://www.youtube.com/embed/yqSC6unNcus"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
