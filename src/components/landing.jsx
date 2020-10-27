@@ -28,7 +28,7 @@ const Landing = () => {
 
   return (
     <StyledBackgroundSection>
-      <section id="landing" class="w-full sm:h-screen">
+      <section id="landing" class="w-full lg:h-screen">
         <div class="flex flex-col justify-center items-center h-full overflow-auto">
           <div class="flex flex-row mt-6 mb-6">
             <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103">
