@@ -17,3 +17,11 @@
   color: #2f224d;
   font-weight: bold;
 }
+
+.ril-image-current {
+	pointer-events: none;
+}
+
+/* .ril-image-current .gatsby-image-wrapper {
+	pointer-events: all;
+} */

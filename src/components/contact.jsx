@@ -44,9 +44,9 @@ const Contact = () => {
             <p class="text-white text-2xl mt-2 font-header">Calgary, AB, Canada</p>
           </div>
           <div class = "flex flex-col items-center">
-            <div class="rounded bg-blue-500 mx-6 p-6 mb-4">
+            <div class="rounded bg-blue-500 mx-6 p-1 sm:p-6 mb-4">
               <p class="text-white text-4xl font-display">Send me an email at:</p>
-              <p class="text-gray-800 text-3xl font-display"><a class="underline" href="mailto:jamesevlowther@gmail.com">jamesevlowther@gmail.com</a></p>
+              <p class="text-gray-800 text-2xl sm:text-3xl font-display"><a class="underline" href="mailto:jamesevlowther@gmail.com">jamesevlowther@gmail.com</a></p>
             </div>
             <a href="/static/james-lowther-resume.pdf" target="_blank" rel="noreferrer">
               <div class="rounded-lg bg-gray-600 hover:bg-gray-700 mx-6 p-3 mt-6">

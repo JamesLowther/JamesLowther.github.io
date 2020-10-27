@@ -45,7 +45,7 @@ const Landing = () => {
             </a>
           </div>
           <div class="my-auto w-3/4 md:w-1/2 p-10 rounded-lg bg-white bg-opacity-65">
-            <p class="text-5xl tracking-widest font-header">JAMES LOWTHER</p>
+            <p class="text-3xl sm:text-5xl tracking-widest font-header">JAMES LOWTHER</p>
             <p class="text-xl font-display mt-2">Currently attending my fourth year of schooling at the Univerity of Calgary pursuing a degree in computing science. Interested in cybersecurity and both front-end and back-end development.</p>
             <p class="text-xl font-display mt-4">Located in Calgary, Alberta</p>
 
