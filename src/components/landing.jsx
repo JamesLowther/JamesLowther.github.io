@@ -28,7 +28,7 @@ const Landing = () => {
 
   return (
     <StyledBackgroundSection>
-      <section id="landing" class="w-full h-screen">
+      <section id="landing" class="w-full sm:h-screen">
         <div class="flex flex-col justify-center items-center h-full overflow-auto">
           <div class="flex flex-row mt-6 mb-6">
             <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103">
@@ -44,7 +44,7 @@ const Landing = () => {
               />
             </a>
           </div>
-          <div class="my-auto w-3/4 md:w-1/2 p-10 rounded-lg bg-white bg-opacity-65">
+          <div class="my-auto w-3/4 md:w-1/2 p-3 sm:p-10 rounded-lg bg-white bg-opacity-65">
             <p class="text-3xl sm:text-5xl tracking-widest font-header">JAMES LOWTHER</p>
             <p class="text-xl font-display mt-2">Currently attending my fourth year of schooling at the Univerity of Calgary pursuing a degree in computing science. Interested in cybersecurity and both front-end and back-end development.</p>
             <p class="text-xl font-display mt-4">Located in Calgary, Alberta</p>
