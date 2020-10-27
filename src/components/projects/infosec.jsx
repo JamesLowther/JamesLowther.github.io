@@ -52,7 +52,7 @@ const InfosecProject = () => {
             allowFullScreen
           />
           <iframe 
-            title="Beginner: Intro to Forensics"
+            title="Beginner: Intro to Web Exploitation"
             class="mx-auto p-2"
             width="300" 
             height="200" 
