@@ -29,11 +29,43 @@ const InfosecProject = () => {
       <InfosecIcon className="w-4/5 md:w-1/3 h-auto" />
       <div class="w-full md:w-2/3">
         <p class="text-white text-4xl mb-8 font-header">InfoSec Club UCalgary</p>
-        <p class="text-white text-2xl mb-8">Technical Director for the Information Security Club at the University of Calgary. Prepared and taught beginner and advanced workshops at weekly club meetings. Administrated server infrastructure and managed front-end development the for club website.</p>
-        <div class="text-center md:text-left">
+        <p class="text-white text-2xl mb-8">Technical Director for the Information Security Club at the University of Calgary. Prepared and taught beginner and advanced workshops at weekly club meetings. Administrated server infrastructure and managed front-end development the for club website. Managed junior executives who were interested in the server infrastructure side of the the club's operations.</p>
+        <div class="flex flex-wrap justify-center">
+          <iframe 
+            title="Beginner: Intro to Forensics"
+            class="mx-auto p-2"
+            width="300" 
+            height="200" 
+            src="https://www.youtube.com/embed/KQSlSHGt9g8" f
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          />
+          <iframe 
+            title="Advanced: Linux Privilege Escalation"
+            class="mx-auto p-2"
+            width="300" 
+            height="200" 
+            src="https://www.youtube.com/embed/UtWZ0dNIslE" f
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          />
+          <iframe 
+            title="Beginner: Intro to Forensics"
+            class="mx-auto p-2"
+            width="300" 
+            height="200" 
+            src="https://www.youtube.com/embed/yqSC6unNcus" f
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          />
+        </div>
+        <div class="text-center md:text-left mt-10">
           <Lightbox 
             text="View Gallery"
-            textClass="px-4 py-2 text-white text-xl bg-indigo-500 hover:bg-indigo-700 rounded-md mb-6"
+            textClass="px-6 py-2 text-white text-xl bg-blue-500 hover:bg-blue-700 rounded-md mb-6"
             images={data.gallery.edges}
           />
           <a class="text-2xl text-white underline" href="https://infosecucalgary.ca/" target="_blank" rel="noreferrer">https://infosecucalgary.ca/</a>
