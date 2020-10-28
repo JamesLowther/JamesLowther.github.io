@@ -30,6 +30,7 @@ const BackgroundSection= ({ className, children }) => {
         numParticles="400"
         lineWidth="1.0"
         alphaFactor="0.8"
+        class="ril-image-current"
         style={{
           position: 'absolute',
           width: '100%',
