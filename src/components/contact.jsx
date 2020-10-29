@@ -56,13 +56,13 @@ const Contact = () => {
           </div>
         </div>
         <div class="mt-12">
-          <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6">
+          <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6" aria-label="Go to my GitHub page">
             <Img
               fluid={data.github.childImageSharp.fluid} 
               className="w-16 inline-block transform hover:scale-103"
             />
           </a>
-          <a href="https://www.linkedin.com/in/jameselowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103">
+          <a href="https://www.linkedin.com/in/jameselowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103" aria-label="Go to my LinkedIn page">
             <Img
               fluid={data.linkedin.childImageSharp.fluid} 
               className="w-16 inline-block transform hover:scale-103"
