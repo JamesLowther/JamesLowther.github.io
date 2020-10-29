@@ -31,13 +31,13 @@ const Landing = () => {
       <section id="landing" class="w-full lg:h-screen">
         <div class="flex flex-col justify-center items-center h-full overflow-auto">
           <div class="flex flex-row mt-6 mb-6">
-            <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103">
+            <a href="https://github.com/JamesLowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103" aria-label="Go to my GitHub page">
               <Img
                 fluid={data.github.childImageSharp.fluid} 
                 className="w-16"
               />
             </a>
-            <a href="https://www.linkedin.com/in/jameselowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103">
+            <a href="https://www.linkedin.com/in/jameselowther/" target="_blank" rel="noreferrer" class="mx-6 transform hover:scale-103" aria-label="Go to my LinkedIn page">
               <Img
                 fluid={data.linkedin.childImageSharp.fluid} 
                 className="w-16"

@@ -9,6 +9,7 @@ const SiteMetadata = ({title}) => {
       <title>{title}</title>
       <meta name="description" content="Personal website for James Lowther" />
       <link rel="canonical" href="http://jameslowther.com" />
+      <html lang="en" />
     </Helmet>
   )
 }
