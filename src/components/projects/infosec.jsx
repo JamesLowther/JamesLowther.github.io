@@ -32,10 +32,20 @@ const InfosecProject = () => {
         <p class="text-white text-2xl mb-8">Technical Director for the Information Security Club at the University of Calgary. Prepared and taught beginner and advanced workshops at weekly club meetings. Administrated server infrastructure and managed front-end development the for club website. Managed junior executives who were interested in the server infrastructure side of the the club's operations.</p>
         <div class="flex flex-wrap justify-center">
           <iframe 
+            title="Beginner: Intro to SQL Injection"
+            class="mx-auto p-2"
+            width="400" 
+            height="300" 
+            src="https://www.youtube.com/embed/0_9Jp8jCUTM"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          />
+          <iframe 
             title="Beginner: Intro to Forensics"
             class="mx-auto p-2"
-            width="300" 
-            height="200" 
+            width="400" 
+            height="300" 
             src="https://www.youtube.com/embed/KQSlSHGt9g8"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -44,8 +54,8 @@ const InfosecProject = () => {
           <iframe 
             title="Advanced: Linux Privilege Escalation"
             class="mx-auto p-2"
-            width="300" 
-            height="200" 
+            width="400" 
+            height="300" 
             src="https://www.youtube.com/embed/UtWZ0dNIslE"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -54,8 +64,8 @@ const InfosecProject = () => {
           <iframe 
             title="Beginner: Intro to Web Exploitation"
             class="mx-auto p-2"
-            width="300" 
-            height="200" 
+            width="400" 
+            height="300" 
             src="https://www.youtube.com/embed/yqSC6unNcus"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
