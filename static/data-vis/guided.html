@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Final Hand-in - Guided</title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3-fetch.v1.js"></script>
+  <script src="index.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet"> 
+</head>
+<body class="bg-gray-900 text-white" style="font-family: 'Tomorrow', sans-serif;">
+  <div class="grid grid-cols-3 gap-4">
+    <div class="flex items-center">
+      <a href="index.html" class="text-2xl bg-gray-700 hover:bg-gray-800 m-4 px-4 py-2 rounded-lg">Back</a>
+    </div>
+    <p class="text-center text-4xl font-bold mt-3">
+      Page <span id="slide-number"></span> of <span id="total-num-slides"></span>
+    </p>
+  </div>
+
+  <div class="flex flex-row justify-around items-center">
+    <button onclick="prev_slide()" class="transform hover:-translate-x-1">
+      <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="gray" width="60">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="flex flex-row w-3/4 my-8">
+      <div class="flex flex-row items-center text-xl w-1/3 bg-gray-800 px-8 py-4 rounded-lg overflow-x-auto">
+        <div class="flex flex-col text-right font-bold mr-4">
+          <p>Category:</p>
+          <p class="mt-2">x-axis:</p>
+          <p class="mt-2">y-axis:</p>
+        </div>
+        <div>
+          <p><span id="category"></span></p>
+          <p class="mt-2"><span id="x-axis"></span></p>
+          <p class="mt-2"><span id="y-axis"></span></p>
+        </div>
+      </div>
+      <p class="ml-8 text-xl w-2/3 bg-gray-800 px-8 py-4 rounded-lg overflow-x-auto" id="description"></p>
+    </div>
+    <button onclick="next_slide()" class="transform hover:translate-x-1">
+      <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="60">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+	<div id="charts" class="flex flex-wrap justify-center mb-4"></div>
+	<script>
+		var current_slide = 0;
+		var slides = [
+			{
+	      description: "First we can draw a comparison between a person's familiarity with the NSA and their opinion of the NSA based on their technical proficieny. We can see that people who are very proficient with tech have a higher level of familiarity with the NSA than people who are not. General opinion of the NSA tends to trend negatively for all levels of technical proficiency, but this negative trend becomes more pronounced as technical proficiency increases.",
+		    color: 0,
+        measure0: "Technical proficiency",
+        xaxis: "Familiarity with NSA",
+        yaxis: "General opinion of NSA"
+      },
+      {
+				description: "Test 2",
+				color: 0,
+				measure0: "Country",
+				xaxis: "Overall concern",
+				yaxis: "Change in opinion of NSA"
+      },
+      {
+				description: "Test 3",
+				color: 0,
+				measure0: "Technical proficiency",
+				xaxis: "Familiarity with NSA",
+				yaxis: "Familiarity with Snowden"
+			}
+		]
+
+		function next_slide() {
+			if (current_slide + 1 >= slides.length) return;
+      current_slide++;
+  
+      update_arrow_colors()
+      make_charts();
+		}
+
+		function prev_slide() {
+			if (current_slide - 1 < 0) return;
+      current_slide--;
+  
+      update_arrow_colors()
+			make_charts();
+    }
+    
+    function update_arrow_colors() {
+      let left_arrow = d3.select("#left-arrow");
+      let right_arrow = d3.select("#right-arrow");
+
+      if (current_slide + 1 >= slides.length) {
+        right_arrow.attr("stroke", "gray");
+      } else {
+        right_arrow.attr("stroke", "white");
+      }
+
+      if (current_slide + 1 <= 1) {
+        left_arrow.attr("stroke", "gray");
+      } else {
+        left_arrow.attr("stroke", "white");
+      }
+
+    }
+
+		function make_charts() {
+      let graph_css = "mx-4 my-3 rounded-lg border-2 border-gray-200";
+      let graph_x = 790;
+      let graph_y = 350;
+
+      let slide = slides[current_slide];
+      let selectors = values[slide.measure0];
+
+      d3.select("#slide-number").text(current_slide + 1);
+      d3.select("#total-num-slides").text(slides.length);
+
+      d3.select("#category").text(slide.measure0);
+      d3.select("#x-axis").text(slide.xaxis);
+      d3.select("#y-axis").text(slide.yaxis);
+
+      d3.select("#description").text(slide.description);
+
+      // Delete existing charts
+      d3.select("#charts").selectAll(".chart").remove();
+
+      let charts_div = d3.select("#charts");
+      let charts = charts_div.selectAll(".chart").data(selectors);
+
+      charts.enter()
+        .append("svg")
+        .attr("class", "chart " + graph_css)
+        .attr("id", (d, i) => ("vis" + i + "-" + current_slide))
+        .attr("viewbox", "0 0 " + graph_x + " " + graph_y)
+        .attr("width", graph_x)
+        .attr("height", graph_y)
+        .append("rect")
+        .attr("class", "bg")
+        .each((d, i) => makeChart("vis" + i + "-" + current_slide, slide.measure0, d, slide.xaxis, slide.yaxis, slide.color));
+    }
+    
+    document.addEventListener('keydown', function(event) {
+      if(event.keyCode == 37) {
+          prev_slide();
+      }
+      else if(event.keyCode == 39) {
+          next_slide();
+      }
+    });
+
+		make_charts();
+	</script>
+</body>
+</html>
