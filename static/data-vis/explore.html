@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Final Hand-in - Explore</title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3-fetch.v1.js"></script>
+  <script src="index.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet"> 
+</head>
+<body class="bg-gray-900 text-white" style="font-family: 'Tomorrow', sans-serif;">
+  <div class="grid grid-cols-3 gap-4">
+    <div class="flex items-center">
+      <a href="index.html" class="text-2xl bg-gray-700 hover:bg-gray-800 m-4 px-4 py-2 rounded-lg">Back</a>
+    </div>
+    <p class="text-center text-4xl font-bold mt-3">
+      Explore On Your Own
+    </p>
+  </div>
+
+  <div class="flex flex-row justify-around">
+    <div class="flex flex-row justify-around w-2/3 bg-gray-800 px-24 py-4 my-6 rounded-lg overflow-x-auto">
+      <div class="flex justify-center text-xl mx-4">
+        <div class="text-right inline-block font-bold mr-4">
+          <p class="">Category:</p>
+          <p class="mt-2">x-axis:</p>
+          <p class="mt-2">y-axis:</p>
+        </div>
+        <div class="inline-block text-black overflow-x-auto">
+          <select class="block p-1 rounded-md bg-gray-200 w-full" name="category" id="category" onchange="make_charts()">
+            <option value="Country">Country</option>
+            <option value="Technical proficiency">Technical proficiency</option>
+          </select>
+          <select class="block mt-1 p-1 rounded-md bg-gray-200" name="x-axis" id="x-axis" onchange="make_charts()">
+            <option value="General opinion of NSA">General opinion of NSA</option>
+            <option value="Familiarity with NSA">Familiarity with NSA</option>
+            <option value="Familiarity with Snowden">Familiarity with Snowden</option>
+            <option value="Change in opinion of NSA">Change in opinion of NSA</option>
+            <option value="Overall concern">Overall concern</option>
+            <option value="Change in infosec awareness">Change in infosec awareness</option>
+          </select>
+          <select class="block mt-1 p-1 rounded-md bg-gray-200" name="y-axis" id="y-axis" onchange="make_charts()">
+            <option value="General opinion of NSA">General opinion of NSA</option>
+            <option value="Familiarity with NSA">Familiarity with NSA</option>
+            <option value="Familiarity with Snowden">Familiarity with Snowden</option>
+            <option value="Change in opinion of NSA">Change in opinion of NSA</option>
+            <option value="Overall concern">Overall concern</option>
+            <option value="Change in infosec awareness">Change in infosec awareness</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex flex-col text-xl mx-4">
+        <p class="text-center font-bold mb-1">Colour</p>
+        <select class="h-10 text-black rounded-md bg-gray-200 w-40 text-center" name="color" id="color" onchange="make_charts()">
+          <option value="0">Rainbow</option>
+          <option value="1">Spectral</option>
+          <option value="2">RdYlGn</option>
+          <option value="3">Sinebow</option>
+          <option value="4">Cool</option>
+        </select>
+      </div>
+    </div>
+  </div>
+	<div id="charts" class="flex flex-wrap justify-center"></div>
+	<script>
+	  function make_charts() {
+      let graph_css = "mx-4 my-3 rounded-lg border-2 border-gray-200";
+      let graph_x = 790;
+      let graph_y = 350;
+
+      let category = document.getElementById("category").value;
+      let xaxis = document.getElementById("x-axis").value;
+      let yaxis = document.getElementById("y-axis").value;
+      let color = document.getElementById("color").value;
+
+      let selectors = values[category];
+
+      // Delete existing charts
+      d3.select("#charts").selectAll(".chart").remove();
+
+      let charts_div = d3.select("#charts");
+      let charts = charts_div.selectAll(".chart").data(selectors);
+
+      charts.enter()
+        .append("svg")
+        .attr("class", "chart " + graph_css)
+        .attr("id", (d, i) => ("vis" + i))
+        .attr("viewbox", "0 0 " + graph_x + " " + graph_y)
+        .attr("width", graph_x)
+        .attr("height", graph_y)
+        .append("rect")
+        .attr("class", "bg")
+        .each((d, i) => makeChart("vis" + i, category, d, xaxis, yaxis, color));
+    }
+
+		make_charts();
+	</script>
+</body>
+</html>
