@@ -4,6 +4,7 @@ import StyledProjectsBackground from "./projectsbackground"
 import InfosecProject from "./projects/infosec"
 import MagpieCTFProject from "./projects/magpiectf"
 import RumpusKingdomsProject from "./projects/rumpuskingdoms"
+import DataVisProject from "./projects/datavis"
 
 const Projects = () => {
 
@@ -21,8 +22,11 @@ const Projects = () => {
             <div class="mb-16">
               <MagpieCTFProject />
             </div>
-            <div>
+            <div class="mb-16">
               <RumpusKingdomsProject />
+            </div>
+            <div>
+              <DataVisProject />
             </div>
           </div>
         </div>
