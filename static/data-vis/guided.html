@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Final Hand-in - Guided</title>
+	<title>CPSC 583 Data Vis - Guided</title>
 	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="https://d3js.org/d3-fetch.v1.js"></script>
@@ -20,28 +20,31 @@
     </p>
   </div>
 
-  <div class="flex flex-row justify-around items-center">
-    <button onclick="prev_slide()" class="transform hover:-translate-x-1">
+  <div class="flex flex-row justify-around items-start">
+    <button onclick="prev_slide()" class="transform hover:-translate-x-1 my-16">
       <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="gray" width="60">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
       </svg>
     </button>
     <div class="flex flex-row w-3/4 my-8">
-      <div class="flex flex-row items-center text-xl w-1/3 bg-gray-800 px-8 py-4 rounded-lg overflow-x-auto">
-        <div class="flex flex-col text-right font-bold mr-4">
-          <p>Category:</p>
-          <p class="mt-2">x-axis:</p>
-          <p class="mt-2">y-axis:</p>
+      <div id="graph-info" class="flex flex-row text-xl w-1/3 bg-gray-800 px-5 py-4 rounded-lg overflow-x-auto">
+        <div class="flex flex-col justify-around text-right font-bold mr-4">
+          <p class="">Category:</p>
+          <p class="mt-8">x-axis:</p>
+          <p class="mt-10 mb-4">y-axis:</p>
         </div>
-        <div>
-          <p><span id="category"></span></p>
-          <p class="mt-2"><span id="x-axis"></span></p>
-          <p class="mt-2"><span id="y-axis"></span></p>
+        <div class="flex flex-col justify-around">
+          <p><span id="category"></span><br><span class="text-lg italic" id="category-levels"></span></p>
+          <p class="mt-4"><span id="x-axis"></span><br><span class="text-lg italic" id="x-axis-levels"></span></p>
+          <p class="mt-4"><span id="y-axis"></span><br><span class="text-lg italic" id="y-axis-levels"></span></p>
         </div>
       </div>
-      <p class="ml-8 text-xl w-2/3 bg-gray-800 px-8 py-4 rounded-lg overflow-x-auto" id="description"></p>
+      <div class="flex flex-col ml-8 text-xl w-full bg-gray-800 px-8 py-4 rounded-lg overflow-x-auto">
+        <p class="" id="description"></p>
+        <p class="mt-6" id="description2"></p>
+      </div>
     </div>
-    <button onclick="next_slide()" class="transform hover:translate-x-1">
+    <button onclick="next_slide()" class="transform hover:translate-x-1 my-16">
       <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="60">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
       </svg>
@@ -51,24 +54,51 @@
 	<script>
 		var current_slide = 0;
 		var slides = [
+      {
+	      description: "The following pages will walk you through different relationships within the data set and show a visualization for each. Each page will display what dimensions are being used on the x-axis and y-axis, and what category is being used to split the up visualizations. How many levels for each dimension will also be shown, often ranging from 'Not familiar at all' to 'Very familiar' or 'Greatly diminished' to 'Greatly improved' depending on the qusetion being asked. A short description will also be given describing the visualizations and possible conslusions derived from the relationships displayed. The actual visualizations will be shown underneath.",
+        description2: "Each line in the visualization represents an individual data point from a response from an online survey. Each circle on the visualization represents a combination of the two dimensions being shown. The radius of each circle shows how many data points fit its criteria. Moving your mouse over a circle on a visualization will show what two dimensions it represents and the number of data points that fit those criteria. Moving your mouse over a line will show its two dimensions and the timestamp for when that data point was collected.",
+		    color: 0,
+        measure0: null,
+        xaxis: null,
+        yaxis: null
+      },
 			{
-	      description: "First we can draw a comparison between a person's familiarity with the NSA and their opinion of the NSA based on their technical proficieny. We can see that people who are very proficient with tech have a higher level of familiarity with the NSA than people who are not. General opinion of the NSA tends to trend negatively for all levels of technical proficiency, but this negative trend becomes more pronounced as technical proficiency increases. This shows that generally people who are more knowledgeable about the NSA tend to have a negative opinion of them, and both knowledge of the NSA and dislike increases along with technical proficiency.",
+	      description: "First we can draw a comparison between a person's familiarity with the NSA and their opinion of the NSA based on their technical proficiency. We can see that people who are very proficient with technology have a higher level of familiarity with the NSA than people who are not. The general opinion of the NSA tends to trend negatively for all levels of technical proficiency, but this negative trend becomes more pronounced as technical proficiency increases.",
+        description2: "This generally shows that people who are more knowledgeable about the NSA tend to have a negative opinion on the agency, and both knowledge of the NSA and dislike of NSA practices increases along with a person's technical proficiency.",
 		    color: 0,
         measure0: "Technical proficiency",
         xaxis: "Familiarity with NSA",
         yaxis: "General opinion of NSA"
       },
       {
-				description: "Test 2",
-				color: 0,
-				measure0: "Country",
-				xaxis: "Overall concern",
-				yaxis: "Change in opinion of NSA"
-      },
-      {
-				description: "Test 3",
+				description: "Next we can look at the relationship between familiarity with the NSA and familiarity with the actions Edward Snowden regarding the NSA. As might be expected, there is high familiarity with both the NSA and Snowden for people who are 'reasonably proficient' and 'very proficient' with technology. As technical proficiency decreases the data points get more evenly distributed between all levels of familiarity on the two axes.",
+        description2: "This indicates that a person's technical proficiency has an impact on their familiarity with the NSA and on Snowden, and those with higher technical proficiency seem to be more familiar with both compared to those who are less technically literate.",
 				color: 0,
 				measure0: "Technical proficiency",
+				xaxis: "Familiarity with NSA",
+				yaxis: "Familiarity with Snowden" 
+      },
+      {
+				description: "Here we can see that for all levels of technical proficiency people, for the most part, have a high level of familiarity with Edward Snowden and his relationship with NSA activities. We can also see that people with higher levels of familiarity with Snowden tend to also have higher levels of overall concern about the revelations regarding the NSA.",
+        description2: "The largest group in the very proficient category, with a count of 59 responses, is 'very familiar' with Edward Snowden's actions and also has a 'very concerned' overall concern. Just like the previous relationships, concern and familiarity increases alongside technical proficiency, however this time it is still high in all of the proficiency categories.",
+				color: 0,
+				measure0: "Technical proficiency",
+				xaxis: "Familiarity with Snowden",
+				yaxis: "Overall concern"
+      },
+      {
+				description: "Here we are showing how change a in a person's opinion of the NSA relates to how much a person's awareness of information security has changed. For the 'resonably proficient' and 'very proficient' technical literacy data points, the strongest increase in information security awareness was when the opinion on the NSA was very diminished. This correlation is not a strong for lesser technical proficiencies.",
+        description2: "This may show that people who are already technically literate may find it easier to increase their information security awareness compared to those who are less experienced with technology. It also shows that people who have had their opinion of the NSA decrease are more likely to have increased awareness of their privacy rights in the online world.",
+				color: 0,
+				measure0: "Technical proficiency",
+				xaxis: "Change in opinion of NSA",
+				yaxis: "Change in infosec awareness"
+      },
+      {
+				description: "Here we are showing how familiar people are about the NSA and the actions of Edward Snowden based on their current country of residence. It looks like most of the participants in the survey are from the USA, and a large percent of those data points have high familiarity with both the NSA and Snowden. For other countries, like the EU, familiarity is still quite high despite the two entities in question being primarily based in the USA.",
+        description2: "This may indicate that news regarding the NSA and Edward Snowden has a large presence on the international stage and was reported on throughout the world. Despite the USA having the most responses in the data set, other countries still have a high level of familiarity which indicates the scale of the information brought forward by Edward Snowden about the NSA.",
+				color: 0,
+				measure0: "Country",
 				xaxis: "Familiarity with NSA",
 				yaxis: "Familiarity with Snowden"
 			}
@@ -109,38 +139,58 @@
     }
 
 		function make_charts() {
-      let graph_css = "mx-4 my-3 rounded-lg border-2 border-gray-200";
-      let graph_x = 790;
-      let graph_y = 350;
 
       let slide = slides[current_slide];
-      let selectors = values[slide.measure0];
+      // Delete existing charts
+      d3.select("#charts").selectAll(".chart").remove();
 
       d3.select("#slide-number").text(current_slide + 1);
       d3.select("#total-num-slides").text(slides.length);
 
-      d3.select("#category").text(slide.measure0);
-      d3.select("#x-axis").text(slide.xaxis);
-      d3.select("#y-axis").text(slide.yaxis);
-
       d3.select("#description").text(slide.description);
+      d3.select("#description2").text(slide.description2);
 
-      // Delete existing charts
-      d3.select("#charts").selectAll(".chart").remove();
+      if (!(slide.measure0 == null || slide.xaxis == null && slide.yaxis == null)) {
+        let graph_css = "mx-4 my-3 rounded-lg border-2 border-gray-200";
+        let graph_x = 790;
+        let graph_y = 350;
 
-      let charts_div = d3.select("#charts");
-      let charts = charts_div.selectAll(".chart").data(selectors);
+        let selectors = values[slide.measure0];
 
-      charts.enter()
-        .append("svg")
-        .attr("class", "chart " + graph_css)
-        .attr("id", (d, i) => ("vis" + i + "-" + current_slide))
-        .attr("viewbox", "0 0 " + graph_x + " " + graph_y)
-        .attr("width", graph_x)
-        .attr("height", graph_y)
-        .append("rect")
-        .attr("class", "bg")
-        .each((d, i) => makeChart("vis" + i + "-" + current_slide, slide.measure0, d, slide.xaxis, slide.yaxis, slide.color));
+        d3.select("#graph-info")
+          .style("display", "");
+
+        d3.select("#category").text(slide.measure0);
+        d3.select("#category-levels").text("(" + values[slide.measure0].length + " levels)");
+        d3.select("#x-axis").text(slide.xaxis);
+        d3.select("#x-axis-levels").text("(" + values[slide.xaxis].length + " levels)");
+        d3.select("#y-axis").text(slide.yaxis);
+        d3.select("#y-axis-levels").text("(" + values[slide.yaxis].length + " levels)");
+
+        let charts_div = d3.select("#charts");
+        let charts = charts_div.selectAll(".chart").data(selectors);
+
+        charts.enter()
+          .append("svg")
+          .attr("class", "chart " + graph_css)
+          .attr("id", (d, i) => ("vis" + i + "-" + current_slide))
+          .attr("viewbox", "0 0 " + graph_x + " " + graph_y)
+          .attr("width", graph_x)
+          .attr("height", graph_y)
+          .append("rect")
+          .attr("class", "bg")
+          .each((d, i) => makeChart("vis" + i + "-" + current_slide, slide.measure0, d, slide.xaxis, slide.yaxis, slide.color));
+      } else {
+        d3.select("#category").text("");
+        d3.select("#category-levels").text("");
+        d3.select("#x-axis").text("");
+        d3.select("#x-axis-levels").text("");
+        d3.select("#y-axis").text(slide.yaxis);
+        d3.select("#y-axis-levels").text("");
+
+        d3.select("#graph-info")
+          .style("display", "none");
+      }
     }
     
     document.addEventListener('keydown', function(event) {
