@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import Lightbox from "../lightbox"
 import magpieCTFwebm from "../../assets/images/ctf-logo-v3.webm"
@@ -50,10 +49,6 @@ const MagpieCTFProject = () => {
           <a class="text-2xl text-white underline" href="https://magpiectf.ca/" target="_blank" rel="noreferrer">https://magpiectf.ca/</a>
         </div>
       </div>
-      {/* <Img 
-        fluid={data.logo.childImageSharp.fluid} 
-        className="w-4/5 md:w-1/3 rounded-full mx-4 mt-6" 
-      /> */}
       <video class="w-4/5 md:w-1/3 rounded-full mx-4 mt-6"  autoPlay={true} loop={true} muted={true}>
         <source src={magpieCTFwebm} type="video/webm" />
       </video>
