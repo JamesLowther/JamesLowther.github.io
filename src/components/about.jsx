@@ -12,6 +12,7 @@ const About = () => {
             <StaticImage
               src="../assets/images/head.jpg"
               className="rounded-full"
+              placeholder="blurred"
             />
           </div>
           <div>

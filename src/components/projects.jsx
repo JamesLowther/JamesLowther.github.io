@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full mx-auto pb-16 bg-black bg-opacity-50"
+      className="w-full mx-auto bg-black bg-opacity-50"
       style={{ display: "grid" }}
     >
       <StaticImage
@@ -20,7 +20,7 @@ const Projects = () => {
         layout="constrained"
       />
       <div
-        className="w-5/6 mx-auto pt-8"
+        className="w-5/6 mx-auto pt-8 pb-16"
         style={{
           gridArea: "1/1",
           position: "relative",

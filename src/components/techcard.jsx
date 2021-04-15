@@ -40,7 +40,9 @@ class TechCard extends React.Component {
           role="none"
         />
         {this.state.hover && (
-          <p className="text-white text-center text-xl mt-1">{this.props.name}</p>
+          <p className="text-white text-center text-xl mt-1">
+            {this.props.name}
+          </p>
         )}
       </div>
     )

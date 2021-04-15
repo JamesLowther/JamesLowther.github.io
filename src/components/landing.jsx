@@ -12,6 +12,7 @@ const Landing = () => {
         src="../assets/images/space-bg.jpg"
         style={{ gridArea: "1/1" }}
         layout="fullWidth"
+        placeholder="blurred"
       />
       <div
         className="flex flex-col justify-center items-center h-full overflow-auto"
@@ -33,6 +34,7 @@ const Landing = () => {
             <StaticImage
               src="../assets/images/github-light.png"
               className="w-16"
+              placeholder="blurred"
             />
           </a>
           <a
@@ -42,7 +44,11 @@ const Landing = () => {
             className="mx-6 transform hover:scale-103"
             aria-label="Go to my LinkedIn page"
           >
-            <StaticImage src="../assets/images/linkedin.png" className="w-16" />
+            <StaticImage
+              src="../assets/images/linkedin.png"
+              className="w-16"
+              placeholder="blurred"
+            />
           </a>
         </div>
         <div className="my-auto w-3/4 md:w-1/2 p-3 sm:p-10 rounded-lg bg-white bg-opacity-65">
@@ -54,7 +60,9 @@ const Landing = () => {
             Calgary pursuing a degree in computing science. Interested in
             cybersecurity and both front-end and back-end development.
           </p>
-          <p className="text-xl font-display mt-4">Located in Calgary, Alberta</p>
+          <p className="text-xl font-display mt-4">
+            Located in Calgary, Alberta
+          </p>
         </div>
         <div className="my-20 transform hover:translate-y-1">
           <svg
