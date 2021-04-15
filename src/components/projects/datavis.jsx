@@ -1,21 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { StaticImage } from "gatsby-plugin-image";
 
 const DataVisProject = () => {
-
-  const data = useStaticQuery(graphql`
-    query {
-      logo: file(relativePath: {eq: "datavis.png"}) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div class="flex flex-col md:flex-row items-center bg-gray-800 bg-opacity-45 rounded-lg p-12">
       <div class="w-full md:w-2/3">
@@ -25,12 +12,11 @@ const DataVisProject = () => {
           <Link class="text-2xl text-white underline" to="/data-vis">View Visualizations</Link>
         </div>
       </div>
-      <Img 
-        fluid={data.logo.childImageSharp.fluid} 
-        className="w-4/5 md:w-1/3 rounded-full mx-4 mt-6" 
-      />
+      <StaticImage
+        src="../../assets/images/data-vis.png"
+        className="w-4/5 md:w-1/3 rounded-full mx-4 mt-6" />
     </div>
-  )
+  );
 
 }
 

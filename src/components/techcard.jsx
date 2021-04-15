@@ -1,44 +1,48 @@
 import React from "react"
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 class TechCard extends React.Component {
   constructor(props) {
     super(props)
-    this.handleMouseHover = this.handleMouseHover.bind(this);
+
+    this.enableHover = this.enableHover.bind(this)
+    this.disableHover = this.disableHover.bind(this)
+
     this.state = {
-      isHovering: false,
-    };
+      hover: false,
+    }
   }
 
-  handleMouseHover() {
-    this.setState(this.toggleHoverState);
+  enableHover() {
+    this.setState({ hover: true })
+    console.log(this.props.name + " enable")
   }
 
-  toggleHoverState(state) {
-    return {
-      isHovering: !state.isHovering,
-    };
+  disableHover() {
+    this.setState({ hover: false })
+    console.log(this.props.name + " disable")
   }
 
   render() {
     return (
-      <div 
-        class="h-24 w-24 mb-8"
-        onMouseEnter={this.handleMouseHover} 
-        onMouseLeave={this.handleMouseHover}
-        role="none"
+      <div
+        id={this.props.name}
+        class="h-24 w-24 mb-4"
+        onMouseEnter={this.enableHover}
+        onMouseLeave={this.disableHover}
       >
-        <Img
-          fluid={this.props.fluid} 
+        <GatsbyImage
+          onMouseEnter={this.enableHover}
+          onMouseLeave={this.disableHover}
+          image={getImage(this.props.image)}
           className="w-16 mx-4"
         />
-        {
-          this.state.isHovering &&
+        {this.state.hover && (
           <p class="text-white text-center text-xl mt-1">{this.props.name}</p>
-        }
+        )}
       </div>
     )
   }
 }
 
-export default TechCard;
+export default TechCard
