@@ -9,17 +9,15 @@ const Landing = () => {
       style={{ display: "grid" }}
     >
       <StaticImage
-        src="../assets/images/landing-background.jpg"
+        src="../assets/images/space-bg.jpg"
         style={{ gridArea: "1/1" }}
         layout="fullWidth"
       />
       <div
         className="flex flex-col justify-center items-center h-full overflow-auto"
         style={{
-          // By using the same grid area for both, they are stacked on top of each other
           gridArea: "1/1",
           position: "relative",
-          // This centers the other elements inside the hero component
           placeItems: "center",
           display: "grid",
         }}

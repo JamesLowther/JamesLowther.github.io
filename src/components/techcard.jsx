@@ -30,12 +30,14 @@ class TechCard extends React.Component {
         className="h-24 w-24 mb-4"
         onMouseEnter={this.enableHover}
         onMouseLeave={this.disableHover}
+        role="none"
       >
         <GatsbyImage
           onMouseEnter={this.enableHover}
           onMouseLeave={this.disableHover}
           image={getImage(this.props.image)}
           className="w-16 mx-4"
+          role="none"
         />
         {this.state.hover && (
           <p className="text-white text-center text-xl mt-1">{this.props.name}</p>

@@ -1,13 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import StyledProjectsBackground from "../components/projectsbackground"
 import SiteMetadata from "../components/SEO"
 
 const NotFoundPage = () => {
   
   return (
-    <StyledProjectsBackground>
+    <section id="404">
       <SiteMetadata title="404: Not found" />
       <div className="w-full h-screen bg-black bg-opacity-50 text-white text-center flex items-center justify-center">
         <div>
@@ -15,7 +14,7 @@ const NotFoundPage = () => {
           <p className="text-5xl">Go back to <Link to="/" className="underline">Home</Link></p>
         </div>
       </div>
-    </StyledProjectsBackground>
+    </section>
   )
 
 }
