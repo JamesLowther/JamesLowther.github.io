@@ -9,10 +9,10 @@ const NotFoundPage = () => {
   return (
     <StyledProjectsBackground>
       <SiteMetadata title="404: Not found" />
-      <div class="w-full h-screen bg-black bg-opacity-50 text-white text-center flex items-center justify-center">
+      <div className="w-full h-screen bg-black bg-opacity-50 text-white text-center flex items-center justify-center">
         <div>
-          <p class="text-6xl font-header">404: Page not found</p>
-          <p class="text-5xl">Go back to <Link to="/" className="underline">Home</Link></p>
+          <p className="text-6xl font-header">404: Page not found</p>
+          <p className="text-5xl">Go back to <Link to="/" className="underline">Home</Link></p>
         </div>
       </div>
     </StyledProjectsBackground>

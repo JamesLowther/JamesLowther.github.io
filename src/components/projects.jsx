@@ -8,19 +8,19 @@ import DataVisProject from "./projects/datavis"
 const Projects = () => {
 
   return (
-    <section id="projects" class="w-full mx-auto pb-16 pt-8 bg-black bg-opacity-50">
-      <div class="w-5/6 mx-auto">
-        <div class="mb-12">
-          <p class="text-center text-white text-6xl font-header">Projects</p>
+    <section id="projects" className="w-full mx-auto pb-16 pt-8 bg-black bg-opacity-50">
+      <div className="w-5/6 mx-auto">
+        <div className="mb-12">
+          <p className="text-center text-white text-6xl font-header">Projects</p>
         </div>
-        <div class="flex flex-col justify-center">
-          <div class="mb-16">
+        <div className="flex flex-col justify-center">
+          <div className="mb-16">
             <InfosecProject/>
           </div>
-          <div class="mb-16">
+          <div className="mb-16">
             <MagpieCTFProject />
           </div>
-          <div class="mb-16">
+          <div className="mb-16">
             <RumpusKingdomsProject />
           </div>
           <div>

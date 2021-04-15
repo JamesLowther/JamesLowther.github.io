@@ -4,11 +4,11 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Navbar = () => {
   return (
-    <div class="invisible lg:visible fixed z-50 h-screen w-full flex pointer-events-none">
-      <div class="flex flex-col items-center justify-center pointer-events-auto rounded bg-white bg-opacity-95 w-16 p-4 ml-auto mr-6 my-auto">
+    <div className="invisible lg:visible fixed z-50 h-screen w-full flex pointer-events-none">
+      <div className="flex flex-col items-center justify-center pointer-events-auto rounded bg-white bg-opacity-95 w-16 p-4 ml-auto mr-6 my-auto">
         <button
           onClick={() => scrollTo("#landing")}
-          class="mb-8 w-10 h-10 transform hover:-translate-y-1"
+          className="mb-8 w-10 h-10 transform hover:-translate-y-1"
           aria-label="top"
         >
           <svg
@@ -26,22 +26,22 @@ const Navbar = () => {
           </svg>
         </button>
         <button onClick={() => scrollTo("#about")} aria-label="about">
-          <div class="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
-            <p class="">About</p>
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+            <p className="">About</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#projects")} aria-label="projects">
-          <div class="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
             <p>Projects</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#skills")} aria-label="skills">
-          <div class="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
             <p>Skills</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#contact")} aria-label="contact">
-          <div class="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
             <p>Contact</p>
           </div>
         </button>

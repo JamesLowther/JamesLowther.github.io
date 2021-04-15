@@ -4,12 +4,12 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const DataVisProject = () => {
   return (
-    <div class="flex flex-col md:flex-row items-center bg-gray-800 bg-opacity-45 rounded-lg p-12">
-      <div class="w-full md:w-2/3">
-        <p class="text-white text-4xl font-header mb-8">Data Visualization</p>
-        <p class="text-white text-2xl mb-8">Data visualization created for CPSC 583: Introduction to Information Visualization at the University of Calgary. Visualizations are created from a data set that contains responses to an online survey asking participants to answer questions related to Edward Snowden and information released about the NSA. Some questions asked include information about a person's technical proficiency, nationality, and change in opinion about a variety of topics. Created using <span class="text-indigo-400">d3.js</span> and <span class="text-indigo-400">TailwindCSS</span>.</p>
-        <div class="text-center md:text-left">
-          <Link class="text-2xl text-white underline" to="/data-vis">View Visualizations</Link>
+    <div className="flex flex-col md:flex-row items-center bg-gray-800 bg-opacity-45 rounded-lg p-12">
+      <div className="w-full md:w-2/3">
+        <p className="text-white text-4xl font-header mb-8">Data Visualization</p>
+        <p className="text-white text-2xl mb-8">Data visualization created for CPSC 583: Introduction to Information Visualization at the University of Calgary. Visualizations are created from a data set that contains responses to an online survey asking participants to answer questions related to Edward Snowden and information released about the NSA. Some questions asked include information about a person's technical proficiency, nationality, and change in opinion about a variety of topics. Created using <span className="text-indigo-400">d3.js</span> and <span className="text-indigo-400">TailwindCSS</span>.</p>
+        <div className="text-center md:text-left">
+          <Link className="text-2xl text-white underline" to="/data-vis">View Visualizations</Link>
         </div>
       </div>
       <StaticImage

@@ -27,7 +27,7 @@ class TechCard extends React.Component {
     return (
       <div
         id={this.props.name}
-        class="h-24 w-24 mb-4"
+        className="h-24 w-24 mb-4"
         onMouseEnter={this.enableHover}
         onMouseLeave={this.disableHover}
       >
@@ -38,7 +38,7 @@ class TechCard extends React.Component {
           className="w-16 mx-4"
         />
         {this.state.hover && (
-          <p class="text-white text-center text-xl mt-1">{this.props.name}</p>
+          <p className="text-white text-center text-xl mt-1">{this.props.name}</p>
         )}
       </div>
     )
