@@ -12,7 +12,6 @@ import Contact from "../components/contact"
 import Footer from "../components/footer"
 
 const Home = () => {
-  
   return (
     <Layout>
       <SiteMetadata title="James Lowther - Home" />
@@ -25,6 +24,6 @@ const Home = () => {
       <Footer />
     </Layout>
   )
-} 
+}
 
-export default Home;
+export default Home

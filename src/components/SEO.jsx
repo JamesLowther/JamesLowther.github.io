@@ -2,8 +2,7 @@ import React from "react"
 
 import { Helmet } from "react-helmet"
 
-const SiteMetadata = ({title}) => {
-
+const SiteMetadata = ({ title }) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -14,4 +13,4 @@ const SiteMetadata = ({title}) => {
   )
 }
 
-export default SiteMetadata;
+export default SiteMetadata
