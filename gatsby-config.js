@@ -44,7 +44,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {

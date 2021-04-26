@@ -21,9 +21,7 @@ const InfosecProject = () => {
         <div className="flex flex-wrap justify-center">
           <iframe
             title="Beginner: Intro to SQL Injection"
-            className="mx-auto p-2"
-            width="400"
-            height="300"
+            className="w-1/2 h-72 p-2"
             src="https://www.youtube.com/embed/0_9Jp8jCUTM"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -31,9 +29,7 @@ const InfosecProject = () => {
           />
           <iframe
             title="Beginner: Intro to Forensics"
-            className="mx-auto p-2"
-            width="400"
-            height="300"
+            className="w-1/2 h-72 p-2"
             src="https://www.youtube.com/embed/KQSlSHGt9g8"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -41,9 +37,7 @@ const InfosecProject = () => {
           />
           <iframe
             title="Advanced: Linux Privilege Escalation"
-            className="mx-auto p-2"
-            width="400"
-            height="300"
+            className="w-1/2 h-72 p-2"
             src="https://www.youtube.com/embed/UtWZ0dNIslE"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -51,9 +45,7 @@ const InfosecProject = () => {
           />
           <iframe
             title="Beginner: Intro to Web Exploitation"
-            className="mx-auto p-2"
-            width="400"
-            height="300"
+            className="w-1/2 h-72 p-2"
             src="https://www.youtube.com/embed/yqSC6unNcus"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

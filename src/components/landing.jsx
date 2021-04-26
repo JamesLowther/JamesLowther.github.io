@@ -1,5 +1,8 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+
+import ASCIIAnimation from "../components/ascii/ascii";
+import dino from "../assets/ascii/dino";
 
 const Landing = () => {
   return (
@@ -8,22 +11,16 @@ const Landing = () => {
       className="w-full lg:h-screen"
       style={{ display: "grid" }}
     >
-      <StaticImage
+      {/* <StaticImage
         src="../assets/images/space-bg.jpg"
         style={{ gridArea: "1/1" }}
         layout="fullWidth"
         placeholder="blurred"
-      />
+      /> */}
       <div
-        className="flex flex-col justify-center items-center h-full overflow-auto"
-        style={{
-          gridArea: "1/1",
-          position: "relative",
-          placeItems: "center",
-          display: "grid",
-        }}
+        className="flex flex-col items-center justify-around h-full p-5 bg-black"
       >
-        <div className="flex flex-row mt-6 mb-6">
+        <div className="flex flex-row">
           <a
             href="https://github.com/JamesLowther/"
             target="_blank"
@@ -51,20 +48,25 @@ const Landing = () => {
             />
           </a>
         </div>
-        <div className="my-auto w-3/4 md:w-1/2 p-3 sm:p-10 rounded-lg bg-white bg-opacity-65">
-          <p className="text-3xl sm:text-5xl tracking-widest font-header">
-            JAMES LOWTHER
-          </p>
-          <p className="text-xl font-display mt-2">
-            Currently attending my fourth year of schooling at the Univerity of
-            Calgary pursuing a degree in computing science. Interested in
-            cybersecurity and both front-end and back-end development.
-          </p>
-          <p className="text-xl font-display mt-4">
-            Located in Calgary, Alberta
-          </p>
+        <div className="flex flex-wrap justify-center h-3/4">
+          <div className="flex items-center my-auto w-full md:w-1/3 p-3 sm:p-10 rounded-lg bg-white bg-opacity-65 h-1/2">
+            <div>
+              <p className="text-3xl sm:text-5xl tracking-widest font-header">
+                JAMES LOWTHER
+              </p>
+              <p className="text-xl font-display mt-2">
+                Currently attending my fourth year of schooling at the Univerity
+                of Calgary pursuing a degree in computing science. Interested in
+                cybersecurity and both front-end and back-end development.
+              </p>
+              <p className="text-xl font-display mt-4">
+                Located in Calgary, Alberta
+              </p>
+            </div>
+          </div>
+          <ASCIIAnimation source={dino} className="w-2/3" />
         </div>
-        <div className="my-20 transform hover:translate-y-1">
+        <div className="transform hover:translate-y-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -82,7 +84,7 @@ const Landing = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;
