@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
-import scrollTo from "gatsby-plugin-smoothscroll"
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const Navbar = () => {
   return (
     <div className="invisible lg:visible fixed z-50 h-screen w-full flex pointer-events-none">
-      <div className="flex flex-col items-center justify-center pointer-events-auto rounded bg-white bg-opacity-95 w-16 p-4 ml-auto mr-6 my-auto">
+      <div className="flex flex-col items-center justify-center pointer-events-auto rounded bg-white w-16 p-4 ml-auto mr-6 my-auto">
         <button
           onClick={() => scrollTo("#landing")}
           className="mb-8 w-10 h-10 transform hover:-translate-y-1"
@@ -26,28 +26,28 @@ const Navbar = () => {
           </svg>
         </button>
         <button onClick={() => scrollTo("#about")} aria-label="about">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
             <p className="">About</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#projects")} aria-label="projects">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
             <p>Projects</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#skills")} aria-label="skills">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
             <p>Skills</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#contact")} aria-label="contact">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-gray-500">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
             <p>Contact</p>
           </div>
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

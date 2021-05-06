@@ -1,31 +1,32 @@
-import React from "react"
-import Typist from "react-typist-repacked"
+import React from "react";
+import Typist from "react-typist-repacked";
 
 export default class Terminal extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       typing: true,
-    }
+    };
   }
 
-  typingDelay = 1700
+  typingDelay = 1700;
 
   typingDone = () => {
     setTimeout(() => {
       this.setState({ typing: false }, () => {
-        this.setState({ typing: true })
-      })
-    }, this.typingDelay)
-  }
+        this.setState({ typing: true });
+      });
+    }, this.typingDelay);
+  };
 
   render() {
     const texts = [
-      "Student",
       "Security Enthusiast",
       "Developer",
       "Driven Learner",
-    ]
+      "Efficiency Focused",
+      "rm -rf /",
+    ];
 
     return (
       <>
@@ -50,9 +51,12 @@ export default class Terminal extends React.Component {
             {texts[3]}"
             <Typist.Delay ms={this.typingDelay} />
             <Typist.Backspace count={texts[3].length + 9} />
+            {texts[4]}
+            <Typist.Delay ms={500} />
+            <Typist.Backspace count={texts[3].length + 8} />
           </Typist>
         )}
       </>
-    )
+    );
   }
 }
