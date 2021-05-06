@@ -8,6 +8,15 @@ module.exports = {
         65: "0.65",
         95: "0.95",
       },
+      keyframes: {
+        slowpulse: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.65 },
+        },
+      },
+      animation: {
+        slowpulse: "slowpulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
     },
     scale: {
       103: "1.03",
@@ -16,4 +25,4 @@ module.exports = {
   purge: {
     enabled: false,
   },
-}
+};

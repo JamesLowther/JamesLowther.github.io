@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 class ASCIIAnimation extends React.PureComponent {
   constructor(props) {
     super(props);
+    this._div = React.createRef();
     this._canvas = React.createRef();
 
     this._handleResize = this._handleResize.bind(this);
@@ -21,7 +22,8 @@ class ASCIIAnimation extends React.PureComponent {
 
   async _start() {
     this.didReset = false;
-    this._getSourceData();
+
+    while (!this._getSourceData()) {}
 
     this.ctx = this._canvas.current.getContext("2d");
     let [renderedFrames, currentFrame_i] = await this._preRender();
@@ -33,8 +35,8 @@ class ASCIIAnimation extends React.PureComponent {
     }
   }
 
-   _handleResize() {
-    clearInterval(this.resizeID);
+  _handleResize() {
+    clearTimeout(this.resizeID);
     this.resizeID = setTimeout(async () => {
       this.didReset = true;
       await this._sleep(100);
@@ -45,41 +47,34 @@ class ASCIIAnimation extends React.PureComponent {
     }, 500);
   }
 
-  componentDidUpdate() {
-  }
-
   _getSourceData() {
     // Calculate dimensions of frame in pixels.
     let frameX = Math.floor(this.props.source[0][0].length / 3);
     let frameY = this.props.source[0].length;
+    let frameRatio = frameX / frameY;
     let numFrames = this.props.source.length;
 
-    // Calculate size of the canvas itself in the DOM.
-    let canvasWidth = this._canvas.current.parentElement.offsetWidth - 5;
-    let canvasHeight = this._canvas.current.parentElement.offsetHeight - 5;
+    if (!this._canvas.current || !this._div.current) return false;
 
-    let pixelSize = null;
+    // Calculate size of the parent div in the DOM.
+    let parentWidth = this._div.current.offsetWidth - 5;
+    let parentHeight = this._div.current.offsetHeight - 5;
+    let parentRatio = parentWidth / parentHeight;
 
-    let newCanvasWidth = null;
-    let newCanvasHeight = null;
+    let pixelSize, newCanvasWidth, newCanvasHeight;
 
-    if (canvasWidth >= canvasHeight) {
-      if ((pixelSize - this.props.squishiness) * frameX > canvasWidth) {
-        pixelSize = canvasWidth / frameX;
-        newCanvasWidth = canvasWidth - this.props.squishiness * frameX;
-        newCanvasHeight = canvasHeight - this.props.squishiness * frameY;
-      } else {
-        pixelSize = canvasHeight / frameY;
-        newCanvasWidth = (pixelSize - this.props.squishiness) * frameX;
-        newCanvasHeight = canvasHeight;
-      }
+    if (frameRatio > parentRatio) {
+      newCanvasWidth = parentWidth;
+      newCanvasHeight = Math.floor(frameY * (parentWidth / frameX));
+      pixelSize = parentWidth / frameX;
     } else {
-      pixelSize = canvasWidth / frameX;
-      newCanvasWidth = canvasWidth - this.squishiness * frameX;
-      newCanvasHeight = pixelSize * frameY;
+      newCanvasWidth = Math.floor(frameX * (parentHeight / frameY));
+      newCanvasHeight = parentHeight;
+      pixelSize = parentHeight / frameY;
     }
 
-    console.log(newCanvasWidth);
+    newCanvasWidth -= frameX * this.props.squishiness;
+    newCanvasHeight -= frameY * this.props.squishiness;
 
     this.setState({ width: newCanvasWidth, height: newCanvasHeight });
 
@@ -91,6 +86,8 @@ class ASCIIAnimation extends React.PureComponent {
       pixelSize: pixelSize,
       numFrames: numFrames,
     };
+
+    return true;
   }
 
   _convertColor(str_hex) {
@@ -168,13 +165,12 @@ class ASCIIAnimation extends React.PureComponent {
             (i / this.props.source.length) * 100
           );
 
-          currentFrame_i =
-            currentFrame_i + (1 % this.sourceData.numFrames);
+          currentFrame_i = currentFrame_i + (1 % this.sourceData.numFrames);
           lastTime = now;
         }
       }
     }
-    return [renderedFrames, currentFrame_i]
+    return [renderedFrames, currentFrame_i];
   }
 
   async _drawIntermediateFrame(frame, progress) {
@@ -227,7 +223,7 @@ class ASCIIAnimation extends React.PureComponent {
 
   render() {
     return (
-      <div className={this.props.className}>
+      <div ref={this._div} className={this.props.className}>
         <canvas
           ref={this._canvas}
           width={this.state.width}

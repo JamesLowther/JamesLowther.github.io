@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import SiteMetadata from "../components/SEO"
+import SiteMetadata from "../components/SEO";
 
 const NotFoundPage = () => {
   return (
@@ -19,7 +19,7 @@ const NotFoundPage = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

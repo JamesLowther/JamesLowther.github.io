@@ -1,29 +1,35 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Contact = () => {
   return (
-    <section id="contact" className="w-full bg-blue-900 pb-20">
+    <section id="contact" className="w-full bg-gray-300 pb-20">
       <div className="pt-8 text-center w-5/6 mx-auto">
-        <p className="text-white text-6xl mb-8 font-header">Contact</p>
+        <p className="text-black text-5xl md:text-6xl mb-8 font-header">
+          Contact
+        </p>
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="w-3/4 md:w-1/5 mx-6 mb-6">
             <StaticImage
               src="../assets/images/map.png"
-              className="rounded"
+              className="rounded shadow-xl"
               placeholder="blurred"
+              alt="Map of Calgary"
             />
-            <p className="text-white text-2xl mt-2 font-header">
+            <p className="text-black text-2xl mt-2 font-header">
               Calgary, AB, Canada
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="rounded bg-blue-500 mx-6 p-1 sm:p-6 mb-4">
-              <p className="text-white text-4xl font-display">
+            <div className="rounded bg-pink-700 mx-6 p-1 sm:p-6 mb-4 shadow-xl">
+              <p className="text-gray-300 text-3xl md:text-4xl font-display mb-2">
                 Send me an email at:
               </p>
               <p className="text-gray-800 text-2xl sm:text-3xl font-display">
-                <a className="underline" href="mailto:jamesevlowther@gmail.com">
+                <a
+                  className="text-white"
+                  href="mailto:jamesevlowther@gmail.com"
+                >
                   jamesevlowther@gmail.com
                 </a>
               </p>
@@ -33,7 +39,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-lg bg-gray-600 hover:bg-gray-700 mx-6 p-3 mt-6">
+              <div className="rounded-lg bg-gray-800 hover:bg-gray-900 mx-6 p-3 mt-6 shadow-xl transform hover:scale-103">
                 <p className="text-white text-3xl font-display">
                   Download Resume
                 </p>
@@ -50,9 +56,10 @@ const Contact = () => {
             aria-label="Go to my GitHub page"
           >
             <StaticImage
-              src="../assets/images/github-light.png"
+              src="../assets/images/github.png"
               className="w-16 inline-block transform hover:scale-103"
               placeholder="blurred"
+              alt="GitHub logo"
             />
           </a>
           <a
@@ -63,15 +70,16 @@ const Contact = () => {
             aria-label="Go to my LinkedIn page"
           >
             <StaticImage
-              src="../assets/images/linkedin.png"
+              src="../assets/images/linkedin-dark.png"
               className="w-16 inline-block transform hover:scale-103"
               placeholder="blurred"
+              alt="LinkedIn logo"
             />
           </a>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
