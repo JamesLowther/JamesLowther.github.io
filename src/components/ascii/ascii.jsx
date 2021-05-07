@@ -16,8 +16,18 @@ class ASCIIAnimation extends React.PureComponent {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this._handleResize);
+    // this._div.current.addEventListener("resize", this._handleResize);
+    this._resizeObserver = new ResizeObserver(entries => {
+      this._handleResize();
+    });
+
+    this._resizeObserver.observe(this._div.current);
+
     this._start();
+  }
+
+  componentWillUnmount() {
+    this._resizeObserver.disconnect();
   }
 
   async _start() {
