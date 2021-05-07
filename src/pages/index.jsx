@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ParallaxProvider } from "react-scroll-parallax";
+
 import SiteMetadata from "../components/SEO";
 
 import Navbar from "../components/navbar";
@@ -11,17 +13,22 @@ import Skills from "../components/skills";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 
+
 const Home = () => {
   return (
     <Layout>
       <SiteMetadata title="James Lowther - Home" />
-      <Navbar />
-      <Landing />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <ParallaxProvider>
+        <Navbar />
+        <Landing />
+        <About />
+        <Projects />
+        <Skills />
+        
+          <Contact />
+          <Footer />
+
+      </ParallaxProvider>
     </Layout>
   );
 };

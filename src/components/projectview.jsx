@@ -81,7 +81,7 @@ class ProjectView extends React.Component {
             Data Visualization
           </button>
         </div>
-        <div className="w-4/5 mx-auto pl-2 pr-2 lg:pr-32 lg:pr-10 text-white">
+        <div className="px-4 mx-auto lg:pr-32 lg:pr-10 text-white">
           {this.projects[this.state.index]}
         </div>
       </div>

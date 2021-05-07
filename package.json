@@ -29,10 +29,13 @@
     "gatsby-transformer-sharp": "^3.3.0",
     "postcss": "^8.2.1",
     "react": "^17.0.2",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.31.0",
+    "react-scroll-parallax": "^2.4.0",
     "react-sizeme": "^3.0.1",
+    "react-transition-group": "^4.4.1",
     "react-typist-repacked": "^1.0.0"
   },
   "devDependencies": {

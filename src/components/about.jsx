@@ -1,19 +1,27 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Parallax } from "react-scroll-parallax";
+import { isMobile } from "react-device-detect";
+
+
 import Terminal from "../components/terminal";
 
 const About = () => {
   return (
-    <section id="about" className="w-full bg-gray-300">
-      <div className="p-8 px-16">
+    <Parallax y={["0px", "-250px"]} className="px-4 md:px-16">
+    <section id="about" className="w-full bg-gray-300 px-16 rounded-xl">
+      <div className="p-8 sm:px-16">
         <div className="flex flex-col md:flex-row items-center">
+          <Parallax disabled={isMobile} x={[-10, 0]} className="flex-none w-full sm:w-2/3 md:w-1/4 my-10">
           <StaticImage
             src="../assets/images/head.jpg"
-            className="flex-none w-2/3 md:w-1/4 my-10 rounded-full shadow-xl"
+            className="rounded-full shadow-xl"
             placeholder="blurred"
             alt="Personal picture of James Lowther"
           />
+          </Parallax>
           <div className="flex flex-col ">
+          <Parallax disabled={isMobile} x={[10, 0]}>
             <div className="text-black">
               <p className="text-2xl md:mx-16">Hello!</p>
               <p className="text-2xl mt-8 md:mx-16">
@@ -48,6 +56,7 @@ const About = () => {
                 !
               </p>
             </div>
+            </Parallax>
             <div className="border-2 bg-pink-700 rounded-lg py-2 px-3 mx-8 mt-16 w-6/7 lg:w-1/2 mx-auto text-white text-2xl shadow-xl">
               <Terminal />
             </div>
@@ -55,6 +64,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </Parallax>
   );
 };
 

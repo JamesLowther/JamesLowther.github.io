@@ -7,7 +7,7 @@ import iss from "../assets/ascii/iss";
 const Landing = () => {
   return (
     <section id="landing" className="w-full lg:h-screen">
-      <div className="flex flex-col items-center justify-around h-full px-16 bg-black">
+      <div className="flex flex-col items-center justify-around h-full lg:px-16 bg-black">
         <div className="flex flex-row mt-3">
           <a
             href="https://github.com/JamesLowther/"
@@ -38,7 +38,7 @@ const Landing = () => {
             />
           </a>
         </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center h-3/4">
+        <div className="flex flex-col lg:flex-row justify-center items-center mx-16 lg:mx-0 h-3/4">
           <div className="flex items-center w-full m-4 lg:w-1/3 rounded-lg bg-gray-300">
             <div className="p-10">
               <p className="text-3xl tracking-widest font-header">
@@ -56,7 +56,7 @@ const Landing = () => {
           </div>
           <ASCIIAnimation
             source={iss}
-            className="flex items-center w-full h-full mb-3 lg:w-2/3"
+            className="flex items-center w-full h-screen mb-3 lg:w-2/3"
             frameDelay={40}
           />
         </div>
