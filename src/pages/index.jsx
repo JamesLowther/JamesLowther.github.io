@@ -13,7 +13,6 @@ import Skills from "../components/skills";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 
-
 const Home = () => {
   return (
     <Layout>
@@ -24,10 +23,9 @@ const Home = () => {
         <About />
         <Projects />
         <Skills />
-        
-          <Contact />
-          <Footer />
 
+        <Contact />
+        <Footer />
       </ParallaxProvider>
     </Layout>
   );

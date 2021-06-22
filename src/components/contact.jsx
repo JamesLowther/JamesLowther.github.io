@@ -14,7 +14,11 @@ const Contact = () => {
             Contact
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center">
-            <Parallax disabled={isMobile} x={[-20, 0]} className="w-3/4 md:w-1/5 mx-6 mb-6">
+            <Parallax
+              disabled={isMobile}
+              x={[-20, 0]}
+              className="w-3/4 md:w-1/5 mx-6 mb-6"
+            >
               <StaticImage
                 src="../assets/images/map.png"
                 className="rounded shadow-xl"
