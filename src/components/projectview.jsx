@@ -28,11 +28,11 @@ class ProjectView extends React.Component {
   render() {
     return (
       <div className="flex flex-col items-center lg:items-start lg:flex-row w-full">
-        <div className="flex flex-col items-center justify-around h-72 mb-3 text-xl lg:text-2xl w-1/2 lg:w-1/5 pl-1 lg:px-12">
+        <div className="flex flex-col items-center justify-around h-80 mb-3 text-xl lg:text-2xl w-1/2 lg:w-1/5 pl-1 lg:px-6">
           <button
             className={
               this.state.index === 0
-                ? "bg-gray-300 bg-pink-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
+                ? "bg-gray-300 bg-pink-700 text-white w-full py-2 px-2 rounded-lg transform hover:scale-103"
                 : "bg-gray-300 hover:bg-pink-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
             }
             onClick={() => {
