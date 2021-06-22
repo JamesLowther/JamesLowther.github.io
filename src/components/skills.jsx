@@ -189,54 +189,54 @@ const Skills = () => {
 
   return (
     <Parallax y={["0px", "-250px"]}>
-    <section
-      id="skills"
-      className="flex flex-col lg:flex-row items-center justify-center w-full bg-black pb-20"
-    >
-      <ASCIIAnimation
-        source={dino}
-        className="flex items-center w-full h-screen mb-3 lg:w-3/5"
-        frameDelay={40}
-      />
-      <div className="pt-8 lg:pr-32 w-3/4 lg:w-2/5 mx-auto text-white">
-        <Parallax y={["-100px", "0px"]}>
-        <p className="text-center text-5xl md:text-6xl mb-8 font-header tracking-wide">
-          Skills
-        </p>
-        </Parallax>
-        <p className="text-4xl md:text-5xl mb-4">Languages / Frameworks</p>
-        <div className="flex flex-wrap ">
-          <TechCard image={data.python} name="Python" />
-          <TechCard image={data.cpp} name="C++" />
-          <TechCard image={data.java} name="Java" />
-          <TechCard image={data.sqlite} name="SQLite" />
-          <TechCard image={data.html} name="HTML" />
-          <TechCard image={data.tailwind} name="Tailwind CSS" />
-          <TechCard image={data.react} name="React" />
-          <TechCard image={data.vue} name="Vue" />
+      <section
+        id="skills"
+        className="flex flex-col lg:flex-row items-center justify-center w-full bg-black pb-20"
+      >
+        <ASCIIAnimation
+          source={dino}
+          className="flex items-center w-full h-screen mb-3 lg:w-3/5"
+          frameDelay={40}
+        />
+        <div className="pt-8 lg:pr-32 w-3/4 lg:w-2/5 mx-auto text-white">
+          <Parallax y={["-100px", "0px"]}>
+            <p className="text-center text-5xl md:text-6xl mb-8 font-header tracking-wide">
+              Skills
+            </p>
+          </Parallax>
+          <p className="text-4xl md:text-5xl mb-4">Languages / Frameworks</p>
+          <div className="flex flex-wrap ">
+            <TechCard image={data.python} name="Python" />
+            <TechCard image={data.cpp} name="C++" />
+            <TechCard image={data.java} name="Java" />
+            <TechCard image={data.sqlite} name="SQLite" />
+            <TechCard image={data.html} name="HTML" />
+            <TechCard image={data.tailwind} name="Tailwind CSS" />
+            <TechCard image={data.react} name="React" />
+            <TechCard image={data.vue} name="Vue" />
+          </div>
+          <p className="text-4xl md:text-5xl mb-4">Tools</p>
+          <div className="flex flex-wrap">
+            <TechCard image={data.docker} name="Docker" />
+            <TechCard image={data.nginx} name="Nginx" />
+            <TechCard image={data.git} name="Git" />
+            <TechCard image={data.terraform} name="Terraform" />
+            <TechCard image={data.shell} name="Shell" />
+          </div>
+          <p className="text-4xl md:text-5xl mb-4">Services</p>
+          <div className="flex flex-wrap">
+            <TechCard image={data.github} name="GitHub" />
+            <TechCard image={data.digitalocean} name="Digital Ocean" />
+          </div>
+          <p className="text-4xl md:text-5xl mb-4">Operating Systems</p>
+          <div className="flex flex-wrap">
+            <TechCard image={data.windows} name="Windows" />
+            <TechCard image={data.linux} name="Linux" />
+            <TechCard image={data.manjaro} name="Manjaro" />
+            <TechCard image={data.debian} name="Debian" />
+          </div>
         </div>
-        <p className="text-4xl md:text-5xl mb-4">Tools</p>
-        <div className="flex flex-wrap">
-          <TechCard image={data.docker} name="Docker" />
-          <TechCard image={data.nginx} name="Nginx" />
-          <TechCard image={data.git} name="Git" />
-          <TechCard image={data.terraform} name="Terraform" />
-          <TechCard image={data.shell} name="Shell" />
-        </div>
-        <p className="text-4xl md:text-5xl mb-4">Services</p>
-        <div className="flex flex-wrap">
-          <TechCard image={data.github} name="GitHub" />
-          <TechCard image={data.digitalocean} name="Digital Ocean" />
-        </div>
-        <p className="text-4xl md:text-5xl mb-4">Operating Systems</p>
-        <div className="flex flex-wrap">
-          <TechCard image={data.windows} name="Windows" />
-          <TechCard image={data.linux} name="Linux" />
-          <TechCard image={data.manjaro} name="Manjaro" />
-          <TechCard image={data.debian} name="Debian" />
-        </div>
-      </div>
-    </section>
+      </section>
     </Parallax>
   );
 };
