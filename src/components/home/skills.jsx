@@ -4,9 +4,9 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Parallax } from "react-scroll-parallax";
 
 import TechCard from "./techcard";
-import ASCIIAnimation from "../components/ascii/ascii";
+import ASCIIAnimation from "./ascii/ascii";
 
-import dino from "../assets/ascii/dino";
+import dino from "../../assets/ascii/dino";
 
 const Skills = () => {
   const data = useStaticQuery(graphql`

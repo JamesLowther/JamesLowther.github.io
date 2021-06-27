@@ -4,14 +4,14 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import SiteMetadata from "../components/SEO";
 
-import Navbar from "../components/navbar";
-import Layout from "../components/layout";
-import About from "../components/about";
-import Landing from "../components/landing";
-import Projects from "../components/projects";
-import Skills from "../components/skills";
-import Contact from "../components/contact";
-import Footer from "../components/footer";
+import Navbar from "../components/home/navbar";
+import Layout from "../components/home/layout";
+import About from "../components/home/about";
+import Landing from "../components/home/landing";
+import Projects from "../components/home/projects";
+import Skills from "../components/home/skills";
+import Contact from "../components/home/contact";
+import Footer from "../components/home/footer";
 
 const Home = () => {
   return (

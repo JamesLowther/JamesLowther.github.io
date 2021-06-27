@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Parallax } from "react-scroll-parallax";
 import { isMobile } from "react-device-detect";
 
-import Terminal from "../components/terminal";
+import Terminal from "./terminal";
 
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
               className="flex-none w-full sm:w-2/3 md:w-1/4 my-10"
             >
               <StaticImage
-                src="../assets/images/head.jpg"
+                src="../../assets/images/head.jpg"
                 className="rounded-full shadow-xl"
                 placeholder="blurred"
                 alt="Personal picture of James Lowther"

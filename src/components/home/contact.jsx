@@ -20,7 +20,7 @@ const Contact = () => {
               className="w-3/4 md:w-1/5 mx-6 mb-6"
             >
               <StaticImage
-                src="../assets/images/map.png"
+                src="../../assets/images/map.png"
                 className="rounded shadow-xl"
                 placeholder="blurred"
                 alt="Map of Calgary"
@@ -67,7 +67,7 @@ const Contact = () => {
               aria-label="Go to my GitHub page"
             >
               <StaticImage
-                src="../assets/images/github.png"
+                src="../../assets/images/github.png"
                 className="w-16 inline-block transform hover:scale-103"
                 placeholder="blurred"
                 alt="GitHub logo"
@@ -81,7 +81,7 @@ const Contact = () => {
               aria-label="Go to my LinkedIn page"
             >
               <StaticImage
-                src="../assets/images/linkedin-dark.png"
+                src="../../assets/images/linkedin-dark.png"
                 className="w-16 inline-block transform hover:scale-103"
                 placeholder="blurred"
                 alt="LinkedIn logo"

@@ -30,7 +30,7 @@ const DataVisProject = () => {
         </div>
       </div>
       <StaticImage
-        src="../../assets/images/data-vis.png"
+        src="../../../assets/images/data-vis.png"
         className="w-4/5 md:w-1/3 rounded-full mx-4 mt-6 shadow-xl"
         alt="Example data visualization"
       />

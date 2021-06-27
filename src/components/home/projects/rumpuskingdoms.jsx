@@ -5,7 +5,7 @@ const RumpusKingdomsProject = () => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-8 lg:p-12">
       <StaticImage
-        src="../../assets/images/rumpus-kingdoms.png"
+        src="../../../assets/images/rumpus-kingdoms.png"
         className="w-4/5 md:w-1/3 rounded-full mx-8 mb-6 shadow-xl"
         alt="Rumpus Kingdoms logo"
       />
