@@ -199,7 +199,7 @@ const Skills = () => {
           frameDelay={40}
         />
         <div className="pt-8 lg:pr-32 w-3/4 lg:w-2/5 mx-auto text-white">
-          <Parallax y={["-100px", "0px"]}>
+          <Parallax y={["-150px", "0px"]}>
             <p className="text-center text-5xl md:text-6xl mb-8 font-header tracking-wide">
               Skills
             </p>

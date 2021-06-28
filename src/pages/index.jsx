@@ -23,7 +23,6 @@ const Home = () => {
         <About />
         <Projects />
         <Skills />
-
         <Contact />
         <Footer />
       </ParallaxProvider>

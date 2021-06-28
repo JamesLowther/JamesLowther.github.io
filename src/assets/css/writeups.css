@@ -1,0 +1,105 @@
+section.writeup {
+  @apply bg-gray-900 w-full h-full text-white
+}
+
+.writeup .w-inner-div {
+  @apply px-4 sm:px-12 md:px-16 xl:px-72
+}
+
+.writeup h1 {
+  @apply text-5xl font-bold mb-3 mt-6 underline
+}
+
+.writeup h2 {
+  @apply text-4xl font-bold mb-3 mt-6
+}
+
+.writeup h3 {
+  @apply text-3xl font-bold mb-3 mt-6
+}
+
+.writeup h4 {
+  @apply text-2xl font-bold mb-3 mt-6
+}
+
+.writeup h5 {
+  @apply text-xl font-bold mb-3 mt-6
+}
+
+.writeup h6 {
+  @apply text-lg font-bold mb-3 mt-6
+}
+
+.writeup p {
+  background-color: #182136;
+  @apply text-lg p-3 rounded-lg my-3
+}
+
+.writeup a {
+  @apply underline text-red-300
+}
+
+.writeup pre {
+  @apply text-lg rounded-lg my-3
+}
+
+.writeup ul {
+  background-color: #182136;
+  @apply text-lg p-3 list-disc pl-7 rounded-lg my-3
+}
+
+.writeup ul.contains-task-list {
+  @apply list-none
+}
+
+.writeup ol {
+  background-color: #182136;
+  @apply text-lg p-3 list-decimal pl-7 rounded-lg my-3
+}
+
+.writeup blockquote p::before, .writeup blockquote p {
+  content: "> ";
+  color: oldlace
+}
+
+.writeup table {
+  background-color: #182136;
+  @apply text-lg table-auto mx-auto my-3;
+}
+
+.writeup table td, .writeup table th {
+  @apply border-2 rounded px-2 py-1;
+}
+
+hr {
+  @apply border-2;
+}
+
+/* Fix PrismJS line numbering */
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  @apply p-4;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers .line-numbers-rows {
+  @apply mt-4;
+  padding-left: 0.5rem;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+/* Fix command line */
+span.command-line-prompt {
+  border-right: 0;
+  margin-right: 0;
+}
