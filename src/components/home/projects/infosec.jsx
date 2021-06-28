@@ -1,6 +1,6 @@
 import React from "react";
 
-import InfosecIcon from "../../assets/svg/magpie-vector-v02.svg";
+import InfosecIcon from "../../../assets/svg/magpie-vector-v02.svg";
 
 const InfosecProject = () => {
   return (

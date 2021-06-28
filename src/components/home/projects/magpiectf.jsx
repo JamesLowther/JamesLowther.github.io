@@ -1,6 +1,6 @@
 import React from "react";
 
-import magpieCTFwebm from "../../assets/images/ctf-logo-v3.webm";
+import magpieCTFwebm from "../../../assets/images/ctf-logo-v3.webm";
 
 const MagpieCTFProject = () => {
   return (

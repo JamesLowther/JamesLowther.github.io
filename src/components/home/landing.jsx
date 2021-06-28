@@ -1,8 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import ASCIIAnimation from "../components/ascii/ascii";
-import iss from "../assets/ascii/iss";
+import ASCIIAnimation from "./ascii/ascii";
+import iss from "../../assets/ascii/iss";
 
 const Landing = () => {
   return (
@@ -17,7 +17,7 @@ const Landing = () => {
             aria-label="Go to my GitHub page"
           >
             <StaticImage
-              src="../assets/images/github-light.png"
+              src="../../assets/images/github-light.png"
               className="w-16"
               placeholder="blurred"
               alt="GitHub logo"
@@ -31,7 +31,7 @@ const Landing = () => {
             aria-label="Go to my LinkedIn page"
           >
             <StaticImage
-              src="../assets/images/linkedin.png"
+              src="../../assets/images/linkedin.png"
               className="w-16"
               placeholder="blurred"
               alt="LinkedIn logo"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import { Parallax } from "react-scroll-parallax";
 
@@ -20,6 +21,15 @@ const Projects = () => {
         </div>
 
         <ProjectView />
+        <div className="text-white flex flex-wrap w-full justify-center items-center text-3xl pt-32">
+          <div>Also, check out my</div>
+          <Link
+            className="shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-500 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            to="/writeups"
+          >
+            <button>writeups</button>
+          </Link>
+        </div>
       </section>
     </Parallax>
   );
