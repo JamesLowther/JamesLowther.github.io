@@ -5,7 +5,9 @@ title: "magpieCTF 2021"
 category: "ctf"
 ---
 
-I was a organizer for this CTF so the following writeups are for challenges that I developed.
+I was a organizer for this CTF so the following writeups are for challenges that I developed. The full repository with all of the challenges can be found [here](https://github.com/infosec-ucalgary/magpieCTF-2021).
+
+***
 
 # Man-in-the-Mirror
 
@@ -62,6 +64,8 @@ An example intercept proxy can be found at `solve/intercept-proxy.py`.
 
 `magpie{1m_st4rt1ng_w1th_th3_m4n_1n_th3_m1ddl3}`
 
+***
+
 # Birdbuster Video
 
 ### Category: Web Exploitation
@@ -89,6 +93,8 @@ This challenge gives provides you a website with the ability to upload a barcode
 
 `magpie{80s_m0v135_4r3_th3_b35t}`
 
+***
+
 # Richard Simmons: Sweatin' in LaTeX
 
 ### Category: Web Exploitation
@@ -108,7 +114,7 @@ The website appears to be a renderer for LaTeX code. Writing LaTex and clicking 
 3. The `/` character however can be isolated from `index.html` using the `\StrMid` function from the `xstring` package. By getting the `/` character from `index.html`, we can use it to build our path and bypass the blacklisted characters filter.
 4. Using this we can write the following LaTeX code that will build the path and read the flag:
 
-```LaTeX{numberLines: true}
+```LaTeX
 \documentclass{minimal}
 
 % The xstring package allows us to use \StrMid
@@ -149,6 +155,8 @@ The flag can be found in the returned LOG data.
 
 `magpie{r1ch4rd_l0v35_t0_5w34t}`
 
+***
+
 # The Smurfs Cipher
 
 ### Category: Web Exploitation
@@ -173,6 +181,8 @@ A table showing all of the PHP loose comparison values can be found [here](https
 ## Flag
 
 `magpie{l0053_c0mp4r150n_l34d5_t0_tr0ub13}`
+
+***
 
 # DynaTAC 8000x Keylogger
 

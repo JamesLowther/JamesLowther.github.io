@@ -1,5 +1,5 @@
 section.writeup {
-  @apply bg-gray-900 w-full h-full text-white
+  @apply bg-gray-900 w-full h-full text-gray-100
 }
 
 .writeup .w-inner-div {
@@ -7,11 +7,11 @@ section.writeup {
 }
 
 .writeup h1 {
-  @apply text-5xl font-bold mb-3 mt-6 underline
+  @apply text-5xl font-bold mb-3 mt-6 underline text-white;
 }
 
 .writeup h2 {
-  @apply text-4xl font-bold mb-3 mt-6
+  @apply text-4xl font-bold mb-3 mt-6 
 }
 
 .writeup h3 {
@@ -31,8 +31,8 @@ section.writeup {
 }
 
 .writeup p {
-  background-color: #182136;
-  @apply text-lg p-3 rounded-lg my-3
+  background-color: #202c47;
+  @apply text-lg p-3 rounded-lg my-3 overflow-x-auto
 }
 
 .writeup a {
@@ -40,12 +40,12 @@ section.writeup {
 }
 
 .writeup pre {
-  @apply text-lg rounded-lg my-3
+  @apply text-lg rounded-lg my-3 
 }
 
 .writeup ul {
-  background-color: #182136;
-  @apply text-lg p-3 list-disc pl-7 rounded-lg my-3
+  background-color: #202c47;
+  @apply text-lg p-3 list-disc pl-8 rounded-lg my-3 overflow-x-auto
 }
 
 .writeup ul.contains-task-list {
@@ -53,8 +53,8 @@ section.writeup {
 }
 
 .writeup ol {
-  background-color: #182136;
-  @apply text-lg p-3 list-decimal pl-7 rounded-lg my-3
+  background-color: #202c47;
+  @apply text-lg p-3 list-decimal pl-12 rounded-lg my-3 overflow-x-auto
 }
 
 .writeup blockquote p::before, .writeup blockquote p {
@@ -63,7 +63,7 @@ section.writeup {
 }
 
 .writeup table {
-  background-color: #182136;
+  background-color: #202c47;
   @apply text-lg table-auto mx-auto my-3;
 }
 
@@ -72,7 +72,8 @@ section.writeup {
 }
 
 hr {
-  @apply border-2;
+  border-color: #e2aa00;
+  @apply border-2 mt-12 mb-10 rounded-full;
 }
 
 /* Fix PrismJS line numbering */
@@ -86,6 +87,10 @@ hr {
 .gatsby-highlight pre[class*="language-"].line-numbers .line-numbers-rows {
   @apply mt-4;
   padding-left: 0.5rem;
+}
+
+div.gatsby-highlight {
+  @apply overflow-x-auto
 }
 
 .gatsby-highlight-code-line {

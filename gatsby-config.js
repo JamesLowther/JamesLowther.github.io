@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway`],
+        fonts: [`Raleway`, `Roboto Mono`],
       },
     },
     `gatsby-plugin-postcss`,
