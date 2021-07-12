@@ -9,7 +9,7 @@ Link: https://ctf.redpwn.net/
 
 ***
 
-# inspect-me
+# pastebin-1
 ### Category: web
 ### Author: BrownieInMotion
 
