@@ -20,7 +20,7 @@ const WriteupTemplate = ({ data }) => {
         </Link>
       </div>
       <div className="w-inner-div pb-10">
-        <div className="mb-10 font-bold text-center py-32 px-0 sm:px-12 md:px-16 xl:px-72">
+        <div className="mb-10 font-bold text-center py-32 px-0 sm:px-12 md:px-16 xl:px-32">
           <div className="border-4 py-10 rounded shadow-lg overflow-x-auto" style={{"borderColor": "#e2aa00"}}>
             <div className="text-5xl lg:text-7xl mb-4">{post.frontmatter.title}</div>
             <div className="text-4xl">{post.frontmatter.date}</div>

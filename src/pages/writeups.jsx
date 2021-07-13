@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 const WriteupPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <section className="bg-gray-900 w-full h-screen text-white" style={{"font-family": "'Roboto Mono', monospace"}}>
+    <section className="bg-gray-900 w-full h-screen text-white" style={{"fontFamily": "'Roboto Mono', monospace"}}>
       <Helmet>
         <title>Writeups - James Lowther</title>
         <meta name="description" content="Writeups written by James Lowther" />
