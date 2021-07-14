@@ -13,6 +13,10 @@ section.writeup {
   @apply h-full flex items-center;
 }
 
+.writeup a.anchor svg {
+  @apply h-6 w-6;
+}
+
 .writeup h1::before {
   content: "> ";
   margin-right: 0.4em;
