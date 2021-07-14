@@ -3,10 +3,14 @@ section.writeup {
 }
 
 .writeup .w-inner-div {
-  @apply px-4 sm:px-12 md:px-16 xl:px-72;
+  @apply px-8 sm:px-12 md:px-16 xl:px-72;
 }
 
 .writeup span.gatsby-resp-image-wrapper {
+}
+
+.writeup a.anchor {
+  @apply h-full flex items-center;
 }
 
 .writeup h1::before {
