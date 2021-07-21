@@ -8,12 +8,12 @@ import iss from "../../assets/ascii/iss";
 const Landing = () => {
   return (
     <section id="landing" className="w-full lg:h-screen">
-      <div className="absolute w-full flex justify-end">
+      <div className="invisible md:visible absolute w-full flex justify-end z-40 pointer-events-none overflow-x-hidden">
         <Link 
-          className="flex justify-end items-center px-4 mt-16 w-64 h-10 bg-red-600 transform duration-150 translate-x-56 hover:translate-x-0"
+          className="pointer-events-auto flex justify-end rounded-tl-3xl rounded-bl-3xl items-center px-4 mt-16 w-72 h-10 bg-red-600 transform duration-150 translate-x-60 hover:translate-x-0"
           to="/writeups"
         >
-          <p className="text-xl text-white">Check out my writeups!</p>
+          <p className="text-xl text-white mb-1 mr-3">Check out my writeups!</p>
         </Link>
       </div>
       <div className="flex flex-col items-center justify-around h-full lg:px-16 bg-black">

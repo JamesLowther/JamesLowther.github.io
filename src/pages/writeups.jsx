@@ -11,7 +11,7 @@ const WriteupPage = ({ data }) => {
         <meta name="description" content="Writeups written by James Lowther" />
         <html lang="en" />
       </Helmet>
-      <div className="flex absolute">
+      <div className="flex absolute z-50">
         <Link
           className="text-white mt-5 ml-4 shadow-lg transition duration-200 ease-in-out bg-gray-700 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 rounded-lg py-2 px-8"
           to="/"
