@@ -10995,6 +10995,11 @@ react-typist-repacked@^1.0.0:
     react "^16.9.0"
     react-dom "^16.9.0"
 
+react-use-scroll-indicator@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-use-scroll-indicator/-/react-use-scroll-indicator-1.1.1.tgz#98fbb31e39c1c5646d0a785ccf6292bace1e7a60"
+  integrity sha512-BhpfbO+qQHeFYmCTAJw8vSWSj0KHmO9sruvLagjzhIRDcBocP7RZivglTbSvSA7kjHgoYh9C/qSGAyI1ccdELg==
+
 react@^16.9.0:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"

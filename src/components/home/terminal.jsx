@@ -36,7 +36,7 @@ export default class Terminal extends React.Component {
             avgTypingDelay={90}
             stdTypingDelay={0}
             startDelay={1000}
-            cursor={{ element: "█" }}
+            cursor={{ element: "|" }}
             onTypingDone={this.typingDone}
           >
             echo "{texts[0]}"
