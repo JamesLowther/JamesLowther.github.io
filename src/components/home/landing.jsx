@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 import ASCIIAnimation from "./ascii/ascii";
 import iss from "../../assets/ascii/iss";
@@ -7,6 +8,14 @@ import iss from "../../assets/ascii/iss";
 const Landing = () => {
   return (
     <section id="landing" className="w-full lg:h-screen">
+      <div className="absolute w-full flex justify-end">
+        <Link 
+          className="flex justify-end items-center px-4 mt-16 w-64 h-10 bg-red-600 transform duration-150 translate-x-56 hover:translate-x-0"
+          to="/writeups"
+        >
+          <p className="text-xl text-white">Check out my writeups!</p>
+        </Link>
+      </div>
       <div className="flex flex-col items-center justify-around h-full lg:px-16 bg-black">
         <div className="flex flex-row mt-3">
           <a
