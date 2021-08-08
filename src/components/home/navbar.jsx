@@ -26,22 +26,22 @@ const Navbar = () => {
           </svg>
         </button>
         <button onClick={() => scrollTo("#about")} aria-label="about">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-red-600 hover:text-white">
             <p className="">About</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#projects")} aria-label="projects">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-red-600 hover:text-white">
             <p>Projects</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#skills")} aria-label="skills">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-red-600 hover:text-white">
             <p>Skills</p>
           </div>
         </button>
         <button onClick={() => scrollTo("#contact")} aria-label="contact">
-          <div className="w-16 h-16 flex justify-center items-center hover:bg-pink-700 hover:text-white">
+          <div className="w-16 h-16 flex justify-center items-center hover:bg-red-600 hover:text-white">
             <p>Contact</p>
           </div>
         </button>
