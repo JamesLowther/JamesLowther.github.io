@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <>
       <main className="bg-black">
         <div className="fixed inset-x-0 top-0 z-50">
-          <div className="h-1 bg-yellow-500" style={{"width": `${state.value}%`}}></div>
+          <div className="h-1 bg-red-600" style={{"width": `${state.value}%`}}></div>
         </div>
         {children}
         </main>

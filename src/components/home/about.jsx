@@ -60,7 +60,7 @@ const About = () => {
                   </p>
                 </div>
               </Parallax>
-              <div className="border-2 bg-pink-700 rounded-lg py-2 px-3 mx-8 mt-16 w-full xl:w-1/2 mx-auto text-white text-2xl shadow-xl">
+              <div className="border-2 bg-red-700 rounded-lg py-2 px-3 mx-8 mt-16 w-full xl:w-1/2 mx-auto text-white text-2xl shadow-xl">
                 <Terminal />
               </div>
             </div>

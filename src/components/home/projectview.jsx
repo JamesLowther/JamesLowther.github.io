@@ -32,8 +32,8 @@ class ProjectView extends React.Component {
           <button
             className={
               this.state.index === 0
-                ? "bg-gray-300 bg-pink-700 text-white w-full py-2 px-2 rounded-lg transform hover:scale-103"
-                : "bg-gray-300 hover:bg-pink-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
+                ? "bg-gray-300 bg-red-700 text-white w-full py-2 px-2 rounded-lg transform hover:scale-103"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
             }
             onClick={() => {
               this.setState({ index: 0 });
@@ -44,8 +44,8 @@ class ProjectView extends React.Component {
           <button
             className={[
               this.state.index === 1
-                ? "bg-gray-300 bg-pink-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
-                : "bg-gray-300 hover:bg-pink-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103",
+                ? "bg-gray-300 bg-red-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103",
               !this.state.ctf ? "animate-slowpulse" : "",
             ].join(" ")}
             onClick={() => {
@@ -57,8 +57,8 @@ class ProjectView extends React.Component {
           <button
             className={[
               this.state.index === 2
-                ? "bg-gray-300 bg-pink-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
-                : "bg-gray-300 hover:bg-pink-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103",
+                ? "bg-gray-300 bg-red-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103",
               !this.state.rumpus ? "animate-slowpulse" : "",
             ].join(" ")}
             onClick={() => {
@@ -70,8 +70,8 @@ class ProjectView extends React.Component {
           <button
             className={[
               this.state.index === 3
-                ? "bg-gray-300 bg-pink-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
-                : "bg-gray-300 hover:bg-pink-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103",
+                ? "bg-gray-300 bg-red-700 text-white w-full py-1 px-2 rounded-lg transform hover:scale-103"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-1 px-2 rounded-lg transform hover:scale-103",
               !this.state.datavis ? "animate-slowpulse" : "",
             ].join(" ")}
             onClick={() => {
