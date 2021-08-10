@@ -254,7 +254,7 @@ ASCIIAnimation.propTypes = {
 
 ASCIIAnimation.defaultProps = {
   frameDelay: 40,
-  squishiness: 2,
+  squishiness: 1,
   loadingFontSize: 25,
 };
 

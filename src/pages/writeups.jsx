@@ -9,6 +9,7 @@ const WriteupPage = ({ data }) => {
       <Helmet>
         <title>Writeups - James Lowther</title>
         <meta name="description" content="Writeups written by James Lowther" />
+        <meta name="theme-color" content="#111827"/>
         <html lang="en" />
       </Helmet>
       <div className="flex absolute z-50">
@@ -21,14 +22,14 @@ const WriteupPage = ({ data }) => {
       </div>
       <div className="px-4 sm:px-12 md:px-16 xl:px-72">
         <h1 className="text-6xl text-center font-bold mb-10 pt-32">Writeups</h1>
-        <div className="rounded-lg p-8 shadow-md" style={{ "background-color": "#182136" }}>
+        <div className="rounded-lg p-8 shadow-md" style={{ "backgroundColor": "#182136" }}>
           <h1 className="text-5xl font-bold">Latest</h1>
           <hr className="my-2" />
           <div className="flex flex-wrap w-full justify-center">
             {posts.length > 0 ? (
               posts.map(({ node: post }) => {
                 return (
-                  <div key={post.id}>
+                  <div key={post.frontmatter.path}>
                     <Link to={post.frontmatter.path}>
                       <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-gray-500 hover:bg-purple-600 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                         <h1 className="text-xl font-bold">{post.frontmatter.title}</h1>

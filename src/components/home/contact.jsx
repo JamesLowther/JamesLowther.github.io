@@ -7,7 +7,7 @@ import { Parallax } from "react-scroll-parallax";
 
 const Contact = () => {
   return (
-    <Parallax y={["0px", "-600px"]} className="px-4 md:px-16">
+    <Parallax y={["0px", "-600px"]} className="px-4 md:px-8 lg:pr-32">
       <section id="contact" className="w-full bg-gray-300 pb-20 rounded-xl">
         <div className="pt-8 text-center w-5/6 mx-auto">
           <p className="text-black text-5xl md:text-6xl mb-8 font-header">
@@ -17,7 +17,7 @@ const Contact = () => {
             <Parallax
               disabled={isMobile}
               x={[-20, 0]}
-              className="w-3/4 md:w-1/5 mx-6 mb-6"
+              className="w-3/4 lg:w-2/5 xl:w-1/3 mx-6 mb-6"
             >
               <StaticImage
                 src="../../assets/images/map.png"
@@ -49,7 +49,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="rounded-lg bg-gray-800 hover:bg-gray-900 mx-6 p-3 mt-6 shadow-xl transform hover:scale-103">
+                  <div className="rounded-lg bg-gray-800 hover:bg-gray-900 mx-6 p-3 mt-6 shadow-xl transform hover:scale-103 transition duration-200 ease-in-out">
                     <p className="text-white text-2xl md:text-3xl font-display">
                       Download Resume
                     </p>
@@ -68,7 +68,7 @@ const Contact = () => {
             >
               <StaticImage
                 src="../../assets/images/github.png"
-                className="w-16 inline-block transform hover:scale-103"
+                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-in-out"
                 placeholder="blurred"
                 alt="GitHub logo"
               />
@@ -82,7 +82,7 @@ const Contact = () => {
             >
               <StaticImage
                 src="../../assets/images/linkedin-dark.png"
-                className="w-16 inline-block transform hover:scale-103"
+                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-in-out"
                 placeholder="blurred"
                 alt="LinkedIn logo"
               />

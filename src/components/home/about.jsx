@@ -7,14 +7,14 @@ import Terminal from "./terminal";
 
 const About = () => {
   return (
-    <Parallax y={["0px", "-250px"]} className="px-4 md:px-16">
+    <Parallax y={["0px", "-250px"]} className="px-4 md:px-8 lg:pr-32">
       <section id="about" className="w-full bg-gray-300 px-16 rounded-xl">
-        <div className="p-8 sm:px-16">
+        <div className="p-2 sm:px-16">
           <div className="flex flex-col md:flex-row items-center">
             <Parallax
               disabled={isMobile}
               x={[-10, 0]}
-              className="flex-none w-full sm:w-2/3 md:w-1/4 my-10"
+              className="flex-none w-full sm:w-2/3 md:w-1/3 lg:w-1/4 my-10"
             >
               <StaticImage
                 src="../../assets/images/head.jpg"
