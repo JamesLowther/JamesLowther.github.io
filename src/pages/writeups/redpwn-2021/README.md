@@ -216,11 +216,8 @@ The injectable query is an `INSERT` statement. One thing to note is that the pas
 
 1. Create a new user with any username and a password that is one character of ginkoid's password at some index i, starting with i=0.
     - This can be done by injecting a sub-query that selects ginkoid's password from the `user` table and taking a substring at index i of length 1.
-    
     - The following injection works to create the password `'||(SELECT substr(password,1,1) FROM users))--`.
-
 2. Do a blind SQL injection on the newly created user. Iterate through each alphanumeric character and try to log in. When you log in successfully, you know the character that is at index i of ginkoid's password.
-
 3. Repeat this process 32 times, incrementing i by 1 each time. Gradually extract ginkoid's password one character at a time.
 
 I wrote the following script to automate this process:

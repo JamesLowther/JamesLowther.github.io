@@ -20,6 +20,7 @@ module.exports = {
     },
     scale: {
       103: "1.03",
+      105: "1.05",
     },
   },
   purge: {

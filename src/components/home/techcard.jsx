@@ -25,7 +25,7 @@ class TechCard extends React.Component {
     return (
       <div
         id={this.props.name}
-        className="h-24 w-24 mb-6"
+        className="h-24 w-24 mb-6 transform hover:scale-105"
         onMouseEnter={this.enableHover}
         onMouseLeave={this.disableHover}
         role="none"

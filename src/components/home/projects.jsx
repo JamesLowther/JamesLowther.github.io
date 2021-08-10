@@ -7,7 +7,7 @@ import ProjectView from "./projectview";
 
 const Projects = () => {
   return (
-    <Parallax y={["0px", "-250px"]}>
+    <Parallax y={["0px", "-200px"]}>
       <section
         id="projects"
         className="w-full mx-auto bg-black pt-24 pb-4 lg:pb-24"

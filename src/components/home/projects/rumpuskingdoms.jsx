@@ -22,12 +22,12 @@ const RumpusKingdomsProject = () => {
         </p>
         <div className="text-center md:text-right">
           <a
-            className="text-md sm:text-2xl text-red-600 underline"
+            className="text-md sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             href="https://github.com/JamesLowther/rumpus-kingdoms"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub repo
+            GitHub Repository
           </a>
         </div>
       </div>

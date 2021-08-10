@@ -6,10 +6,10 @@ const MagpieCTFProject = () => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-8 lg:p-12">
       <div className="w-full md:w-2/3">
-        <p className="text-black text-4xl font-header mb-8">magpieCTF</p>
+        <p className="text-black text-4xl font-header mb-8">magpieCTF 2021</p>
         <p className="text-black text-2xl mb-10">
           Headed the planning and implementation of server infrastructure for
-          all CTF challenges for the competition. Developed an infrastructure
+          all CTF challenges for the 2021-edition of the competition. Developed an infrastructure
           stack that used tools such as
           <span className="text-pink-600"> Docker</span>,{" "}
           <span className="text-pink-600">Watchtower</span>,{" "}
@@ -23,7 +23,7 @@ const MagpieCTFProject = () => {
         </p>
         <div className="text-center md:text-left">
           <a
-            className="text-md sm:text-2xl text-red-600 underline"
+            className="text-md sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             href="https://magpiectf.ca/"
             target="_blank"
             rel="noreferrer"
