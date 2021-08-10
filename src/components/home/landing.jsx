@@ -58,14 +58,16 @@ const Landing = () => {
                 Science. Interested in cybersecurity, DevOps pipelines, and both
                 front-end and back-end development.
               </p>
-              <p className="flex items-center text-xl font-display mt-4">
-                Located in Calgary, AB, Canada
+              <p className="flex flex-wrap items-center text-xl font-display mt-4">
+                <span className="mr-1">
+                  Calgary, AB, Canada
+                </span>
                 <StaticImage
                   src="../../assets/images/canadian-flag.png"
-                  className="shadow rounded-sm ml-2 w-9 inline"
+                  className="shadow rounded-sm w-9 inline"
                   placeholder="blurred"
                   alt="Canadian flag"
-              />
+                />
               </p>
             </div>
           </div>
