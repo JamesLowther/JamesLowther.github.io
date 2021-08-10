@@ -4,8 +4,8 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const DataVisProject = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-8 lg:p-12">
-      <div className="w-full md:w-2/3">
+    <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-4 lg:p-12">
+      <div className="w-full py-5 md:w-2/3">
         <p className="text-black text-4xl font-header mb-8">
           Data Visualization
         </p>
@@ -22,7 +22,7 @@ const DataVisProject = () => {
         </p>
         <div className="text-center md:text-left">
           <Link
-            className="text-md sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            className="text-sm sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             to="/data-vis"
           >
             View Visualizations
