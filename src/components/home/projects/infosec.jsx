@@ -4,9 +4,9 @@ import InfosecIcon from "../../../assets/svg/magpie-vector-v02.svg";
 
 const InfosecProject = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-8 lg:p-12">
+    <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-4 lg:p-12">
       <InfosecIcon className="w-4/5 md:w-1/3 h-auto" />
-      <div className="w-full md:w-2/3">
+      <div className="w-full md:w-2/3 py-5">
         <p className="text-black text-4xl mb-8 font-header">
           InfoSec Club UCalgary
         </p>
@@ -52,9 +52,9 @@ const InfosecProject = () => {
             allowFullScreen
           />
         </div>
-        <div className="mt-10 text-center md:text-right">
+        <div className="mt-5 text-center md:text-right">
           <a
-            className="text-md sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            className="text-sm sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             href="https://infosecucalgary.ca/"
             target="_blank"
             rel="noreferrer"

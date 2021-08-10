@@ -4,8 +4,8 @@ import magpieCTFwebm from "../../../assets/images/ctf-logo-v3.webm";
 
 const MagpieCTFProject = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-8 lg:p-12">
-      <div className="w-full md:w-2/3">
+    <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-4 lg:p-12">
+      <div className="w-full py-5 md:w-2/3">
         <p className="text-black text-4xl font-header mb-8">magpieCTF 2021</p>
         <p className="text-black text-2xl mb-10">
           Headed the planning and implementation of server infrastructure for
@@ -21,9 +21,9 @@ const MagpieCTFProject = () => {
           exploitation, forensics, and networks. Created art and assets to help
           market the event.
         </p>
-        <div className="text-center md:text-left">
+        <div className=" text-center md:text-left">
           <a
-            className="text-md sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            className="text-sm sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             href="https://magpiectf.ca/"
             target="_blank"
             rel="noreferrer"

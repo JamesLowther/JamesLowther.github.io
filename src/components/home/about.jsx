@@ -8,7 +8,7 @@ import Terminal from "./terminal";
 const About = () => {
   return (
     <Parallax y={["0px", "-250px"]} className="px-4 md:px-8 lg:pr-32">
-      <section id="about" className="w-full bg-gray-300 px-16 rounded-xl">
+      <section id="about" className="w-full bg-gray-300 px-16 py-6 rounded-xl">
         <div className="p-2 sm:px-16">
           <div className="flex flex-col md:flex-row items-center">
             <Parallax
