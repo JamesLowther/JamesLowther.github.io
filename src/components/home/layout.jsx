@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
           <div className="h-1 bg-red-600" style={{"width": `${state.value}%`}}></div>
         </div>
         {children}
-        </main>
+      </main>
     </>
   );
 };

@@ -28,12 +28,12 @@ class ProjectView extends React.Component {
   render() {
     return (
       <div className="flex flex-col items-center lg:items-start lg:flex-row w-full">
-        <div className="flex flex-col items-center justify-around h-80 mb-3 text-xl lg:text-2xl w-1/2 lg:w-2/12 pl-1 lg:px-6">
+        <div className="flex flex-col items-center justify-around h-80 mb-3 text-lg lg:text-xl w-1/2 lg:w-2/12 pl-1 lg:px-6">
           <button
             className={
               this.state.index === 0
-                ? "bg-gray-300 bg-red-700 text-white w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
-                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
+                ? "bg-gray-300 bg-red-700 text-white w-full py-2 mb-3 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white mb-3 w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
             }
             onClick={() => {
               this.setState({ index: 0 });
@@ -44,8 +44,8 @@ class ProjectView extends React.Component {
           <button
             className={[
               this.state.index === 1
-                ? "bg-gray-300 bg-red-700 text-white w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
-                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out",
+                ? "bg-gray-300 bg-red-700 text-white w-full mb-3 py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white mb-3 w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out",
               !this.state.ctf ? "animate-slowpulse" : "",
             ].join(" ")}
             onClick={() => {
@@ -57,8 +57,8 @@ class ProjectView extends React.Component {
           <button
             className={[
               this.state.index === 2
-                ? "bg-gray-300 bg-red-700 text-white w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
-                : "bg-gray-300 hover:bg-red-700 hover:text-white w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out",
+                ? "bg-gray-300 bg-red-700 text-white w-full mb-3 py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out"
+                : "bg-gray-300 hover:bg-red-700 hover:text-white mb-3 w-full py-2 px-2 rounded-lg transform hover:scale-103 transition duration-200 ease-in-out",
               !this.state.rumpus ? "animate-slowpulse" : "",
             ].join(" ")}
             onClick={() => {

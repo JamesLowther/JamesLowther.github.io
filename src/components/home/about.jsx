@@ -31,7 +31,7 @@ const About = () => {
                     My name is James Lowther and I'm a graduate from the
                     University of Calgary with a degree in Computer Science.
                     Some of my interests include participating in CTF
-                    (Capture-the-Flag) hacking competitions and creating
+                    (Capture-the-Flag) hacking competitions, hacking boxes, and creating
                     educational material related to information security. I have
                     a passion for cybersecurity and enjoy learning about proper
                     methods for deployment of server infrastructure.

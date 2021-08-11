@@ -17,7 +17,7 @@ const Landing = () => {
         </Link>
       </div>
       <div className="flex flex-col items-center justify-around h-full lg:px-16 bg-black">
-        <div className="flex flex-row mt-3">
+        <div className="flex flex-row mt-4">
           <a
             href="https://github.com/JamesLowther/"
             target="_blank"
