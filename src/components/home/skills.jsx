@@ -103,7 +103,7 @@ const Skills = () => {
           )
         }
       }
-      manjaro: file(relativePath: { eq: "skill-icons/manjaro.png" }) {
+      arch: file(relativePath: { eq: "skill-icons/arch.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 300
@@ -148,7 +148,25 @@ const Skills = () => {
           )
         }
       }
+      ansible: file(relativePath: { eq: "skill-icons/ansible.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 300
+            placeholder: TRACED_SVG
+            layout: CONSTRAINED
+          )
+        }
+      }
       terraform: file(relativePath: { eq: "skill-icons/terraform.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 300
+            placeholder: TRACED_SVG
+            layout: CONSTRAINED
+          )
+        }
+      }
+      cloudformation: file(relativePath: { eq: "skill-icons/cloudformation.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 300
@@ -176,6 +194,15 @@ const Skills = () => {
         }
       }
       digitalocean: file(relativePath: { eq: "skill-icons/digitalocean.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 300
+            placeholder: TRACED_SVG
+            layout: CONSTRAINED
+          )
+        }
+      }
+      aws: file(relativePath: { eq: "skill-icons/aws.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 300
@@ -220,19 +247,22 @@ const Skills = () => {
             <TechCard image={data.docker} name="Docker" />
             <TechCard image={data.nginx} name="Nginx" />
             <TechCard image={data.git} name="Git" />
+            <TechCard image={data.ansible} name="Ansible" />
             <TechCard image={data.terraform} name="Terraform" />
+            <TechCard image={data.cloudformation} name="Cloudformation" />
             <TechCard image={data.shell} name="Shell" />
           </div>
           <p className="text-4xl md:text-5xl mb-4">Services</p>
           <div className="flex flex-wrap">
             <TechCard image={data.github} name="GitHub" />
             <TechCard image={data.digitalocean} name="Digital Ocean" />
+            <TechCard image={data.aws} name="AWS" />
           </div>
           <p className="text-4xl md:text-5xl mb-4">Operating Systems</p>
           <div className="flex flex-wrap">
             <TechCard image={data.windows} name="Windows" />
             <TechCard image={data.linux} name="Linux" />
-            <TechCard image={data.manjaro} name="Manjaro" />
+            <TechCard image={data.arch} name="Arch" />
             <TechCard image={data.debian} name="Debian" />
           </div>
         </div>
