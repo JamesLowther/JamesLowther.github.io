@@ -172,7 +172,7 @@ class ASCIIAnimation extends React.PureComponent {
         if (currentFrame_i < renderedFrames.length) {
           await this._drawIntermediateFrame(
             renderedFrames[currentFrame_i],
-            (i / this.props.source.length) * 100
+            i / this.props.source.length
           );
 
           currentFrame_i = currentFrame_i + (1 % this.sourceData.numFrames);
@@ -187,34 +187,18 @@ class ASCIIAnimation extends React.PureComponent {
     // Draw the frame.
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     this.ctx.drawImage(frame, 0, 0);
-
-    // Draw the loading screen.
-    this.ctx.textAlign = "end";
-    let text = "Loading " + Math.floor(progress) + "%";
-    let dim = this.ctx.measureText(text);
-
-    // Loading text options.
+    
     let padding = 20;
+    this.ctx.lineWidth = 3;
+    
+    let radius = this.sourceData.canvasWidth / 60;
+    let radOffset = 1.5 * Math.PI;
 
-    this.ctx.font = this.props.loadingFontSize + "px Courier New";
-
-    // Draw loading background.
-    this.ctx.fillStyle = "black";
-    this.ctx.fillRect(
-      this.ctx.canvas.width - dim.width - padding,
-      0,
-      dim.width + padding,
-      this.props.loadingFontSize + 10
-    );
-
-    // Draw loading text.
-    this.ctx.fillStyle = "white";
-    this.ctx.fillText(
-      text,
-      Math.floor(this.ctx.canvas.width - padding / 2),
-      this.props.loadingFontSize
-    );
-
+    this.ctx.beginPath();
+    this.ctx.arc(this.ctx.canvas.width - radius - padding, radius + padding, radius, radOffset, (2 * Math.PI * progress) + radOffset);
+    this.ctx.strokeStyle = "#FFFFFF";
+    this.ctx.stroke();
+    
     await this._sleep(1);
   }
 
@@ -255,7 +239,7 @@ ASCIIAnimation.propTypes = {
 ASCIIAnimation.defaultProps = {
   frameDelay: 40,
   squishiness: 1,
-  loadingFontSize: 25,
+  loadingFontSize: 12,
 };
 
 export default ASCIIAnimation;
