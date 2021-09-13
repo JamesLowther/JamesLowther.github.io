@@ -9,6 +9,10 @@ section.writeup {
 .writeup span.gatsby-resp-image-wrapper {
 }
 
+.writeup img.gatsby-resp-image-image {
+  @apply rounded-md
+}
+
 .writeup a.anchor {
   @apply h-full flex items-center;
 }
@@ -128,7 +132,7 @@ hr {
 }
 
 div.gatsby-highlight {
-  @apply overflow-x-auto shadow-md;
+  @apply overflow-x-auto shadow-md w-11/12 mx-auto;
 }
 
 .gatsby-highlight-code-line {
