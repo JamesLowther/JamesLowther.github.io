@@ -165,7 +165,6 @@ div.gatsby-highlight {
 
 .writeup pre code.language-text {
   background-color: inherit;
-  @apply px-1 text-lg;
 }
 
 .writeup code.language-text {
