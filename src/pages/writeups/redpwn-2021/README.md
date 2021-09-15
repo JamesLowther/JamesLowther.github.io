@@ -2,7 +2,7 @@
 path: "/writeups/redpwn-2021"
 date: 2021-07-09
 title: "redpwnCTF 2021"
-category: "ctf"
+category: "writeup"
 ---
 
 Link: https://ctf.redpwn.net/

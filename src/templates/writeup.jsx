@@ -3,12 +3,13 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 
 import "../assets/css/writeups.css";
+import "katex/dist/katex.min.css";
 
 const WriteupTemplate = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <section className="writeup overflow-x-auto" style={{"fontFamily": "'Roboto Mono', monospace"}}>
+    <section className="writeup overflow-x-auto" style={{"fontFamily": "'Mulish', sans-serif"}}>
       <Helmet> 
         <title>{`${post.frontmatter.title} - James Lowther`}</title>
         <meta name="theme-color" content="#111827"/>
