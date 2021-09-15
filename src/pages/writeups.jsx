@@ -10,7 +10,7 @@ const WriteupPage = ({ data }) => {
   return (
     <section className="bg-gray-900 w-full h-screen text-white" style={{"fontFamily": "'Mulish', sans-serif"}}>
       <Helmet>
-        <title>Projects/Guides - James Lowther</title>
+        <title>Writeups/Projects - James Lowther</title>
         <meta name="description" content="Writeups written by James Lowther" />
         <meta name="theme-color" content="#111827"/>
         <html lang="en" />
