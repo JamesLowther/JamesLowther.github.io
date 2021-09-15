@@ -27,7 +27,7 @@ const BlogPage = ({ data }) => {
         {/* <h1 className="text-6xl text-center font-bold mb-10 pt-32">Projects & Guides</h1> */}
         <div className="pt-36">
           <div className="rounded-lg p-8 shadow-md mb-10" style={{ "backgroundColor": "#182136" }}>
-            <h1 className="text-5xl font-bold">Writeups</h1>
+            <h1 id="writeups" className="text-5xl font-bold">Writeups</h1>
             <hr className="my-2" />
             <div className="flex flex-wrap w-full justify-center">
               {
@@ -52,7 +52,7 @@ const BlogPage = ({ data }) => {
           </div>
         </div>
         <div className="rounded-lg p-8 shadow-md" style={{ "backgroundColor": "#182136" }}>
-          <h1 className="text-5xl font-bold">Projects</h1>
+          <h1 id="projects" className="text-5xl font-bold">Projects</h1>
           <hr className="my-2" />
           <div className="flex flex-wrap w-full justify-center">
             {
