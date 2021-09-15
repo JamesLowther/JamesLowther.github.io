@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway`, `Roboto Mono`],
+        fonts: [`Raleway`, `Mulish`],
       },
     },
     `gatsby-plugin-postcss`,
@@ -87,11 +87,21 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
+          {
+            resolve: `gatsby-remark-unwrap-images`
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 900,
               quality: 80,
-              withWebp: true,
+              withWebp: true
             },
           },
         ],

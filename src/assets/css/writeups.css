@@ -7,10 +7,11 @@ section.writeup {
 }
 
 .writeup span.gatsby-resp-image-wrapper {
+  @apply w-11/12;
 }
 
 .writeup img.gatsby-resp-image-image {
-  @apply rounded-md
+  @apply rounded-md shadow-md w-full;
 }
 
 .writeup a.anchor {
@@ -54,7 +55,7 @@ section.writeup {
 
 .writeup p {
   background-color: #202c47;
-  @apply text-lg p-3 rounded-lg my-6 overflow-x-auto shadow-md;
+  @apply text-xl p-3 rounded-lg my-6 overflow-x-auto shadow-md;
 }
 
 .writeup a {
@@ -160,6 +161,11 @@ div.gatsby-highlight {
   overflow: initial;
   float: left; /* 1 */
   min-width: 100%; /* 2 */
+}
+
+.writeup code.language-text {
+  background-color: rgb(88, 86, 86);
+  @apply px-1 text-lg;
 }
 
 /* Fix command line */
