@@ -163,6 +163,11 @@ div.gatsby-highlight {
   min-width: 100%; /* 2 */
 }
 
+.writeup pre code.language-text {
+  background-color: inherit;
+  @apply px-1 text-lg;
+}
+
 .writeup code.language-text {
   background-color: rgb(88, 86, 86);
   @apply px-1 text-lg;
