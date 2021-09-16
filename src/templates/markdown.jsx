@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 
-import "../assets/css/writeups.css";
+import "../assets/css/markdown.css";
 import "katex/dist/katex.min.css";
 
-const WriteupTemplate = ({ data }) => {
+const MarkdownTemplate = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
@@ -18,7 +18,7 @@ const WriteupTemplate = ({ data }) => {
         <Link
           className="text-white mt-5 ml-4 shadow-lg transition duration-200 ease-in-out bg-gray-700 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 rounded-lg py-2 px-8"
           style={{"color": "white", "textDecoration": "none"}}
-          to=".."
+          to="/blog"
         >
           Back
         </Link>
@@ -49,4 +49,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default WriteupTemplate;
+export default MarkdownTemplate;

@@ -25,9 +25,9 @@ const Projects = () => {
           <div>Also, check out my</div>
           <Link
             className="shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-            to="/writeups"
+            to="/blog"
           >
-            <button>writeups</button>
+            <button>blog</button>
           </Link>
         </div>
       </section>

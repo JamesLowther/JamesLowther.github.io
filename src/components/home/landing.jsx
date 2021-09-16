@@ -11,7 +11,7 @@ const Landing = () => {
       <div className="invisible md:visible absolute w-full flex justify-end z-40 pointer-events-none overflow-x-hidden">
         <Link 
           className="pointer-events-auto flex justify-end rounded-tl-3xl rounded-bl-3xl items-center px-4 mt-16 w-72 h-10 bg-red-600 transform duration-150 translate-x-60 hover:translate-x-0"
-          to="/writeups"
+          to="/blog"
         >
           <p className="text-xl text-white mb-1">Check out my writeups!</p>
         </Link>

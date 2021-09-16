@@ -2,16 +2,24 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
-const WriteupPage = ({ data }) => {
+const BlogPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
-  const writeups = posts.filter(post => post.node.frontmatter.category === "writeup")
-  const projects = posts.filter(post => post.node.frontmatter.category === "project")
+  const writeups = posts.filter(post => 
+    post.node.frontmatter.category === "writeup"
+    &&
+    post.node.frontmatter.enabled
+  )
+  const projects = posts.filter(post => 
+    post.node.frontmatter.category === "project"
+    &&
+    post.node.frontmatter.enabled  
+  )
 
   return (
     <section className="bg-gray-900 w-full h-screen text-white" style={{"fontFamily": "'Mulish', sans-serif"}}>
       <Helmet>
-        <title>Writeups/Projects - James Lowther</title>
-        <meta name="description" content="Writeups written by James Lowther" />
+        <title>Blog - James Lowther</title>
+        <meta name="description" content="Blog content written by James Lowther" />
         <meta name="theme-color" content="#111827"/>
         <html lang="en" />
       </Helmet>
@@ -27,7 +35,7 @@ const WriteupPage = ({ data }) => {
         {/* <h1 className="text-6xl text-center font-bold mb-10 pt-32">Projects & Guides</h1> */}
         <div className="pt-36">
           <div className="rounded-lg p-8 shadow-md mb-10" style={{ "backgroundColor": "#182136" }}>
-            <h1 className="text-5xl font-bold">Writeups</h1>
+            <h1 id="writeups" className="text-5xl font-bold">Writeups</h1>
             <hr className="my-2" />
             <div className="flex flex-wrap w-full justify-center">
               {
@@ -52,7 +60,7 @@ const WriteupPage = ({ data }) => {
           </div>
         </div>
         <div className="rounded-lg p-8 shadow-md" style={{ "backgroundColor": "#182136" }}>
-          <h1 className="text-5xl font-bold">Projects</h1>
+          <h1 id="projects" className="text-5xl font-bold">Projects</h1>
           <hr className="my-2" />
           <div className="flex flex-wrap w-full justify-center">
             {
@@ -61,7 +69,7 @@ const WriteupPage = ({ data }) => {
                   return (
                     <div key={post.frontmatter.path}>
                       <Link to={post.frontmatter.path}>
-                        <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-gray-500 hover:bg-purple-600 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                        <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-gray-500 hover:bg-green-600 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                           <h1 className="text-xl font-bold">{post.frontmatter.title}</h1>
                           <h2 className="text-lg">{post.frontmatter.date}</h2>
                         </button>
@@ -90,6 +98,7 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             category
+            enabled
           }
         }
       }
@@ -97,4 +106,4 @@ export const query = graphql`
   }
 `;
 
-export default WriteupPage;
+export default BlogPage;

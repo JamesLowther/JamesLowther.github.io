@@ -3,7 +3,7 @@ const path = require("path");
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const writeupTemplate = path.resolve(`src/templates/writeup.jsx`);
+  const markdownTemplate = path.resolve(`src/templates/markdown.jsx`);
 
   const result = await graphql(`
     {
@@ -31,7 +31,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: writeupTemplate,
+      component: markdownTemplate,
       context: {
         path: node.frontmatter.path,
       },
