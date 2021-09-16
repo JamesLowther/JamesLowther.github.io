@@ -68,7 +68,7 @@ section.writeup {
 
 .writeup ul {
   background-color: #202c47;
-  @apply text-lg p-3 list-disc pl-8 rounded-lg my-3 overflow-x-auto shadow-md;
+  @apply text-xl p-3 list-disc pl-8 rounded-lg my-3 overflow-x-auto shadow-md;
 }
 
 .writeup ul.contains-task-list {
@@ -77,7 +77,7 @@ section.writeup {
 
 .writeup ol {
   background-color: #202c47;
-  @apply text-lg p-3 list-decimal pl-20 rounded-lg my-3 overflow-x-auto shadow-md;
+  @apply text-xl p-3 list-decimal pl-10 rounded-lg my-3 overflow-x-auto shadow-md;
 }
 
 .writeup blockquote p::before, .writeup blockquote p {
@@ -107,7 +107,7 @@ section.writeup {
 
 .writeup table {
   background-color: #202c47;
-  @apply text-lg table-auto mx-auto my-3 shadow-md;
+  @apply text-xl table-auto mx-auto my-3 shadow-md;
 }
 
 .writeup table td, .writeup table th {

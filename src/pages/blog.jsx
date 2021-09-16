@@ -4,8 +4,16 @@ import { Helmet } from "react-helmet";
 
 const BlogPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
-  const writeups = posts.filter(post => post.node.frontmatter.category === "writeup")
-  const projects = posts.filter(post => post.node.frontmatter.category === "project")
+  const writeups = posts.filter(post => 
+    post.node.frontmatter.category === "writeup"
+    &&
+    post.node.frontmatter.enabled
+  )
+  const projects = posts.filter(post => 
+    post.node.frontmatter.category === "project"
+    &&
+    post.node.frontmatter.enabled  
+  )
 
   return (
     <section className="bg-gray-900 w-full h-screen text-white" style={{"fontFamily": "'Mulish', sans-serif"}}>
@@ -90,6 +98,7 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             category
+            enabled
           }
         }
       }
