@@ -27,6 +27,7 @@
     "gatsby-plugin-sharp": "^3.3.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-remark-autolink-headers": "^4.6.0",
+    "gatsby-remark-gifs": "^1.0.0",
     "gatsby-remark-images": "^5.5.0",
     "gatsby-remark-katex": "^5.10.0",
     "gatsby-remark-prismjs": "^5.5.0",
