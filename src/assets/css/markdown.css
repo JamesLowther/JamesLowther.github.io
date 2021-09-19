@@ -14,6 +14,10 @@ section.writeup {
   @apply rounded-md shadow-md w-full;
 }
 
+.writeup img {
+  @apply rounded-md shadow-md w-full;
+}
+
 .writeup a.anchor {
   @apply h-full flex items-center;
 }
