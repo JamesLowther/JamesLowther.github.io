@@ -78,7 +78,8 @@ def add_nodes(self):
     ones_column = np.ones((len(node_array), 1))
     ones_added = np.hstack((node_array, ones_column))
     self._earth_nodes = np.vstack((self._earth_nodes, ones_added))
-...
+    
+    ...
 ```
 
 ### Drawing the nodes
@@ -100,7 +101,8 @@ def draw(self, image):
                 self.Y + int(node[1]) * -1), 
                 self.EARTH_COLOR
             )
-...
+    
+    ...
 ```
 
 This is what the result looks like before a bitmap of the Earth is applied. The resolution can easily be increased by changing the `MAP_WIDTH` and `MAP_HEIGHT` variables before the nodes get created. The resolution below is lower than what is used in the final result. The higher the resolution the more computations are needed when rotating and drawing the sphere.
@@ -131,15 +133,22 @@ def update_spin(self):
 
     self.rotate(matrix_y)
 
-def rotate(self, matrix):
-"""
-Applies the rotation matrix to the Earth array, ISS array, and home array.
-"""
-center = self.find_center()
+def find_center(self):
+    """
+    Returns the center coordinates of the Earth.
+    """
+    return self._earth_nodes.mean(axis=0)
 
-for i, node in enumerate(self._earth_nodes):
-    self._earth_nodes[i] = center + np.matmul(matrix, node - center)
-...
+def rotate(self, matrix):
+    """
+    Applies the rotation matrix to the Earth array, ISS array, and home array.
+    """
+    center = self.find_center()
+
+    for i, node in enumerate(self._earth_nodes):
+        self._earth_nodes[i] = center + np.matmul(matrix, node - center)
+    
+    ...
 ```
 
 This will produce the following result:
