@@ -215,9 +215,9 @@ def draw(self, image):
         image.putpixel((self.X + home_x, self.Y + home_y * -1), self.HOME_COLOR)
 ```
 
+## Final result
 ![ISS visualization](./videos/iss-visualization.gif)
 
-## Final result
 A video of the final ISS tracking display running on the RGB matrix can be found [here](https://www.youtube.com/watch?v=hGGuzK79fT0).
 
 This was a really fun project that forced me to brush-up on my linear algebra. It is a really cool visualization to leave running in the background.
