@@ -30,15 +30,17 @@ The following are the parts that I used to build this project. Most of them were
 In order to get this to work I needed to brush up on my linear algebra skills. I used this [video](https://www.youtube.com/watch?v=7Q6yvpjvKVg) as a starting point for my own code. It explains how to convert from a spherical coordinate system to a Cartesian coordinate system, initialize a numpy matrix to store the coordinates for the sphere, and how to apply a rotation matrix. The video describes how to use this to draw an ASCII Earth with pygame, but I managed to adapt it to work with the RGB matrix.
 
 ### Generating the nodes
-First, for each latitude (north/south) I iterated over a number of longitudes (east/west) and converted the latitude/longitude pair to to a xyz coordinate. These coordinates were then converted to a numpy matrix. The `add_nodes()` and `convert_coords()` methods are used to achieve this.
+First, for each latitude (north/south) I iterated over a number of longitudes (east/west) and converted the latitude/longitude pair to to a xyz coordinate. These coordinates were then converted to a numpy matrix. The `add_nodes()` and `convert_coords()` methods were written to achieve this.
 
 Converting from spherical to Cartesian coordinates is done using the following equations:
 
-$
-x=\sqrt{r\sin{\theta}\cos{\varphi}} \newline
-y=\sqrt{r\cos{\theta}} \newline
-z=\sqrt{r\sin{\theta}\sin{\varphi}}
-$
+$$
+\begin{align*}
+    x=&\sqrt{r\sin{\theta}\cos{\varphi}} \\
+    y=&\sqrt{r\cos{\theta}} \\
+    z=&\sqrt{r\sin{\theta}\sin{\varphi}}
+\end{align*}
+$$
 
 When given standard latitude and longitude values as input, $\theta$ is the complement of the latitude, or co-latitude, and $\varphi$ is the complement of the longitude. $r$ is the radius of the sphere. The following image from the [Wikipedia](https://en.wikipedia.org/wiki/Spherical_coordinate_system) article helps illustrate this. ***Note: I switched the equations for y and z to allow y to represent the vertical axis.***
 
