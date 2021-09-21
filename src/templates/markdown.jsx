@@ -14,7 +14,7 @@ const MarkdownTemplate = ({ data }) => {
         <title>{`${post.frontmatter.title} - James Lowther`}</title>
         <meta name="theme-color" content="#111827"/>
       </Helmet>
-      <div className="flex absolute z-50">
+      <div className="flex fixed z-50">
         <Link
           className="text-white mt-5 ml-4 shadow-lg transition duration-200 ease-in-out bg-gray-700 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 rounded-lg py-2 px-8"
           style={{"color": "white", "textDecoration": "none"}}
