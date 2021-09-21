@@ -1,10 +1,5 @@
-/* Katex fix */
-body {
-  overflow-y: hidden;
-}
-
 section.writeup {
-  @apply bg-gray-900 w-full h-screen text-gray-100;
+  @apply bg-gray-900 w-full text-gray-100;
 }
 
 .writeup .w-inner-div {
@@ -12,7 +7,7 @@ section.writeup {
 }
 
 .writeup span.gatsby-resp-image-wrapper {
-  @apply w-11/12;
+  @apply w-11/12 rounded-md;
 }
 
 .writeup img.gatsby-resp-image-image {
@@ -126,6 +121,15 @@ section.writeup {
 hr {
   border-color: #e2aa00;
   @apply border-2 mt-12 mb-10 rounded-full shadow-md;
+}
+
+.writeup div.math-display {
+  @apply text-xl;
+}
+
+.writeup div.math-display span.base {
+  background-color: #36425f;
+  @apply px-10 py-4 rounded-lg shadow-md;
 }
 
 /* Fix PrismJS line numbering */
