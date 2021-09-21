@@ -7,7 +7,7 @@ section.writeup {
 }
 
 .writeup span.gatsby-resp-image-wrapper {
-  @apply w-11/12 rounded-md;
+  @apply w-11/12 rounded-md my-5;
 }
 
 .writeup img.gatsby-resp-image-image {
