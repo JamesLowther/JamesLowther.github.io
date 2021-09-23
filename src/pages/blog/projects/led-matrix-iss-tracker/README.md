@@ -232,3 +232,5 @@ def draw(self, image):
 A video of the final ISS tracking display running on the RGB matrix can be found [here](https://www.youtube.com/watch?v=hGGuzK79fT0).
 
 This was a really fun project that forced me to brush-up on my linear algebra. It is a really cool visualization to leave running in the background.
+
+***
