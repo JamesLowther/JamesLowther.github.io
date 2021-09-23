@@ -6,7 +6,7 @@ category: "project"
 enabled: True
 ---
 
-The goal of this projects was simple - create a visualization to display the current position of the ISS in real-time. This was my first major attempt create a display to be used on my new 32x64 RGB matrix from Adafruit.
+The goal of this projects was simple - create a visualization to display the current position of the ISS in real-time. This was my first major attempt create a display to be used on my new 64x32 RGB matrix from Adafruit.
 
 ![Matrix](./images/matrix.jpg)
 
@@ -85,7 +85,7 @@ def add_nodes(self):
 ```
 
 ### Drawing the nodes
-Once the nodes have been initialized they can be drawn to the screen. Drawing is done using the PIL library. On each frame, a 32x64 PIL image is created and sent to the RGB matrix to be drawn. To create the frame, each node is iterated over and the pixel at the `x` and `y` coordinate is drawn (only if `z > 1` to only draw nodes in the foreground). 
+Once the nodes have been initialized they can be drawn to the screen. Drawing is done using the PIL library. On each frame, a 64x32 PIL image is created and sent to the RGB matrix to be drawn. To create the frame, each node is iterated over and the pixel at the `x` and `y` coordinate is drawn (only if `z > 1` to only draw nodes in the foreground). 
 
 ```python
 def draw(self, image):
