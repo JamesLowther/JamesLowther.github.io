@@ -154,9 +154,6 @@ class ASCIIAnimation extends React.PureComponent {
 
         for (let x = 0; x < this.sourceData.frameX; x++) {
           let start = x * 3;
-
-          console.log(Date.now())
-
           // Draw a single pixel.
           preCtx.fillStyle = this._convertColor(
             line.slice(start + 1, start + 3)
