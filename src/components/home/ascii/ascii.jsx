@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 class ASCIIAnimation extends React.PureComponent {
   constructor(props) {
     super(props);
+
+    this._isMounted = false;
+
     this._div = React.createRef();
     this._canvas = React.createRef();
 
@@ -16,6 +19,8 @@ class ASCIIAnimation extends React.PureComponent {
   }
 
   componentDidMount() {
+    this._isMounted = true;
+
     // this._div.current.addEventListener("resize", this._handleResize);
     this._resizeObserver = new ResizeObserver(entries => {
       this._handleResize();
@@ -27,21 +32,24 @@ class ASCIIAnimation extends React.PureComponent {
   }
 
   componentWillUnmount() {
+    this._isMounted = false;
     this._resizeObserver.disconnect();
   }
 
   async _start() {
     this.didReset = false;
 
-    while (!this._getSourceData()) {}
+    while (this._isMounted && !this._getSourceData()) {}
 
-    this.ctx = this._canvas.current.getContext("2d");
-    let [renderedFrames, currentFrame_i] = await this._preRender();
+    if (this._isMounted) {
+      this.ctx = this._canvas.current.getContext("2d");
+      let [renderedFrames, currentFrame_i] = await this._preRender();
 
-    if (renderedFrames) {
-      this.renderedFrames = renderedFrames;
-      this.currentFrame_i = currentFrame_i;
-      this._playRendered();
+      if (renderedFrames) {
+        this.renderedFrames = renderedFrames;
+        this.currentFrame_i = currentFrame_i;
+        this._playRendered();
+      }
     }
   }
 
@@ -127,7 +135,7 @@ class ASCIIAnimation extends React.PureComponent {
     let lastTime = Date.now();
 
     for (let i = 0; i < this.sourceData.numFrames; i++) {
-      if (this.didReset) {
+      if (!this._isMounted || this.didReset) {
         return [null, null];
       }
 
@@ -146,6 +154,8 @@ class ASCIIAnimation extends React.PureComponent {
 
         for (let x = 0; x < this.sourceData.frameX; x++) {
           let start = x * 3;
+
+          console.log(Date.now())
 
           // Draw a single pixel.
           preCtx.fillStyle = this._convertColor(
