@@ -6,7 +6,7 @@ category: "writeup"
 enabled: True
 ---
 
-I was a organizer for this CTF so the following writeups are for challenges that I developed. The full repository with all of the challenges can be found [here](https://github.com/infosec-ucalgary/magpieCTF-2021).
+I was an organizer for this CTF so the following writeups are for challenges that I developed. The full repository with all of the challenges can be found [here](https://github.com/infosec-ucalgary/magpieCTF-2021).
 
 ***
 
@@ -191,12 +191,12 @@ The flag can be found in the returned LOG data.
 Gargamel stole the key to decrypt The Smurfs ciphertext. Now they can't get into their kingdom to view their flag. Can you help them get the right key?
 
 ## Solution
-This challenge gives you a file named `cipher` and the source code used to return the flag. Your goal is to reverse engineer the source code to create, and upload, the key that will allow the flag to be returned. This challenge requires you to exploit PHP loose comparison. In PHP versions less than 8 using `==` will loosly compare variables of different types, allowing expressions to implicitly evaluate to true. Any string (i.e. `password.txt`) compared with the integer `0` will evaluate to `true`. By making `to_check` equal to `0` we can echo the flag.
+This challenge gives you a file named `cipher` and the source code used to return the flag. Your goal is to reverse engineer the source code to create, and upload, the key that will allow the flag to be returned. This challenge requires you to exploit PHP loose comparison. In PHP versions less than 8 using `==` will loosely compare variables of different types, allowing expressions to implicitly evaluate to true. Any string (i.e. `password.txt`) compared with the integer `0` will evaluate to `true`. By making `to_check` equal to `0` we can echo the flag.
 
 A table showing all of the PHP loose comparison values can be found [here](https://www.php.net/manual/en/types.comparisons.php).
 
 1. In order to get the flag we need to ensure that `$to_check` is `0` to exploit PHP using loose comparison.
-2. Create a 8 byte file that is equivalent to the the data in `cipher + 0xd34db33f` and upload it.
+2. Create a 8 byte file that is equivalent to the data in `cipher + 0xd34db33f` and upload it.
    - Your key will be XORed with `cipher + 0xd34db33f`. If they are equivalent then the XOR result will be zero.
 3. The if statement will be `0 == "whatever the password is"` which evaluates to true, and the flag will be echoed back.
 
@@ -217,7 +217,7 @@ The DynaTAC 8000X, released in 1983, was the first consumer cellphone ever sold.
 2. Pay attention to when the keys were actually pressed.
 
 ## Solution
-This challenge provides you with a file including a bunch of keystrokes on a cell phone as well as the time the key was pressed. Keys need to be decoded to the letters that would be selected if pressed on a 9-key flip phone. The time between each sequence of presses is roughly 400ms and the time between each letter is roughtly 1200ms. The BACKSPACE key represents an incorrect sequence and the user deleting a previously entered letter.
+This challenge provides you with a file including a bunch of keystrokes on a cell phone as well as the time the key was pressed. Keys need to be decoded to the letters that would be selected if pressed on a 9-key flip phone. The time between each sequence of presses is roughly 400ms and the time between each letter is roughly 1200ms. The BACKSPACE key represents an incorrect sequence and the user deleting a previously entered letter.
 
 1. To solve this challenge, write a script that looks at the keys and the time they were pressed and decodes each sequence of key presses back to the corresponding letter on a 9-key flip phone.
 
