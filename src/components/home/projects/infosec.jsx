@@ -14,7 +14,7 @@ const InfosecProject = () => {
           Technical Director for the Information Security Club at the University
           of Calgary. Prepared and taught beginner and advanced workshops at
           weekly club meetings. Administrated server infrastructure and managed
-          front-end development the for club website. Managed junior executives
+          front-end development the for the club website. Managed junior executives
           who were interested in the server infrastructure side of the the
           club's operations.
         </p>

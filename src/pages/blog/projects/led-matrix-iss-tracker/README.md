@@ -6,11 +6,11 @@ category: "project"
 enabled: True
 ---
 
-The goal of this projects was simple - create a visualization to display the current position of the ISS in real-time. This was my first major attempt create a display to be used on my new 64x32 RGB matrix from Adafruit.
+The goal of this project was simple - create a visualization to display the current position of the ISS in real-time. This was my first major attempt to create a display to be used on my new 64x32 RGB matrix from Adafruit.
 
 ![Matrix](./images/matrix.jpg)
 
-The red dot on the image above represents the ISS and the green dot shows my current location. Displayed on the left there is time, ISS latitude, ISS longitude, and number of astronauts on board (one coloured square for each).
+The red dot on the image above represents the ISS and the green dot shows my current location. Displayed on the left there is time, ISS latitude, ISS longitude, and the number of astronauts on board (one coloured square for each).
 
 The source code for this project can be found [here](https://github.com/JamesLowther/led-matrix/blob/main/src/views/issview.py).
 ***
@@ -27,10 +27,10 @@ The following are the parts that I used to build this project. Most of them were
 ![Raspberry Pi](./images/raspberry-pi.jpg)
 
 ## The Spinning Globe
-In order to get this to work I needed to brush up on my linear algebra skills. I used this [video](https://www.youtube.com/watch?v=7Q6yvpjvKVg) as a starting point for my own code. It explains how to convert from a spherical coordinate system to a Cartesian coordinate system, initialize a numpy matrix to store the coordinates for the sphere, and how to apply a rotation matrix. The video describes how to use this to draw an ASCII Earth with pygame, but I managed to adapt it to work with the RGB matrix.
+To get this to work, I needed to brush up on my linear algebra skills. I used this [video](https://www.youtube.com/watch?v=7Q6yvpjvKVg) as a starting point for my code. It explains how to convert from a spherical coordinate system to a Cartesian coordinate system, initialize a numpy matrix to store the coordinates for the sphere, and how to apply a rotation matrix. The video describes how to use this to draw an ASCII Earth with pygame, but I managed to adapt it to work with the RGB matrix.
 
 ### Generating the nodes
-First, for each latitude (north/south) I iterated over a number of longitudes (east/west) and converted the latitude/longitude pair to to a xyz coordinate. These coordinates were then converted to a numpy matrix. The `add_nodes()` and `convert_coords()` methods were written to achieve this.
+First, for each latitude (north/south) I iterated over a number of longitudes (east/west) and converted the latitude/longitude pair to a xyz coordinate. These coordinates were then converted to a numpy matrix. The `add_nodes()` and `convert_coords()` methods were written to achieve this.
 
 Converting from spherical to Cartesian coordinates is done using the following equations:
 
@@ -158,7 +158,7 @@ This will produce the following result:
 ![Spinning simple globe](./videos/spinning-simple-globe.gif)
 
 ### Adding the Earth bitmap
-To actually make the sphere look like the Earth I took a black and white image of the Earth and reduced its size to `MAP_WIDTH` by `MAP_HEIGHT`. I then converted the image to an array of bits, 1 for a white pixel and 0 for a black pixel. When drawing the Earth I then check the array at the index for corresponding node and only draw the pixel if the bit is 1. The following image is converted with the code below:
+To actually make the sphere look like the Earth I took a black and white image of the Earth and reduced its size to `MAP_WIDTH` by `MAP_HEIGHT`. I then converted the image to an array of bits, 1 for a white pixel and 0 for a black pixel. When drawing the Earth I then check the array at the index for the corresponding node and only draw the pixel if the bit is 1. The following image is converted with the code below:
 
 ![World map](./images/world-map.png)
 
@@ -189,7 +189,7 @@ def convert_map(self):
 ### Drawing the ISS
 Drawing the ISS on the sphere is very similar to drawing the nodes for the Earth. Every 5 seconds I'm sending a request to an [API](http://api.open-notify.org/iss-now.json) which returns the current latitude and longitude for the ISS. I take this information and generate a node matrix with a single node for the ISS. The rotation matrix is applied to this new ISS matrix as well. Then when drawing the frame, I change the pixel for where the ISS is to red.
 
-I do the same process to draw the green dot for my own location.
+I do the same process to draw the green dot for my location.
 
 ```python
 def update_iss(self):
@@ -231,6 +231,6 @@ def draw(self, image):
 
 A video of the final ISS tracking display running on the RGB matrix can be found [here](https://www.youtube.com/watch?v=hGGuzK79fT0).
 
-This was a really fun project that forced me to brush-up on my linear algebra. It is a really cool visualization to leave running in the background.
+This was a really fun project that forced me to brush up on my linear algebra. It is a cool visualization to leave running in the background.
 
 ***
