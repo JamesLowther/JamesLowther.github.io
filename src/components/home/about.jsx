@@ -17,7 +17,7 @@ const About = () => {
               className="flex-none w-full sm:w-2/3 md:w-1/3 lg:w-1/4 my-10"
             >
               <StaticImage
-                src="../../assets/images/head.jpg"
+                src="../../assets/images/head-3.jpg"
                 className="rounded-full shadow-xl"
                 placeholder="blurred"
                 alt="Personal picture of James Lowther"
