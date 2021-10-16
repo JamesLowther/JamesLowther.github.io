@@ -10,7 +10,12 @@ const RumpusKingdomsProject = () => {
         alt="Rumpus Kingdoms logo"
       />
       <div className="w-full py-5 md:w-2/3">
-        <p className="text-black text-4xl font-header mb-8">Rumpus Kingdoms</p>
+        <div className="flex justify-between items-center mb-8">
+          <p className="text-black text-4xl font-header">Rumpus Kingdoms</p>
+          <p className="text-black text-xl">
+            Aug 2020
+          </p>
+        </div>
         <p className="text-black text-2xl mb-10">
           Discord-driven attack-and-defend strategy game based around a medieval
           theme. Players would build a kingdom by settling villages. Attack and

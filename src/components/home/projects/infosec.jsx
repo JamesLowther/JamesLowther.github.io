@@ -7,9 +7,14 @@ const InfosecProject = () => {
     <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-4 lg:p-12">
       <InfosecIcon className="w-4/5 md:w-1/3 h-auto" />
       <div className="w-full md:w-2/3 py-5">
-        <p className="text-black text-4xl mb-8 font-header">
-          InfoSec Club UCalgary
-        </p>
+        <div className="flex justify-between items-center mb-8">
+          <p className="text-black text-4xl font-header">
+            InfoSec Club UCalgary
+          </p>
+          <p className="text-black text-xl">
+            Feb 2020 - May 2021
+          </p>
+        </div>
         <p className="text-black text-2xl mb-8">
           Technical Director for the Information Security Club at the University
           of Calgary. Prepared and taught beginner and advanced workshops at

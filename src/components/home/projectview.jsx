@@ -52,7 +52,7 @@ class ProjectView extends React.Component {
               this.setState({ index: 1, ctf: true });
             }}
           >
-            magpieCTF
+            magpieCTF 2021
           </button>
           <button
             className={[

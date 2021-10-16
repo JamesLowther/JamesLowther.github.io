@@ -6,9 +6,14 @@ const DataVisProject = () => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-4 lg:p-12">
       <div className="w-full py-5 md:w-2/3">
-        <p className="text-black text-4xl font-header mb-8">
-          Data Visualization
-        </p>
+        <div className="flex justify-between items-center mb-8">
+          <p className="text-black text-4xl font-header">
+            Data Visualization
+          </p>
+          <p className="text-black text-xl">
+            Dec 2020
+          </p>
+        </div>
         <p className="text-black text-2xl mb-10">
           Data visualization created for CPSC 583: Introduction to Information
           Visualization at the University of Calgary. Visualizations are created

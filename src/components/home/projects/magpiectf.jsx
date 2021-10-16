@@ -6,7 +6,12 @@ const MagpieCTFProject = () => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-gray-300 rounded-lg p-4 lg:p-12">
       <div className="w-full py-5 md:w-2/3">
-        <p className="text-black text-4xl font-header mb-8">magpieCTF 2021</p>
+        <div className="flex justify-between items-center mb-8">
+          <p className="text-black text-4xl font-header">magpieCTF 2021</p>
+          <p className="text-black text-xl">
+            Feb 2021
+          </p>
+        </div>
         <p className="text-black text-2xl mb-10">
           Headed the planning and implementation of server infrastructure for
           all CTF challenges for the 2021-edition of the competition. Developed an infrastructure
