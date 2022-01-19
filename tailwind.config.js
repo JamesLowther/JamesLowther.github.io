@@ -1,5 +1,8 @@
 // tailwind.config.js
 module.exports = {
+  content: [
+    "./src/**/*.jsx"
+  ],
   theme: {
     extend: {
       opacity: {
@@ -22,8 +25,5 @@ module.exports = {
       103: "1.03",
       105: "1.05",
     },
-  },
-  purge: {
-    enabled: false,
   },
 };

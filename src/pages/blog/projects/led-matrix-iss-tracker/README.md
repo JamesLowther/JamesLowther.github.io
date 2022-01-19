@@ -26,6 +26,7 @@ The following are the parts that I used to build this project. Most of them were
 
 ![Raspberry Pi](./images/raspberry-pi.jpg)
 
+***
 ## The Spinning Globe
 To get this to work, I needed to brush up on my linear algebra skills. I used this [video](https://www.youtube.com/watch?v=7Q6yvpjvKVg) as a starting point for my code. It explains how to convert from a spherical coordinate system to a Cartesian coordinate system, initialize a numpy matrix to store the coordinates for the sphere, and how to apply a rotation matrix. The video describes how to use this to draw an ASCII Earth with pygame, but I managed to adapt it to work with the RGB matrix.
 
@@ -226,6 +227,7 @@ def draw(self, image):
         image.putpixel((self.X + home_x, self.Y + home_y * -1), self.HOME_COLOR)
 ```
 
+***
 ## Final result
 ![ISS visualization](./videos/iss-visualization.gif)
 
