@@ -1,21 +1,22 @@
 section.writeup {
-  @apply bg-gray-900 w-full text-gray-100;
+  background-color: #1b1b1b;
+  @apply w-full text-gray-100;
 }
 
 .writeup .w-inner-div {
-  @apply px-8 sm:px-12 md:px-16 xl:px-72;
+  @apply px-8 sm:px-12 md:px-16 lg:px-32 xl:px-64;
 }
 
 .writeup span.gatsby-resp-image-wrapper {
-  @apply w-11/12 rounded-md my-5;
+  @apply w-11/12 rounded my-5;
 }
 
 .writeup img.gatsby-resp-image-image {
-  @apply rounded-md shadow-md w-full;
+  @apply rounded shadow-md w-full;
 }
 
 .writeup img {
-  @apply w-11/12 rounded-md shadow-md w-full;
+  @apply w-11/12 rounded shadow-md w-full;
 }
 
 .writeup a.anchor {
@@ -58,21 +59,21 @@ section.writeup {
 }
 
 .writeup p {
-  background-color: #202c47;
-  @apply text-xl p-3 rounded-lg my-6 overflow-x-auto shadow-md;
+  background-color: #312f2a;
+  @apply text-xl p-3 rounded my-6 overflow-x-auto shadow-md;
 }
 
 .writeup a {
-  @apply underline text-red-300;
+  @apply underline text-red-400;
 }
 
 .writeup pre {
-  @apply text-lg rounded-lg my-3;
+  @apply text-lg rounded my-3;
 }
 
 .writeup ul {
-  background-color: #202c47;
-  @apply text-xl p-3 list-disc pl-8 rounded-lg my-3 overflow-x-auto shadow-md;
+  background-color: #312f2a;
+  @apply text-xl p-3 list-disc pl-8 rounded my-3 overflow-x-auto shadow-md;
 }
 
 .writeup ul.contains-task-list {
@@ -80,8 +81,8 @@ section.writeup {
 }
 
 .writeup ol {
-  background-color: #202c47;
-  @apply text-xl p-3 list-decimal pl-10 rounded-lg my-3 overflow-x-auto shadow-md;
+  background-color: #312f2a;
+  @apply text-xl p-3 list-decimal pl-10 rounded my-3 overflow-x-auto shadow-md;
 }
 
 .writeup blockquote p::before, .writeup blockquote p {
@@ -110,7 +111,7 @@ section.writeup {
 }
 
 .writeup table {
-  background-color: #202c47;
+  background-color: #312f2a;
   @apply text-xl table-auto mx-auto my-3 shadow-md;
 }
 
@@ -120,6 +121,7 @@ section.writeup {
 
 hr {
   border-color: #e2aa00;
+  background-color: #e2aa00;
   @apply border-2 mt-12 mb-10 rounded-full shadow-md;
 }
 
@@ -128,8 +130,8 @@ hr {
 }
 
 .writeup div.math-display span.base {
-  background-color: #36425f;
-  @apply px-10 py-4 rounded-lg shadow-md;
+  background-color: #46433c;
+  @apply px-10 py-4 rounded shadow-md;
 }
 
 /* Fix PrismJS line numbering */
