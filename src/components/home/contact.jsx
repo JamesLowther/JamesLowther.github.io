@@ -1,8 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { isMobile } from "react-device-detect";
-
 import { Parallax } from "react-scroll-parallax";
 
 const Contact = () => {
@@ -13,10 +11,8 @@ const Contact = () => {
           <p className="text-black text-5xl md:text-6xl mb-8 font-header">
             Contact
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-center">
-            <Parallax
-              disabled={isMobile}
-              x={[-20, 0]}
+          <div className="flex flex-col md:flex-row justify-around items-center">
+            <div
               className="w-3/4 lg:w-2/5 xl:w-1/3 mx-6 mb-6"
             >
               <StaticImage
@@ -28,8 +24,8 @@ const Contact = () => {
               <p className="text-black text-2xl mt-2 font-header">
                 Calgary, AB, Canada
               </p>
-            </Parallax>
-            <Parallax disabled={isMobile} x={[20, 0]}>
+            </div>
+            <div>
               <div className="flex flex-col items-center">
                 <div className="rounded bg-red-700 mx-6 p-1 sm:p-6 mb-4 shadow-xl">
                   <p className="text-gray-300 text-xl sm:text-3xl md:text-4xl font-display mb-2">
@@ -56,7 +52,7 @@ const Contact = () => {
                   </div>
                 </a>
               </div>
-            </Parallax>
+            </div>
           </div>
           <div className="mt-12">
             <a
