@@ -19,7 +19,7 @@ Link: https://realworldctf.com/
 * Note2: Scanner or sqlmap NOT REQUIRED to solve this challenge, please do not use scanners.
 
 ## First Impressions
-For this challenge we are given a link to a website and the source code for the back-end Flask application.
+For this challenge, we are given a link to a website and the source code for the back-end Flask application.
 
 The website brings you to a login page:
 
@@ -64,10 +64,10 @@ def query_kill_time():
     return '{}: {}'.format(*nb[0])
 ```
 
-This `query_kill_time()` function is only called if we have a valid `SessionId` cookie, something we can only get by logging in. Therefore, we need to somehow log-in before we can do any sort of injection.
+This `query_kill_time()` function is only called if we have a valid `SessionId` cookie, something we can only get by logging in. Therefore, we need to somehow log in before we can do any sort of injection.
 
 ## Logging in
-Upon closer inspection of the `query_login_attempt()` function we see that it's login logic is sort of backwards. It first queries for the password in the database, then checks if the username given by the user matches the username associated with the result of the query. If we send a random, invalid, password along with an empty username, the SQL query will return a empty username from the database. This empty username will match with our empty username and we will "log in". This provides us with a `SessionId` that we can use to start querying the `query_kill_time()` function.
+Upon closer inspection of the `query_login_attempt()` function we see that its login logic is sort of backward. It first queries for the password in the database, then checks if the username given by the user matches the username associated with the result of the query. If we send a random, invalid, password along with an empty username, the SQL query will return an empty username from the database. This empty username will match with our empty username and we will "log in". This provides us with a `SessionId` that we can use to start querying the `query_kill_time()` function.
 
 The following curl command illustrates this:
 ```bash
@@ -195,7 +195,7 @@ b'<!DOCTYPE html>\n<head>\n  <link rel="stylesheet" href="static/style.css">\n  
 ...
 ```
 
-The `access_key` and `secret_key` column names stood out in the `target_credentials` table. Modifying our curl command allowed us to pull from those two colums. Using an `OFFSET` of 0 gave us the flag.
+The `access_key` and `secret_key` column names stood out in the `target_credentials` table. Modifying our curl command allowed us to pull from those two columns. Using an `OFFSET` of 0 gave us the flag.
 
 ```bash
 curl -v -X POST 47.242.21.212:8085 \
