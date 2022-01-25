@@ -20,7 +20,7 @@ const BlogPage = ({ data }) => {
       <Helmet>
         <title>Blog - James Lowther</title>
         <meta name="description" content="Blog content written by James Lowther" />
-        <meta name="theme-color" content="#111827"/>
+        <meta name="theme-color" content="#292723"/>
         <html lang="en" />
       </Helmet>
       <div className="flex fixed z-50">
