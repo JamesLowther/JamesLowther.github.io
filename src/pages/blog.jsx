@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
+import { isMobile } from 'react-device-detect';
 
 const BlogPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
@@ -16,7 +17,8 @@ const BlogPage = ({ data }) => {
   )
 
   return (
-    <section className="w-full h-screen overflow-y-auto text-white" style={{"fontFamily": "'Mulish', sans-serif", "backgroundColor": "#1b1b1b"}}>
+    <section className="w-full h-screen overflow-y-auto text-white" style={{"fontFamily": "'Mulish', sans-serif", "backgroundColor": "#1b1b1b",
+    "backgroundImage": `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.09'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}>
       <Helmet>
         <title>Blog - James Lowther</title>
         <meta name="description" content="Blog content written by James Lowther" />
@@ -31,9 +33,22 @@ const BlogPage = ({ data }) => {
           Back
         </Link>
       </div>
+      <div
+        className="flex justify-end select-none py-6 px-12 text-3xl text-red-400 w-full h-16 overflow-hidden"
+        style={{"fontFamily": "'Courier New', monospace"}}
+      >
+        <div className={`relative ${isMobile ? 'pointer-events-none' : 'pointer-events-auto'}`}>
+          <div className="absolute transform duration-300 -translate-x-5 hover:-translate-x-88 w-96">
+            <span className="mr-2">$</span>
+            <span className="absolute transform duration-100 ease-in-out opacity-0 hover:opacity-100 w-full">
+              <div className="pl-8 -translate-x-8">nmap -A 127.0.0.1</div>
+            </span>
+          </div>
+          <div className="absolute transform animate-blink pointer-events-none">|</div>
+        </div>
+      </div>
       <div className="px-4 sm:px-12 md:px-16 xl:px-72">
-        {/* <h1 className="text-6xl text-center font-bold mb-10 pt-32">Projects & Guides</h1> */}
-        <div className="pt-36">
+        <div className="pt-32">
           <div className="rounded-lg p-8 shadow-md mb-10" style={{ "backgroundColor": "#312f2a" }}>
             <h1 id="writeups" className="text-4xl sm:text-5xl font-bold">Writeups</h1>
             <hr className="my-2" />
