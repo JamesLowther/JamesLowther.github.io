@@ -12,7 +12,7 @@ The goal of this project was simple - create a visualization to display the curr
 
 The red dot on the image above represents the ISS and the green dot shows my current location. Displayed on the left there is time, ISS latitude, ISS longitude, and the number of astronauts on board (one coloured square for each).
 
-The source code for this project can be found [here](https://github.com/JamesLowther/led-matrix/blob/main/src/views/issview.py).
+The source code for this project can be found [here](https://github.com/JamesLowther/led-matrix).
 ***
 
 ## Parts
