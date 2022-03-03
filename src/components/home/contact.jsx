@@ -27,19 +27,6 @@ const Contact = () => {
             </div>
             <div>
               <div className="flex flex-col items-center">
-                <div className="rounded bg-red-700 mx-6 p-1 sm:p-6 mb-4 shadow-xl">
-                  <p className="text-gray-300 text-xl sm:text-3xl md:text-4xl font-display mb-2">
-                    Send me an email at:
-                  </p>
-                  <p className="text-gray-800 text-xl sm:text-3xl font-display">
-                    <a
-                      className="text-white"
-                      href="mailto:jamesevlowther@gmail.com"
-                    >
-                      jamesevlowther@gmail.com
-                    </a>
-                  </p>
-                </div>
                 <a
                   href="/static/james-lowther-resume.pdf"
                   target="_blank"
