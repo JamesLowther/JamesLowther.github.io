@@ -1,12 +1,14 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+
 import { Parallax } from "react-scroll-parallax";
+import { isMobile } from 'react-device-detect';
 
 import Terminal from "./terminal";
 
 const About = () => {
   return (
-    <Parallax y={["0px", "-250px"]} className="px-4 md:px-8 lg:pr-32">
+    <Parallax disabled={isMobile} translateY={["0px", "-250px"]} className="px-4 md:px-8 lg:pr-32">
       <section id="about" className="w-full bg-gray-300 px-4 lg:px-12 py-6 rounded-md">
         <div className="p-2 sm:px-16">
           <div className="flex flex-col md:flex-row items-center">
@@ -23,7 +25,7 @@ const About = () => {
             <div className="flex flex-col ">
               <div>
                 <div className="text-black">
-                  <p className="text-2xl md:mx-16">Hello!</p>
+                  <p className="text-2xl font-bold md:mx-16">Hello!</p>
                   <p className="text-2xl mt-8 md:mx-16">
                     My name is James Lowther and I'm a graduate from the
                     University of Calgary with a degree in Computer Science.

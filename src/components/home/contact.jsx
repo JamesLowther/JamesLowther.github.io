@@ -2,10 +2,11 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import { Parallax } from "react-scroll-parallax";
+import { isMobile } from 'react-device-detect';
 
 const Contact = () => {
   return (
-    <Parallax y={["0px", "-600px"]} className="px-4 md:px-8 lg:pr-32">
+    <Parallax disabled={isMobile} translateY={["0px", "-600px"]} className="px-4 md:px-8 lg:pr-32">
       <section id="contact" className="w-full bg-gray-300 pb-20 rounded-xl">
         <div className="pt-8 text-center w-5/6 mx-auto">
           <p className="text-black text-5xl md:text-6xl mb-8 font-header">
@@ -32,7 +33,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="rounded-lg bg-gray-800 hover:bg-gray-900 mx-6 p-3 shadow-xl transform hover:scale-103 transition duration-200 ease-in-out">
+                  <div className="rounded bg-gray-800 hover:bg-gray-900 mx-6 p-3 shadow-xl transform hover:scale-103 transition duration-75 ease-out">
                     <p className="text-white text-2xl md:text-3xl font-display">
                       Download Resume
                     </p>
@@ -51,7 +52,7 @@ const Contact = () => {
             >
               <StaticImage
                 src="../../assets/images/github.png"
-                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-in-out"
+                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-out"
                 placeholder="blurred"
                 alt="GitHub logo"
               />
@@ -65,7 +66,7 @@ const Contact = () => {
             >
               <StaticImage
                 src="../../assets/images/linkedin-dark.png"
-                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-in-out"
+                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-out"
                 placeholder="blurred"
                 alt="LinkedIn logo"
               />

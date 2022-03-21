@@ -21,14 +21,11 @@ class ASCIIAnimation extends React.PureComponent {
   componentDidMount() {
     this._isMounted = true;
 
-    // this._div.current.addEventListener("resize", this._handleResize);
     this._resizeObserver = new ResizeObserver(entries => {
       this._handleResize();
     });
 
     this._resizeObserver.observe(this._div.current);
-
-    this._start();
   }
 
   componentWillUnmount() {
@@ -56,13 +53,14 @@ class ASCIIAnimation extends React.PureComponent {
   _handleResize() {
     clearTimeout(this.resizeID);
     this.resizeID = setTimeout(async () => {
+    
       this.didReset = true;
       await this._sleep(100);
 
       clearInterval(this.intervalID);
       this.forceUpdate();
       this._start();
-    }, 500);
+    }, 75);
   }
 
   _getSourceData() {
@@ -229,7 +227,7 @@ class ASCIIAnimation extends React.PureComponent {
           ref={this._canvas}
           width={this.state.width}
           height={this.state.height}
-          className="mx-auto"
+          className="mx-auto w-full"
         />
       </div>
     );

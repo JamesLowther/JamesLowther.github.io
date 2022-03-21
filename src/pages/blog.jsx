@@ -27,7 +27,7 @@ const BlogPage = ({ data }) => {
       </Helmet>
       <div className="flex fixed z-50">
         <Link
-          className="text-white mt-5 ml-4 shadow-lg transition duration-200 ease-in-out bg-stone-700 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 rounded-lg py-2 px-8"
+          className="text-white mt-5 ml-4 shadow-lg transition duration-75 ease-out bg-stone-700 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 rounded-lg py-2 px-8"
           to="/"
         >
           Back
@@ -59,7 +59,7 @@ const BlogPage = ({ data }) => {
                     return (
                       <div key={post.frontmatter.path}>
                         <Link to={post.frontmatter.path}>
-                          <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-zinc-600 hover:bg-zinc-500 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                          <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-zinc-600 hover:bg-zinc-500 transition duration-75 ease-out transform hover:-translate-y-1 hover:scale-110">
                             <h1 className="text-xl font-bold">{post.frontmatter.title}</h1>
                             <h2 className="text-lg">{post.frontmatter.date}</h2>
                           </button>
@@ -84,7 +84,7 @@ const BlogPage = ({ data }) => {
                   return (
                     <div key={post.frontmatter.path}>
                       <Link to={post.frontmatter.path}>
-                        <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-zinc-600 hover:bg-zinc-500 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                        <button className="shadow-lg text-white px-4 py-2 rounded m-5 bg-zinc-600 hover:bg-zinc-500 transition duration-75 ease-out transform hover:-translate-y-1 hover:scale-110">
                           <h1 className="text-xl font-bold">{post.frontmatter.title}</h1>
                           <h2 className="text-lg">{post.frontmatter.date}</h2>
                         </button>

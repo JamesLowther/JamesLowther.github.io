@@ -16,12 +16,15 @@ const InfosecProject = () => {
           </p>
         </div>
         <p className="text-black text-2xl mb-8">
-          Technical Director for the Information Security Club at the University
+          Former Technical Director for the Information Security Club at the University
           of Calgary. Prepared and taught beginner and advanced workshops at
           weekly club meetings. Administrated server infrastructure and managed
           front-end development the for the club website. Managed junior executives
           who were interested in the server infrastructure side of the the
           club's operations.
+        </p>
+        <p className="text-black text-2xl mb-8">
+          Take a look at some of my workshops below!
         </p>
         <div className="flex flex-wrap justify-center">
           <iframe
@@ -59,7 +62,7 @@ const InfosecProject = () => {
         </div>
         <div className="mt-5 text-center md:text-right">
           <a
-            className="text-sm sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            className="text-sm sm:text-2xl text-white-600 underline shadow-lg text-white px-8 py-2 pb-3 rounded m-5 bg-gray-500 hover:bg-red-700 transition duration-75 ease-out transform hover:-translate-y-1 hover:scale-103"
             href="https://infosecucalgary.ca/"
             target="_blank"
             rel="noreferrer"
