@@ -2,18 +2,19 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { Parallax } from "react-scroll-parallax";
+import { isMobile } from 'react-device-detect';
 
 import ProjectView from "./projectview";
 
 const Projects = () => {
   return (
-    <Parallax y={["0px", "-200px"]}>
+    <Parallax disabled={isMobile} translateY={["0px", "-200px"]}>
       <section
         id="projects"
         className="w-full mx-auto bg-black pt-24 pb-4 lg:pb-24"
       >
         <div className="mb-8">
-          <Parallax y={["-100px", "0px"]}>
+          <Parallax disabled={isMobile} translateY={["-100px", "0px"]}>
             <p className="text-center text-white text-5xl md:text-6xl tracking-wide font-header">
               Projects
             </p>

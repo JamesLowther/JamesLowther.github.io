@@ -2,10 +2,11 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import { Parallax } from "react-scroll-parallax";
+import { isMobile } from 'react-device-detect';
 
 const Contact = () => {
   return (
-    <Parallax y={["0px", "-600px"]} className="px-4 md:px-8 lg:pr-32">
+    <Parallax disabled={isMobile} translateY={["0px", "-600px"]} className="px-4 md:px-8 lg:pr-32">
       <section id="contact" className="w-full bg-gray-300 pb-20 rounded-xl">
         <div className="pt-8 text-center w-5/6 mx-auto">
           <p className="text-black text-5xl md:text-6xl mb-8 font-header">

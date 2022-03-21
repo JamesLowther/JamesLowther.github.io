@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { Parallax } from "react-scroll-parallax";
+import { isMobile } from 'react-device-detect';
 
 import TechCard from "./techcard";
 import ASCIIAnimation from "./ascii/ascii";
@@ -215,7 +216,7 @@ const Skills = () => {
   `);
 
   return (
-    <Parallax y={["0px", "-250px"]}>
+    <Parallax disabled={isMobile} translateY={["0px", "-250px"]}>
       <section
         id="skills"
         className="flex flex-col lg:flex-row items-center justify-center w-full bg-black pb-20"
@@ -226,7 +227,7 @@ const Skills = () => {
           frameDelay={40}
         />
         <div className="pt-8 lg:pr-32 w-3/4 lg:w-2/5 mx-auto text-white">
-          <Parallax y={["-150px", "0px"]}>
+          <Parallax disabled={isMobile} translateY={["-150px", "0px"]}>
             <p className="text-center text-5xl md:text-6xl mb-8 font-header tracking-wide">
               Skills
             </p>

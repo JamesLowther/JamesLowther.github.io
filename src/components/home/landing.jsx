@@ -48,15 +48,14 @@ const Landing = () => {
           </a>
         </div>
         <div className="flex flex-col lg:flex-row justify-center items-center mx-4 lg:mx-0 h-3/4">
-          <div className="flex items-center w-5/6 mt-16 lg:m-4 lg:w-1/3 rounded-lg bg-gray-300">
+          <div className="flex items-center w-5/6 my-16 lg:m-4 lg:w-1/3 rounded-lg bg-gray-300">
             <div className="p-10">
               <p className="text-4xl tracking-widest font-header">
                 JAMES LOWTHER
               </p>
               <p className="text-xl font-display mt-2">
                 Graduate from the Univerity of Calgary with a BSc in Computer
-                Science. Interested in cybersecurity, DevOps pipelines, and both
-                front-end and back-end development.
+                Science. Interested in cybersecurity, DevOps pipelines, infrastructure as code, and full-stack development.
               </p>
               <p className="flex flex-wrap items-center text-xl font-display mt-4">
                 <span className="mr-1">
@@ -77,7 +76,7 @@ const Landing = () => {
             frameDelay={40}
           />
         </div>
-        <div className="transform hover:translate-y-1 mb-3">
+        <div className="animate-bounce transform hover:translate-y-1 mt-16 mb-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

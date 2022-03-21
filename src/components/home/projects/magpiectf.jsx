@@ -14,7 +14,7 @@ const MagpieCTFProject = () => {
         </div>
         <p className="text-black text-2xl mb-10">
           Headed the planning and implementation of server infrastructure for
-          all CTF challenges for the 2021-edition of the competition. Developed an infrastructure
+          all CTF challenges for the 2021-edition of this capture-the-flag hacking competition. Developed an infrastructure
           stack that used tools such as
           <span className="text-pink-600"> Docker</span>,{" "}
           <span className="text-pink-600">Watchtower</span>,{" "}

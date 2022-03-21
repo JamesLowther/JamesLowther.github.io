@@ -18,7 +18,7 @@ const RumpusKingdomsProject = () => {
         </div>
         <p className="text-black text-2xl mb-10">
           Discord-driven attack-and-defend strategy game based around a medieval
-          theme. Players would build a kingdom by settling villages. Attack and
+          theme. Players would build up a kingdom by settling villages. Attack and
           defence units could be purchased to attack other player's kingdoms.
           Complete with front-end scoreboard to track player status. Written
           with <span className="text-green-600">discord.py</span> for the
