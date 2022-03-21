@@ -26,6 +26,8 @@ class ASCIIAnimation extends React.PureComponent {
     });
 
     this._resizeObserver.observe(this._div.current);
+
+    this._start();
   }
 
   componentWillUnmount() {
