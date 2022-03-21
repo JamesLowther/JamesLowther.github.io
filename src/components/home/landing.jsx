@@ -22,7 +22,7 @@ const Landing = () => {
             href="https://github.com/JamesLowther/"
             target="_blank"
             rel="noreferrer"
-            className="mx-6 transform hover:scale-103 transition duration-100 ease-in-out"
+            className="mx-6 transform hover:scale-103 transition duration-100 ease-out"
             aria-label="Go to my GitHub page"
           >
             <StaticImage
@@ -36,7 +36,7 @@ const Landing = () => {
             href="https://www.linkedin.com/in/jameselowther/"
             target="_blank"
             rel="noreferrer"
-            className="mx-6 transform hover:scale-103 transition duration-100 ease-in-out"
+            className="mx-6 transform hover:scale-103 transition duration-100 ease-out"
             aria-label="Go to my LinkedIn page"
           >
             <StaticImage
@@ -73,7 +73,7 @@ const Landing = () => {
           </div>
           <ASCIIAnimation
             source={iss}
-            className="flex items-center w-full h-screen mb-3 lg:w-2/3"
+            className="flex items-center w-full h-screen mb-3 lg:w-7/12"
             frameDelay={40}
           />
         </div>

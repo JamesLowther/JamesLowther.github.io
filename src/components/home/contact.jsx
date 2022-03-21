@@ -32,7 +32,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="rounded-lg bg-gray-800 hover:bg-gray-900 mx-6 p-3 shadow-xl transform hover:scale-103 transition duration-200 ease-in-out">
+                  <div className="rounded bg-gray-800 hover:bg-gray-900 mx-6 p-3 shadow-xl transform hover:scale-103 transition duration-75 ease-out">
                     <p className="text-white text-2xl md:text-3xl font-display">
                       Download Resume
                     </p>
@@ -51,7 +51,7 @@ const Contact = () => {
             >
               <StaticImage
                 src="../../assets/images/github.png"
-                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-in-out"
+                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-out"
                 placeholder="blurred"
                 alt="GitHub logo"
               />
@@ -65,7 +65,7 @@ const Contact = () => {
             >
               <StaticImage
                 src="../../assets/images/linkedin-dark.png"
-                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-in-out"
+                className="w-16 inline-block transform hover:scale-103 transition duration-100 ease-out"
                 placeholder="blurred"
                 alt="LinkedIn logo"
               />
