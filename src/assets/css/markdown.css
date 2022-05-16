@@ -4,7 +4,8 @@ section.writeup {
 }
 
 .writeup .w-inner-div {
-  @apply px-8 sm:px-12 md:px-16 lg:px-32 xl:px-64;
+  /* @apply px-8 sm:px-12 md:px-16 lg:px-32 xl:px-96; */
+  @apply w-11/12 md:w-4/5 lg:w-2/3 xl:w-3/5 mx-auto;
 }
 
 .writeup span.gatsby-resp-image-wrapper {

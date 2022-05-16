@@ -10,7 +10,7 @@ const MarkdownTemplate = ({ data }) => {
 
   return (
     <section className="writeup overflow-x-auto" style={{"fontFamily": "'Mulish', sans-serif"}}>
-      <Helmet> 
+      <Helmet>
         <title>{`${post.frontmatter.title} - James Lowther`}</title>
         <meta name="theme-color" content="#292723"/>
       </Helmet>
