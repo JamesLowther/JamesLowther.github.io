@@ -3,7 +3,8 @@ path: "/writeups/seccon-ctf-2021"
 date: 2021-12-11
 title: "SECCON CTF 2021"
 category: "writeup"
-enabled: True
+enabled: true
+hidden: false
 ---
 
 Link: https://ctf.seccon.jp/
@@ -19,7 +20,7 @@ How many vulnerabilities do you know?
 https://vulnerabilities.quals.seccon.jp
 
 ## Method
-The code is written in Go. This website also has two API Endpoints: a GET request to https://vulnerabilities.quals.seccon.jp/api/vulnerability will give you all the vulnerabilities in the datebase (except the flag), and a POST request to the same endpoint with the parameter `name=?` will give you the details about a specific vulnerability. 
+The code is written in Go. This website also has two API Endpoints: a GET request to https://vulnerabilities.quals.seccon.jp/api/vulnerability will give you all the vulnerabilities in the datebase (except the flag), and a POST request to the same endpoint with the parameter `name=?` will give you the details about a specific vulnerability.
 
 There is a vulnerability in the database that corresponds to the name of the flag. Unfortunately the name is set as an environment variable, so it is hidden.
 
@@ -50,7 +51,7 @@ Since the description is: "How many vulnerabilities do you know?", there will li
 
 https://security.snyk.io/vuln/SNYK-GOLANG-GITHUBCOMGINGONICGIN-550031
 
-It's also possible that we can use the way GORM runs queries. Supposedly, if the other fields in the query are blank, it will use the Model object to run the query. 
+It's also possible that we can use the way GORM runs queries. Supposedly, if the other fields in the query are blank, it will use the Model object to run the query.
 
 The following query returns the Heartbleed object:
 
@@ -67,7 +68,7 @@ print(resp.status_code)
 print(resp.text)
 ```
 
-While this one does not, because the ID does not match. 
+While this one does not, because the ID does not match.
 
 ```python
 import requests

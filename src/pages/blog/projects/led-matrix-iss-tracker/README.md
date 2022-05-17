@@ -3,7 +3,8 @@ path: "/projects/led-matrix-iss-tracker"
 date: 2021-09-14
 title: "LED Matrix: ISS Tracker"
 category: "project"
-enabled: True
+enabled: true
+hidden: false
 ---
 
 The goal of this project was simple - create a visualization to display the current position of the ISS in real-time. This was my first major attempt to create a display to be used on my new 64x32 RGB matrix from Adafruit.
@@ -53,13 +54,13 @@ Here is the code the implements this:
 def convert_coords(self, lat, lon):
     """
     Converts latitude and longitude to Cartesian coordinates.
-    In this case the y coordinate is on the vertical plane 
+    In this case the y coordinate is on the vertical plane
     and x and z are on the horizontal plane.
     """
     x = round(self.RADIUS * sin(lat) * cos(lon), 2)
     y = round(self.RADIUS * cos(lat), 2)
     z = round(self.RADIUS * sin(lat) * sin(lon), 2)
-    
+
     return (x, y, z)
 
 def add_nodes(self):
@@ -81,12 +82,12 @@ def add_nodes(self):
     ones_column = np.ones((len(node_array), 1))
     ones_added = np.hstack((node_array, ones_column))
     self._earth_nodes = np.vstack((self._earth_nodes, ones_added))
-    
+
     ...
 ```
 
 ### Drawing the nodes
-Once the nodes have been initialized they can be drawn to the screen. Drawing is done using the PIL library. On each frame, a 64x32 PIL image is created and sent to the RGB matrix to be drawn. To create the frame, each node is iterated over and the pixel at the `x` and `y` coordinate is drawn (only if `z > 1` to only draw nodes in the foreground). 
+Once the nodes have been initialized they can be drawn to the screen. Drawing is done using the PIL library. On each frame, a 64x32 PIL image is created and sent to the RGB matrix to be drawn. To create the frame, each node is iterated over and the pixel at the `x` and `y` coordinate is drawn (only if `z > 1` to only draw nodes in the foreground).
 
 ```python
 def draw(self, image):
@@ -98,13 +99,13 @@ def draw(self, image):
         if (i > self.MAP_WIDTH - 1 and
             i < (self.MAP_WIDTH * self.MAP_HEIGHT - self.MAP_WIDTH) and
             node[2] > 1):
-            
+
             image.putpixel(
-                (self.X + int(node[0]), 
-                self.Y + int(node[1]) * -1), 
+                (self.X + int(node[0]),
+                self.Y + int(node[1]) * -1),
                 self.EARTH_COLOR
             )
-    
+
     ...
 ```
 
@@ -121,9 +122,9 @@ def update_spin(self):
     Handles the logic to control the Earth rotation.
     Resets the nodes to the backed-up version after every full rotation.
     """
-    
+
     ...
-    
+
     c = np.cos(self.SPIN_THETA)
     s = np.sin(self.SPIN_THETA)
 
@@ -132,7 +133,7 @@ def update_spin(self):
         [0, 1, 0, 0],
         [-s, 0, c, 0],
         [0, 0, 0, 1]
-    ])    
+    ])
 
     self.rotate(matrix_y)
 
@@ -150,7 +151,7 @@ def rotate(self, matrix):
 
     for i, node in enumerate(self._earth_nodes):
         self._earth_nodes[i] = center + np.matmul(matrix, node - center)
-    
+
     ...
 ```
 
@@ -209,7 +210,7 @@ def draw(self, image):
     """
 
     ...
-    
+
     # Draw the ISS.
     iss_x = int(self._iss_nodes[0][0])
     iss_y = int(self._iss_nodes[0][1])

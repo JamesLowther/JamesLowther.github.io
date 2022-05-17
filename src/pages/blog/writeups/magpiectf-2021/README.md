@@ -3,7 +3,8 @@ path: "/writeups/magpiectf-2021"
 date: 2021-02-19
 title: "magpieCTF 2021"
 category: "writeup"
-enabled: True
+enabled: true
+hidden: false
 ---
 
 I was an organizer for this CTF so the following writeups are for challenges that I developed. The full repository with all of the challenges can be found [here](https://github.com/infosec-ucalgary/magpieCTF-2021).
@@ -76,14 +77,14 @@ def main():
   while True:
     print("Waiting for connection on port " + str(my_port) + "...")
     (clientsocket, address) = serversocket.accept()
-    
+
     print("Client connected. Waiting to receive data...")
     msg_byte = clientsocket.recv(1024)
-    
+
     print("Connecting to " + challenge_site + " on port " + str(challenge_port) + "..." )
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((challenge_site, challenge_port))
-    
+
     print("Sending request from proxy...")
     s.send(msg_byte)
 
