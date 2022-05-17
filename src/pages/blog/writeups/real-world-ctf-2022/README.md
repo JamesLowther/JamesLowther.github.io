@@ -3,7 +3,8 @@ path: "/writeups/real-world-ctf-2022"
 date: 2022-01-22
 title: "Real World CTF 2022"
 category: "writeup"
-enabled: True
+enabled: true
+hidden: false
 ---
 
 Link: https://realworldctf.com/
@@ -84,7 +85,7 @@ curl -v -X POST http://47.242.21.212:8081/login \
 > Accept: */*
 > Content-Length: 249
 > Content-Type: multipart/form-data; boundary=------------------------52f42c0931fd21fe
-> 
+>
 * We are completely uploaded and fine
 * Mark bundle as not supporting multiuse
 * HTTP 1.0, assume close after body
@@ -97,9 +98,9 @@ curl -v -X POST http://47.242.21.212:8081/login \
 < Location: http://47.242.21.212:8081/
 < Server: Werkzeug/0.16.1 Python/3.8.10
 < Date: Sat, 22 Jan 2022 21:18:43 GMT
-< 
+<
 * Closing connection 0
-Login success    
+Login success
 ```
 
 We can now use the `SessionId` cookie of `a706967504e8247d98ad7e583a11e002` in our future requests.
@@ -125,10 +126,10 @@ curl -X POST 47.242.21.212:8081 \                                               
 
 <body>
   <div class="query">
-    
+
       <h1>Kill before</h1>
       <h1>skynet: 1997-04-19 00:00:00</h1>
-    
+
   </div>
 </body>
 ```
@@ -213,7 +214,7 @@ curl -v -X POST 47.242.21.212:8085 \
 > Cookie: SessionId=21199b076e91781a209628260d6ecc0c
 > Content-Length: 222
 > Content-Type: multipart/form-data; boundary=------------------------c2ffd11bf040c4a1
-> 
+>
 * We are completely uploaded and fine
 * Mark bundle as not supporting multiuse
 * HTTP 1.0, assume close after body
@@ -222,7 +223,7 @@ curl -v -X POST 47.242.21.212:8085 \
 < Content-Length: 348
 < Server: Werkzeug/0.16.1 Python/3.8.10
 < Date: Sat, 22 Jan 2022 21:33:36 GMT
-< 
+<
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="static/style.css">
@@ -232,12 +233,12 @@ curl -v -X POST 47.242.21.212:8085 \
 
 <body>
   <div class="query">
-    
+
       <h1>Kill before</h1>
       # highlight-start
       <h1>$kynet: rwctf{t0-h4ck-$kynet-0r-f1ask_that-Is-th3-questi0n}</h1>
       # highlight-end
-    
+
   </div>
 * Closing connection 0
 </body>

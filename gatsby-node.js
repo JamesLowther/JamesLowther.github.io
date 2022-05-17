@@ -1,4 +1,5 @@
 const path = require("path");
+const md5 = require("md5")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -16,6 +17,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             html
             frontmatter {
               path
+              title
+              enabled
+              hidden
             }
           }
         }
@@ -29,12 +33,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: markdownTemplate,
-      context: {
-        path: node.frontmatter.path,
-      },
-    });
+
+    if (node.frontmatter.enabled) {
+      let page_path = node.frontmatter.path;
+
+      if (node.frontmatter.hidden) {
+        page_path = "/hidden/" + md5(node.frontmatter.title);
+      }
+
+      createPage({
+        path: page_path,
+        component: markdownTemplate,
+        context: {
+          title: node.frontmatter.title,
+        },
+      });
+    }
   });
 };

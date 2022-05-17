@@ -5,15 +5,19 @@ import { isMobile } from 'react-device-detect';
 
 const BlogPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
-  const writeups = posts.filter(post => 
+  const writeups = posts.filter(post =>
     post.node.frontmatter.category === "writeup"
     &&
     post.node.frontmatter.enabled
+    &&
+    !post.node.frontmatter.hidden
   )
-  const projects = posts.filter(post => 
+  const projects = posts.filter(post =>
     post.node.frontmatter.category === "project"
     &&
-    post.node.frontmatter.enabled  
+    post.node.frontmatter.enabled
+    &&
+    !post.node.frontmatter.hidden
   )
 
   return (
@@ -114,6 +118,7 @@ export const query = graphql`
             path
             category
             enabled
+            hidden
           }
         }
       }

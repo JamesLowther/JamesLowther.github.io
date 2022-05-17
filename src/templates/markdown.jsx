@@ -10,7 +10,7 @@ const MarkdownTemplate = ({ data }) => {
 
   return (
     <section className="writeup overflow-x-auto" style={{"fontFamily": "'Mulish', sans-serif"}}>
-      <Helmet> 
+      <Helmet>
         <title>{`${post.frontmatter.title} - James Lowther`}</title>
         <meta name="theme-color" content="#292723"/>
       </Helmet>
@@ -25,7 +25,7 @@ const MarkdownTemplate = ({ data }) => {
       </div>
       <div className="w-inner-div pb-10">
         <div className="mb-10 font-bold text-center py-32 px-0 sm:px-12 md:px-16 xl:px-24">
-          <div className="border-4 py-10 rounded shadow-lg overflow-x-auto" style={{"borderColor": "#e2aa00"}}>
+          <div className="border-4 py-10 px-3 rounded shadow-lg overflow-x-auto" style={{"borderColor": "#e2aa00"}}>
             <div className="text-4xl sm:text-5xl lg:text-7xl mb-4">{post.frontmatter.title}</div>
             <div className="text-3xl sm:text-4xl lg:text-5xl">{post.frontmatter.date}</div>
           </div>
@@ -37,8 +37,8 @@ const MarkdownTemplate = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query WriteupByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query WriteupByPath($title: String!) {
+    markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
