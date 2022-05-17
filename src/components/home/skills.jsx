@@ -15,7 +15,7 @@ const Skills = () => {
       html: file(relativePath: { eq: "skill-icons/html5.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -26,7 +26,7 @@ const Skills = () => {
       ) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -35,7 +35,7 @@ const Skills = () => {
       python: file(relativePath: { eq: "skill-icons/python.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -44,7 +44,7 @@ const Skills = () => {
       cpp: file(relativePath: { eq: "skill-icons/cpp.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -53,7 +53,7 @@ const Skills = () => {
       sqlite: file(relativePath: { eq: "skill-icons/sqlite.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -62,7 +62,7 @@ const Skills = () => {
       java: file(relativePath: { eq: "skill-icons/java.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -71,7 +71,7 @@ const Skills = () => {
       react: file(relativePath: { eq: "skill-icons/react.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -80,7 +80,7 @@ const Skills = () => {
       vue: file(relativePath: { eq: "skill-icons/vue.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -89,7 +89,7 @@ const Skills = () => {
       windows: file(relativePath: { eq: "skill-icons/windows.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -98,7 +98,7 @@ const Skills = () => {
       linux: file(relativePath: { eq: "skill-icons/tux.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -107,7 +107,7 @@ const Skills = () => {
       arch: file(relativePath: { eq: "skill-icons/arch.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -116,7 +116,7 @@ const Skills = () => {
       debian: file(relativePath: { eq: "skill-icons/debian.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -125,7 +125,7 @@ const Skills = () => {
       docker: file(relativePath: { eq: "skill-icons/docker.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -134,7 +134,7 @@ const Skills = () => {
       nginx: file(relativePath: { eq: "skill-icons/nginx.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -143,7 +143,7 @@ const Skills = () => {
       git: file(relativePath: { eq: "skill-icons/git.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -152,7 +152,7 @@ const Skills = () => {
       ansible: file(relativePath: { eq: "skill-icons/ansible.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -161,7 +161,7 @@ const Skills = () => {
       terraform: file(relativePath: { eq: "skill-icons/terraform.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -170,7 +170,7 @@ const Skills = () => {
       cloudformation: file(relativePath: { eq: "skill-icons/cloudformation.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -179,7 +179,7 @@ const Skills = () => {
       shell: file(relativePath: { eq: "skill-icons/shell.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -188,7 +188,7 @@ const Skills = () => {
       github: file(relativePath: { eq: "skill-icons/github-light.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -197,7 +197,7 @@ const Skills = () => {
       digitalocean: file(relativePath: { eq: "skill-icons/digitalocean.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
@@ -206,7 +206,7 @@ const Skills = () => {
       aws: file(relativePath: { eq: "skill-icons/aws.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 90
             placeholder: TRACED_SVG
             layout: CONSTRAINED
           )
