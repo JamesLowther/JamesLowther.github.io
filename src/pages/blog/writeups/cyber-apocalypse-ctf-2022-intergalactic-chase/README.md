@@ -18,7 +18,7 @@ Bonnie has confirmed the location of the Acnologia spacecraft operated by the Go
 ## Initial thoughts
 For this challenge, we're given an endpoint to the "Acnologia Firmware Portal", which is just a login screen, as well as a zip file containing the source code. The code looks to be written using the Flask framework.
 
-In `routes.py` we can see all the endpoints available to us. Many of the endpoints are publically available, but some require you to be logged in, be an administrator, or some combination of the two.
+In `routes.py` we can see all the endpoints available to us. Many of the endpoints are publicly available, but some require you to be logged in, be an administrator, or some combination of the two.
 
 I created an account, and after logging in was given a list of firmware and the ability to report a bug on each.
 
@@ -104,9 +104,9 @@ def firmware_update():
 * Extracts the tar.gz
 * Copies the extracted files to a randomly-generated directory in `static/firmware_extract`
 
-This sounds like it would be a zip slip. Something interesting is that tar.gz files allow you to tar existing symlinks and have them maintain their link when untarred on a different system. If we tar a file that is symlinked to `/flag`, we can zip slip this file into the static folder on the challenge instance (which is publically accessible) and then read it from there.
+This sounds like it would be a zip slip. Something interesting is that tar.gz files allow you to tar existing symlinks and have them maintain their link when untarred on a different system. If we tar a file that is symlinked to `/flag.txt`, we can zip slip this file into the static folder on the challenge instance (which is publically accessible) and then read it from there.
 
-I used a tool called [evilarc](https://github.com/ptoomey3/evilarc) to generate the zip slip tar.gz file. I used the following command:
+I used a tool called [evilarc](https://github.com/ptoomey3/evilarc) to generate the zip slip tar.gz file with the following command:
 
 ```shell
 python2 evilarc.py -o unix -d 1 -f zip.tar.gz zip-dir/ -p app/application/static/firmware_extract
