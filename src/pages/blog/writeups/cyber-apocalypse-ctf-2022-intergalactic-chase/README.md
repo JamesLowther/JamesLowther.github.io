@@ -104,7 +104,7 @@ def firmware_update():
 * Extracts the tar.gz
 * Copies the extracted files to a randomly-generated directory in `static/firmware_extract`
 
-This sounds like it would be a zip slip. Something interesting is that tar.gz files allow you to tar existing symlinks and have them maintain their link when untarred on a different system. If we tar a file that is symlinked to `/flag`, we can zip slip this file into the static folder on the challenge instance (which is publically accessible) and then read it from there.
+This sounds like it would be a zip slip. Something interesting is that tar.gz files allow you to tar existing symlinks and have them maintain their link when untarred on a different system. If we tar a file that is symlinked to `/flag.txt`, we can zip slip this file into the static folder on the challenge instance (which is publically accessible) and then read it from there.
 
 I used a tool called [evilarc](https://github.com/ptoomey3/evilarc) to generate the zip slip tar.gz file. I used the following command:
 
