@@ -4,7 +4,7 @@ date: 2022-05-15
 title: "Cyber Apocalypse CTF 2022 - Intergalactic Chase"
 category: "writeup"
 enabled: true
-hidden: true
+hidden: false
 ---
 
 ***
