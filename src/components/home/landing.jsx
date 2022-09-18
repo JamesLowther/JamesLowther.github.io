@@ -72,7 +72,7 @@ const Landing = () => {
           </div>
           <ASCIIAnimation
             source={iss}
-            className="flex items-center w-full lg:w-7/12"
+            className="flex items-center w-full h-full lg:w-7/12"
             frameDelay={40}
           />
         </div>
