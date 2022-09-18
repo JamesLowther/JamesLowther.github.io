@@ -25,6 +25,11 @@ class ASCIIAnimation extends React.PureComponent {
       this._handleResize();
     });
 
+    this._size = {
+      width: this._div.current.offsetWidth,
+      height: this._div.current.offsetHeight
+    }
+
     this._resizeObserver.observe(this._div.current);
 
     this._start();
@@ -53,7 +58,13 @@ class ASCIIAnimation extends React.PureComponent {
   }
 
   _handleResize() {
-    console.log("RESIZE")
+    if (Math.abs(this._div.current.offsetWidth - this._size.width) <= 3 || Math.abs(this._div.current.offsetHeight - this._size.height) <= 3) {
+      return;
+    }
+
+    this._size.width = this._div.current.offsetWidth;
+    this._size.height = this._div.current.offsetHeight;
+
     clearTimeout(this.resizeID);
     this.resizeID = setTimeout(async () => {
 
