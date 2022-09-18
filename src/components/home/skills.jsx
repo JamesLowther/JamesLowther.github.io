@@ -223,7 +223,7 @@ const Skills = () => {
       >
         <ASCIIAnimation
           source={dino}
-          className="flex items-center w-full h-screen mb-3 lg:w-7/12"
+          className="flex items-center w-full lg:w-7/12"
           frameDelay={40}
         />
         <div className="pt-8 lg:pr-32 w-3/4 lg:w-2/5 mx-auto text-white">

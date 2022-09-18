@@ -53,9 +53,10 @@ class ASCIIAnimation extends React.PureComponent {
   }
 
   _handleResize() {
+    console.log("RESIZE")
     clearTimeout(this.resizeID);
     this.resizeID = setTimeout(async () => {
-    
+
       this.didReset = true;
       await this._sleep(100);
 
@@ -194,10 +195,10 @@ class ASCIIAnimation extends React.PureComponent {
     // Draw the frame.
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     this.ctx.drawImage(frame, 0, 0);
-    
+
     let padding = 20;
     this.ctx.lineWidth = 3;
-    
+
     let radius = this.sourceData.canvasWidth / 60;
     let radOffset = 1.5 * Math.PI;
 
@@ -205,7 +206,7 @@ class ASCIIAnimation extends React.PureComponent {
     this.ctx.arc(this.ctx.canvas.width - radius - padding, radius + padding, radius, radOffset, (2 * Math.PI * progress) + radOffset);
     this.ctx.strokeStyle = "#FFFFFF";
     this.ctx.stroke();
-    
+
     await this._sleep(1);
   }
 
