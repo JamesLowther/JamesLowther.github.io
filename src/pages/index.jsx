@@ -21,7 +21,7 @@ const Home = () => {
         <Navbar />
         <Landing />
         <About />
-        <Projects />
+        {/* <Projects /> */}
         <Skills />
         <Contact />
         <Footer />
