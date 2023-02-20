@@ -16,7 +16,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -27,7 +27,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -36,7 +36,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -45,7 +45,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -54,7 +54,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -63,7 +63,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -72,7 +72,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -81,7 +81,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -90,7 +90,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -99,7 +99,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -108,7 +108,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -117,7 +117,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -126,7 +126,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -135,7 +135,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -144,7 +144,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -153,7 +153,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -162,7 +162,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -171,7 +171,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -180,7 +180,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -189,7 +189,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -198,7 +198,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
@@ -207,7 +207,7 @@ const Skills = () => {
         childImageSharp {
           gatsbyImageData(
             width: 90
-            placeholder: TRACED_SVG
+            placeholder: DOMINANT_COLOR
             layout: CONSTRAINED
           )
         }
