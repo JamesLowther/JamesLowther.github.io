@@ -21,10 +21,10 @@ export default class Terminal extends React.Component {
 
   render() {
     const texts = [
-      "Security Enthusiast",
-      "Developer",
-      "Driven Learner",
-      "Efficiency Focused",
+      "Security enthusiast",
+      "Automate everything",
+      "Efficiency focused",
+      "Check out www.scriptkitties.ca",
       "rm -rf /",
     ];
 
@@ -32,7 +32,7 @@ export default class Terminal extends React.Component {
       <>
         {this.state.typing && (
           <Typist
-            className="subtitle-typing"
+            className="subtitle-typing font-mono"
             avgTypingDelay={90}
             stdTypingDelay={0}
             startDelay={1000}
