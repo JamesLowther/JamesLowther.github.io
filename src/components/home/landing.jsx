@@ -1,23 +1,15 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 
-import ASCIIAnimation from "./ascii/ascii";
+import ASCIIAnimation from "./ascii";
 import iss from "../../assets/ascii/iss";
+import Terminal from "./terminal";
 
 const Landing = () => {
   return (
-    <section id="landing" className="w-full lg:h-screen">
-      <div className="invisible md:visible absolute w-full flex justify-end z-40 pointer-events-none overflow-x-hidden">
-        <Link
-          className="pointer-events-auto flex justify-end rounded-tl-3xl rounded-bl-3xl items-center px-4 mt-16 w-72 h-10 bg-red-600 transform duration-150 translate-x-60 hover:translate-x-0"
-          to="/blog"
-        >
-          <p className="text-xl text-white mb-1">Check out my writeups!</p>
-        </Link>
-      </div>
-      <div className="flex flex-col items-center justify-around h-full lg:px-16 bg-black">
-        <div className="flex flex-row mt-4">
+    <section id="landing" className="h-full">
+      <div className="flex items-center justify-center w-full py-4">
+        <div className="flex flex-row">
           <a
             href="https://github.com/JamesLowther/"
             target="_blank"
@@ -26,7 +18,7 @@ const Landing = () => {
             aria-label="Go to my GitHub page"
           >
             <StaticImage
-              src="../../assets/images/github-light.png"
+              src="../../assets/images/github.png"
               className="w-16"
               placeholder="blurred"
               alt="GitHub logo"
@@ -47,15 +39,20 @@ const Landing = () => {
             />
           </a>
         </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center mx-4 lg:mx-0 h-3/4">
+      </div>
+      <div className="flex items-center justify-center w-full py-4">
+        <a href="https://blog.jameslowther.com" className="font-header text-rose-700 font-bold text-2xl transform hover:scale-103 transition duration-75 ease-out animate-pulse ">🚀 Check out my blog</a>
+      </div>
+      <div className="lg:flex h-5/6">
+        <div className="flex flex-col lg:flex-row justify-around items-center">
           <div className="flex items-center w-5/6 my-16 lg:m-4 lg:w-1/3 rounded-lg bg-gray-300">
-            <div className="p-10">
+            <div className="px-10 py-10">
               <p className="text-4xl tracking-widest font-header">
                 JAMES LOWTHER
               </p>
               <p className="text-xl font-display mt-2">
                 Graduate from the Univerity of Calgary with a BSc in Computer
-                Science. Interested in cybersecurity, DevOps pipelines, infrastructure as code, and full-stack development.
+                Science. Interested in cybersecurity, cloud infrastructure, DevOps principles, and front-end and back-end software development.
               </p>
               <p className="flex flex-wrap items-center text-xl font-display mt-4">
                 <span className="mr-1">
@@ -68,29 +65,16 @@ const Landing = () => {
                   alt="Canadian flag"
                 />
               </p>
+              <div className="text-lg mt-8">
+                <Terminal />
+              </div>
             </div>
           </div>
           <ASCIIAnimation
             source={iss}
-            className="flex items-center w-full h-full lg:w-7/12"
+            className="flex items-center w-full h-full lg:w-7/12 mb-10"
             frameDelay={40}
           />
-        </div>
-        <div className="animate-bounce transform hover:translate-y-1 mt-16 mb-5">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="white"
-            width="60"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.2}
-              d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
-            />
-          </svg>
         </div>
       </div>
     </section>

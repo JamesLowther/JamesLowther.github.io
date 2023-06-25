@@ -1,23 +1,31 @@
+body {
+    background-color: black;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
 .font-display {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 
 .font-header {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.font-bold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .subtitle-typing:before {
-  content: "root@james:~$ ";
-  color: #f5edd6;
-  font-weight: bold;
+    content: "root@use1-iss:~$ ";
+    color: #000000;
+    font-weight: bold;
 }
-
-.ril-image-current {
-	pointer-events: none;
-}
-
-/* .ril-image-current .gatsby-image-wrapper {
-	pointer-events: all;
-} */
