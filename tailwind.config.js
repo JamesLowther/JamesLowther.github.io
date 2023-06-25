@@ -1,8 +1,6 @@
 // tailwind.config.js
 module.exports = {
-  content: [
-    "./src/**/*.jsx"
-  ],
+  content: ["./src/**/*.jsx"],
   theme: {
     extend: {
       opacity: {
@@ -12,7 +10,7 @@ module.exports = {
         95: "0.95",
       },
       translate: {
-        "88": "20.6rem"
+        88: "20.6rem",
       },
       keyframes: {
         slowpulse: {

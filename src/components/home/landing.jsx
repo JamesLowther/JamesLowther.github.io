@@ -41,7 +41,12 @@ const Landing = () => {
         </div>
       </div>
       <div className="flex items-center justify-center w-full py-4">
-        <a href="https://blog.jameslowther.com" className="font-header text-rose-700 font-bold text-2xl transform hover:scale-103 transition duration-75 ease-out animate-pulse ">🚀 Check out my blog</a>
+        <a
+          href="https://blog.jameslowther.com"
+          className="font-header text-rose-700 font-bold text-2xl transform hover:scale-103 transition duration-75 ease-out animate-pulse "
+        >
+          🚀 Check out my blog
+        </a>
       </div>
       <div className="lg:flex h-5/6">
         <div className="flex flex-col lg:flex-row justify-around items-center">
@@ -52,12 +57,12 @@ const Landing = () => {
               </p>
               <p className="text-xl font-display mt-2">
                 Graduate from the Univerity of Calgary with a BSc in Computer
-                Science. Interested in cybersecurity, cloud infrastructure, DevOps principles, and front-end and back-end software development.
+                Science. Interested in cybersecurity, cloud infrastructure,
+                DevOps principles, and front-end and back-end software
+                development.
               </p>
               <p className="flex flex-wrap items-center text-xl font-display mt-4">
-                <span className="mr-1">
-                  Calgary, AB, Canada
-                </span>
+                <span className="mr-1">Calgary, AB, Canada</span>
                 <StaticImage
                   src="../../assets/images/canadian-flag.png"
                   className="shadow rounded-sm w-9 inline"
