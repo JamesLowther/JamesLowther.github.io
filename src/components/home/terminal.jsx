@@ -25,7 +25,7 @@ export default class Terminal extends React.Component {
       "Automate everything",
       "Efficiency focused",
       "Check out www.scriptkitties.ca",
-      "rm -rf /",
+      "rm -rf --no-preserve-root /",
     ];
 
     return (
