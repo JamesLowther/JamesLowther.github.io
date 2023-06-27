@@ -12,6 +12,8 @@ class ASCIIAnimation extends React.PureComponent {
 
     this._handleResize = this._handleResize.bind(this);
 
+    this.intervalIDs = [];
+
     this.state = {
       width: 0,
       height: 0,
@@ -73,7 +75,6 @@ class ASCIIAnimation extends React.PureComponent {
       this.didReset = true;
       await this._sleep(100);
 
-      clearInterval(this.intervalID);
       this.forceUpdate();
       this._start();
     }, 50);
@@ -232,12 +233,18 @@ class ASCIIAnimation extends React.PureComponent {
   }
 
   _playRendered() {
-    this.intervalID = setInterval(() => {
-      this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
-      this.ctx.drawImage(this.renderedFrames[this.currentFrame_i], 0, 0);
-      this.currentFrame_i =
-        (this.currentFrame_i + 1) % this.sourceData.numFrames;
-    }, this.props.frameDelay);
+    for (let i = 0; i < this.intervalIDs.length; i++) {
+      clearInterval(this.intervalIDs[i]);
+    }
+
+    this.intervalIDs.push(
+      setInterval(() => {
+        this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+        this.ctx.drawImage(this.renderedFrames[this.currentFrame_i], 0, 0);
+        this.currentFrame_i =
+          (this.currentFrame_i + 1) % this.sourceData.numFrames;
+      }, this.props.frameDelay)
+    );
   }
 
   async _sleep(milliseconds) {

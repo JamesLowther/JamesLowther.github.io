@@ -23,9 +23,3 @@ body,
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
-
-.subtitle-typing:before {
-    content: "root@use1-iss:~$ ";
-    color: #000000;
-    font-weight: bold;
-}
