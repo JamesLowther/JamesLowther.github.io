@@ -50,7 +50,7 @@ const Landing = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-around items-center h-5/6 overflow-scroll pb-32">
+      <div className="flex flex-col lg:flex-row justify-around items-center sm:h-5/6 sm:pb-32">
         <div className="flex items-center my-16 lg:m-24 w-5/6 lg:w-2/5 rounded-lg bg-gray-300">
           <div className="p-10">
             <p className="text-4xl tracking-widest font-header">
