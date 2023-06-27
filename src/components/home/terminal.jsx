@@ -10,6 +10,7 @@ export default class Terminal extends React.Component {
   }
 
   typingDelay = 1700;
+  typingFinishDelay = 1000;
 
   typingDone = () => {
     setTimeout(() => {
@@ -20,40 +21,54 @@ export default class Terminal extends React.Component {
   };
 
   render() {
-    const texts = [
-      "Security enthusiast",
-      "Automate everything",
-      "Efficiency focused",
-      "Check out www.scriptkitties.ca",
-      "rm -rf --no-preserve-root /",
-    ];
-
     return (
       <>
+        <div className="inline font-mono" style={{ fontWeight: "bold" }}>
+          root@use1-iss:~${" "}
+        </div>
         {this.state.typing && (
           <Typist
-            className="subtitle-typing font-mono"
+            className="subtitle-typing inline font-mono"
             avgTypingDelay={90}
             stdTypingDelay={0}
             startDelay={1000}
-            cursor={{ element: "|" }}
+            cursor={{ element: "|", blink: false }}
             onTypingDone={this.typingDone}
           >
-            echo "{texts[0]}"
+            echo "Linux hack
+            <Typist.Delay ms={400} />
+            <Typist.Backspace count={3} />
+            4ck3r"
             <Typist.Delay ms={this.typingDelay} />
-            <Typist.Backspace count={texts[0].length + 1} />
-            {texts[1]}"
+            <Typist.Backspace count={22} />
+            <Typist.Delay ms={this.typingFinishDelay} />
+            nmap -sV -sC -p- security.enthusiast
             <Typist.Delay ms={this.typingDelay} />
-            <Typist.Backspace count={texts[1].length + 1} />
-            {texts[2]}"
+            <Typist.Backspace count={40} />
+            <Typist.Delay ms={this.typingFinishDelay} />
+            bash ./automate-everything.sh
             <Typist.Delay ms={this.typingDelay} />
-            <Typist.Backspace count={texts[2].length + 1} />
-            {texts[3]}"
+            <Typist.Backspace count={29} />
+            <Typist.Delay ms={this.typingFinishDelay} />
+            docker run -d -p 1337:80 scalable-services:latest
             <Typist.Delay ms={this.typingDelay} />
-            <Typist.Backspace count={texts[3].length + 9} />
-            {texts[4]}
+            <Typist.Backspace count={49} />
+            <Typist.Delay ms={this.typingFinishDelay} />
+            gcc capable.c -o developer
+            <Typist.Delay ms={this.typingDelay} />
+            <Typist.Backspace count={26} />
+            <Typist.Delay ms={this.typingFinishDelay} />
+            curl -L https://www.scriptkitties.ca/
+            <Typist.Delay ms={this.typingDelay} />
+            <Typist.Backspace count={37} />
+            <Typist.Delay ms={this.typingFinishDelay} />
+            rm -rf --no-presrve
             <Typist.Delay ms={500} />
-            <Typist.Backspace count={texts[3].length + 8} />
+            <Typist.Backspace count={3} />
+            erve-root /
+            <Typist.Delay ms={this.typingDelay} />
+            <Typist.Backspace count={27} />
+            <Typist.Delay ms={this.typingFinishDelay} />
           </Typist>
         )}
       </>

@@ -9,7 +9,7 @@ const Landing = () => {
   return (
     <section id="home" className="h-full">
       <div className="h-1/6">
-        <div className="flex items-center justify-center w-full py-4">
+        <div className="flex items-center justify-center w-full py-5">
           <div className="flex flex-row">
             <a
               href="https://github.com/JamesLowther/"
@@ -56,17 +56,16 @@ const Landing = () => {
             <p className="text-4xl tracking-widest font-header">
               JAMES LOWTHER
             </p>
-            <p className="text-xl font-display mt-2">
+            <p className="text-xl font-display mt-4">
               Graduate from the Univerity of Calgary with a BSc in Computer
-              Science. Interested in cybersecurity, cloud infrastructure,
-              DevOps principles, and front-end and back-end software
-              development.
+              Science. Interested in cybersecurity, cloud infrastructure, DevOps
+              principles, and front-end and back-end software development.
             </p>
-            <p className="flex flex-wrap items-center text-xl font-display mt-4">
+            <p className="flex flex-wrap items-center text-xl font-display mt-4 ">
               <span className="mr-1">Calgary, AB, Canada</span>
               <StaticImage
                 src="../../assets/images/canadian-flag.png"
-                className="shadow rounded-sm w-9 inline"
+                className="shadow rounded-sm w-9 ml-1 inline"
                 placeholder="blurred"
                 alt="Canadian flag"
               />
