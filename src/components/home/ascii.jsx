@@ -30,9 +30,9 @@ class ASCIIAnimation extends React.PureComponent {
       height: this._div.current.offsetHeight,
     };
 
-    this._resizeObserver.observe(this._div.current);
-
     this._start();
+
+    this._resizeObserver.observe(this._div.current);
   }
 
   componentWillUnmount() {
@@ -43,7 +43,7 @@ class ASCIIAnimation extends React.PureComponent {
   async _start() {
     this.didReset = false;
 
-    while (this._isMounted && !this._getSourceData()) {}
+    while (this._isMounted && !await this._getSourceData()) { }
 
     if (this._isMounted) {
       this.ctx = this._canvas.current.getContext("2d");
@@ -76,7 +76,7 @@ class ASCIIAnimation extends React.PureComponent {
       clearInterval(this.intervalID);
       this.forceUpdate();
       this._start();
-    }, 75);
+    }, 50);
   }
 
   _getSourceData() {
@@ -213,18 +213,20 @@ class ASCIIAnimation extends React.PureComponent {
     this.ctx.lineWidth = 3;
 
     let radius = this.sourceData.canvasWidth / 60;
-    let radOffset = 1.5 * Math.PI;
+    if (radius > 0) {
+      let radOffset = 1.5 * Math.PI;
 
-    this.ctx.beginPath();
-    this.ctx.arc(
-      this.ctx.canvas.width - radius - padding,
-      radius + padding,
-      radius,
-      radOffset,
-      2 * Math.PI * progress + radOffset
-    );
-    this.ctx.strokeStyle = "#FFFFFF";
-    this.ctx.stroke();
+      this.ctx.beginPath();
+      this.ctx.arc(
+        this.ctx.canvas.width - radius - padding,
+        radius + padding,
+        radius,
+        radOffset,
+        2 * Math.PI * progress + radOffset
+      );
+      this.ctx.strokeStyle = "#FFFFFF";
+      this.ctx.stroke();
+    }
 
     await this._sleep(1);
   }
@@ -249,7 +251,8 @@ class ASCIIAnimation extends React.PureComponent {
           ref={this._canvas}
           width={this.state.width}
           height={this.state.height}
-          className="mx-auto w-full"
+          style={{ width: this.state.width + "px", height: this.state.height + "px" }}
+          className="mx-auto"
         />
       </div>
     );
