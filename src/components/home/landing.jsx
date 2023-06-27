@@ -58,9 +58,8 @@ const Landing = () => {
             </p>
             <p className="text-xl font-display mt-4">
               Graduate from the Univerity of Calgary with a BSc in Computer
-              Science. Interested in cybersecurity, cloud infrastructure,
-              DevOps principles, and front-end and back-end software
-              development.
+              Science. Interested in cybersecurity, cloud infrastructure, DevOps
+              principles, and front-end and back-end software development.
             </p>
             <p className="flex flex-wrap items-center text-xl font-display mt-4 ">
               <span className="mr-1">Calgary, AB, Canada</span>

@@ -45,7 +45,7 @@ class ASCIIAnimation extends React.PureComponent {
   async _start() {
     this.didReset = false;
 
-    while (this._isMounted && !await this._getSourceData()) { }
+    while (this._isMounted && !(await this._getSourceData())) {}
 
     if (this._isMounted) {
       this.ctx = this._canvas.current.getContext("2d");
@@ -258,7 +258,10 @@ class ASCIIAnimation extends React.PureComponent {
           ref={this._canvas}
           width={this.state.width}
           height={this.state.height}
-          style={{ width: this.state.width + "px", height: this.state.height + "px" }}
+          style={{
+            width: this.state.width + "px",
+            height: this.state.height + "px",
+          }}
           className="mx-auto"
         />
       </div>

@@ -23,7 +23,9 @@ export default class Terminal extends React.Component {
   render() {
     return (
       <>
-        <div className="inline font-mono" style={{ fontWeight: "bold" }}>root@use1-iss:~$ </div>
+        <div className="inline font-mono" style={{ fontWeight: "bold" }}>
+          root@use1-iss:~${" "}
+        </div>
         {this.state.typing && (
           <Typist
             className="subtitle-typing inline font-mono"
