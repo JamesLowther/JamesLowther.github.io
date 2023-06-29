@@ -78,7 +78,7 @@ const Landing = () => {
           </div>
           <ASCIIAnimation
             source={iss}
-            className="hidden sm:flex items-center h-96 mt-16 lg:mt-0 xl:h-[32rem] 2xl:h-[52rem] 3xl:h-[64rem] w-full"
+            className="hidden sm:flex items-center h-96 mt-16 lg:mt-0 xl:h-[32rem] 2xl:h-[40rem] 3xl:h-[64rem] w-full"
             frameDelay={40}
           />
         </div>
