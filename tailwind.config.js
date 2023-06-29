@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.jsx"],
   theme: {
     extend: {
+      screens: {
+        '3xl': '2000px',
+      },
       opacity: {
         35: "0.35",
         45: "0.45",
