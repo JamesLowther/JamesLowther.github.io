@@ -14,7 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
