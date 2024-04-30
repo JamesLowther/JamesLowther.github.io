@@ -24,7 +24,7 @@ export default class Terminal extends React.Component {
     return (
       <>
         <div className="inline font-mono" style={{ fontWeight: "bold" }}>
-          root@use1-iss:~${" "}
+          root@ca-orbit-iss:~${" "}
         </div>
         {this.state.typing && (
           <Typist
@@ -50,7 +50,7 @@ export default class Terminal extends React.Component {
             <Typist.Delay ms={this.typingDelay} />
             <Typist.Backspace count={29} />
             <Typist.Delay ms={this.typingFinishDelay} />
-            docker run -d -p 1337:80 scalable-services:latest
+            docker run -d -p 1337:80 scalable-services:stable
             <Typist.Delay ms={this.typingDelay} />
             <Typist.Backspace count={49} />
             <Typist.Delay ms={this.typingFinishDelay} />
