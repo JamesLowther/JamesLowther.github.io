@@ -43,7 +43,7 @@ const Landing = () => {
         </div>
         <div className="flex items-center justify-center w-full py-4">
           <a
-            href="https://blog.jameslowther.com"
+            href="https://dev.jameslowther.com/"
             className="font-header text-rose-700 font-bold text-2xl transform hover:scale-103 transition duration-75 ease-out animate-pulse "
           >
             🚀 Check out my blog
